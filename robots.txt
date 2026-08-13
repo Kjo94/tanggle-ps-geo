@@ -14,4 +14,4 @@ User-agent: Googlebot
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://kjo94.github.io/tanggle-ps-geo/sitemap.xml
+Sitemap: https://damara.my/sitemap.xml
