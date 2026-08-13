@@ -76,6 +76,15 @@
   .topnav a{font-size:.9em;color:#42545f;text-decoration:none;margin-left:14px}
   .topnav a:hover{color:#0a6a61}
   @media(max-width:560px){.topnav a{margin-left:10px;font-size:.84em}}
+  .entries{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+  .entry{display:block;text-decoration:none;background:#fff;border:1px solid #d8e4e1;
+         border-radius:12px;padding:18px 20px;transition:border-color .15s}
+  .entry:hover{border-color:#0a6a61}
+  .entry-t{display:block;font-size:1.12em;font-weight:700;color:#0a6a61;
+           letter-spacing:-.01em}
+  .entry-d{display:block;font-size:.9em;color:#42545f;margin:6px 0 8px;line-height:1.55}
+  .entry-n{display:block;font-size:.82em;color:#7a8791}
+  @media(max-width:600px){.entries{grid-template-columns:1fr}}
   .faq h3{font-size:1em;margin:1.4em 0 .3em}
   .faq p{margin:.2em 0 0}
 </style>

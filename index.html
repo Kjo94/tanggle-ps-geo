@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>damara.my — 성형·의료 시술 안내 | 비용 기준·회복·병원 선택</title>
-<meta name="description" content="시술마다 비용이 달라지는 기준, 회복 경과, 병원을 고를 때 확인할 점을 정리한 안내 사이트입니다. 병원이 확인한 수치만 게재합니다.">
+<title>성형·의료 시술 안내 — 비용 기준·회복·병원 선택 | damara.my</title>
+<meta name="description" content="시술마다 비용이 달라지는 기준, 회복 경과, 병원을 고를 때 확인할 점을 정리한 안내입니다. 병원이 확인한 수치만 게재합니다.">
 <link rel="alternate" hreflang="en" href="https://damara.my/en/">
 <style>
   body{margin:0;font-family:-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
@@ -77,6 +77,15 @@
   .topnav a{font-size:.9em;color:#42545f;text-decoration:none;margin-left:14px}
   .topnav a:hover{color:#0a6a61}
   @media(max-width:560px){.topnav a{margin-left:10px;font-size:.84em}}
+  .entries{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+  .entry{display:block;text-decoration:none;background:#fff;border:1px solid #d8e4e1;
+         border-radius:12px;padding:18px 20px;transition:border-color .15s}
+  .entry:hover{border-color:#0a6a61}
+  .entry-t{display:block;font-size:1.12em;font-weight:700;color:#0a6a61;
+           letter-spacing:-.01em}
+  .entry-d{display:block;font-size:.9em;color:#42545f;margin:6px 0 8px;line-height:1.55}
+  .entry-n{display:block;font-size:.82em;color:#7a8791}
+  @media(max-width:600px){.entries{grid-template-columns:1fr}}
   .faq h3{font-size:1em;margin:1.4em 0 .3em}
   .faq p{margin:.2em 0 0}
 </style>
@@ -88,118 +97,39 @@
   <a class="brand" href="./">damara<span>.my</span></a>
   <nav class="topnav">
     <a href="#directory">시술별 안내</a>
-    <a href="#check">상담 전 확인</a>
-    <a href="#terms">용어</a>
+    <a href="#why">전문의 확인</a>
+    <a href="#safety">환자 안전</a>
+    <a href="#clinics">병원 찾기</a>
     <a href="en/">EN</a>
   </nav>
 </div></header>
+
 <div class="hero">
   <div class="hero-in">
     <span class="kicker">성형·의료 시술 안내</span>
-    <h1>시술 정보를 찾을 때, 먼저 확인할 것들</h1>
-    <p>비용이 달라지는 기준, 회복에 걸리는 시간, 병원을 고를 때 확인할 점을
-    시술별로 정리했습니다.</p>
-    <div class="quick"><a href="#directory">시술별 안내</a><a href="#faq">자주 묻는 질문</a><a href="#clinics">진료 병원</a><a href="en/">English</a></div>
+    <h1>성형·의료 시술 안내</h1>
+    <p>시술마다 <strong>비용이 달라지는 기준</strong>, <strong>회복에 걸리는 시간</strong>,
+    <strong>병원을 고를 때 확인할 점</strong>을 항목별로 정리했습니다.</p>
+    <div class="entries">
+    <a class="entry" href="#cat-0">
+      <span class="entry-t">바디 시술</span>
+      <span class="entry-d">복부·가슴·팔·허벅지·힙 등 몸의 윤곽과 처진 피부를 다루는 시술</span>
+      <span class="entry-n">23개 항목</span>
+    </a>
+    <a class="entry" href="#cat-1">
+      <span class="entry-t">얼굴·안티에이징</span>
+      <span class="entry-d">얼굴 윤곽과 피부 처짐, 비수술 시술을 다루는 항목</span>
+      <span class="entry-n">6개 항목</span>
+    </a>
+    </div>
   </div>
 </div>
+
 <main>
-  <h2>시술 정보는 왜 찾기 어려울까요?</h2>
-  <p class="lead"><strong>같은 이름의 시술이라도 병원마다 실제 수술 범위가 다르기
-  때문입니다.</strong> 그래서 비용도 회복 기간도 한 가지 숫자로 답하기 어렵고,
-  검색해도 광고 문구만 나오는 경우가 많습니다.</p>
-  <p>예를 들어 '복부거상'이라는 같은 이름이 붙어도, 배꼽 아래만 절제하는 범위와
-  복직근 교정까지 함께 하는 범위는 수술 시간도 회복 과정도 다릅니다.
-  가격표를 나란히 놓고 비교하는 것이 어려운 이유가 여기 있습니다.
-  <strong>비교해야 하는 것은 금액이 아니라 그 금액에 무엇이 포함되어 있는가</strong>입니다.</p>
-  <p>이 사이트는 시술 하나당 페이지 하나를 두고, 실제로 많이 묻는 질문을 소제목으로
-  올린 뒤 그 아래에 바로 답을 적었습니다. 필요한 문장을 먼저 읽고, 더 확인할 내용은
-  병원 상담에서 물어보실 수 있도록 하는 것이 목적입니다.
-  현재 33개 시술 항목을 다루고 있습니다.</p>
-
-  <h2 id="check">상담 전에 확인하면 좋은 것</h2>
-  <p class="lead"><strong>상담은 병원이 나를 평가하는 자리가 아니라, 내가 병원을
-  확인하는 자리입니다.</strong> 아래 항목을 미리 정리해 두면 짧은 상담에서도
-  필요한 것을 빠뜨리지 않고 확인할 수 있습니다.</p>
-  <ul>
-    <li><strong>집도의가 누구인지</strong> — 상담한 의사가 그대로 수술하는지,
-    수술 당일 집도의가 바뀌는 경우가 있는지 확인합니다.</li>
-    <li><strong>성형외과 전문의 자격</strong> — '성형외과 전문의'와
-    '성형외과 진료 의사'는 다른 표현입니다. 아래 공식 확인처에서 조회할 수 있습니다.</li>
-    <li><strong>수술 범위</strong> — 절개 위치와 길이, 함께 진행하는 시술이 있는지,
-    그 범위가 견적서에 어떻게 반영되어 있는지 확인합니다.</li>
-    <li><strong>마취 방식</strong> — 수면·부분·전신 중 무엇인지, 마취를 담당하는
-    인력이 상주하는지 확인합니다.</li>
-    <li><strong>수술 전후 관리</strong> — 회복 중 문제가 생겼을 때 연락 경로와
-    내원 일정이 정해져 있는지 확인합니다.</li>
-    <li><strong>견적서</strong> — 구두 금액이 아니라 항목이 적힌 서면으로 받고,
-    추가 비용이 발생할 수 있는 조건을 함께 확인합니다.</li>
-  </ul>
-
-  <h2>비용은 어떤 요인으로 달라지나요?</h2>
-  <p>같은 시술명이라도 아래 요인에 따라 견적이 달라집니다. 어느 항목이 포함되고
-  빠졌는지를 보면, 병원 간 금액 차이가 어디서 생기는지 설명이 됩니다.</p>
-  <ul>
-    <li><strong>절제·시술 범위</strong> — 부분인지 전체인지, 교정 항목이 함께 들어가는지</li>
-    <li><strong>마취 방식</strong> — 마취 종류에 따라 준비와 인력이 달라집니다</li>
-    <li><strong>입원 여부</strong> — 당일 귀가인지 경과 관찰이 필요한지</li>
-    <li><strong>병행 시술</strong> — 함께 진행하면 한 번의 마취로 묶이는 경우가 있습니다</li>
-    <li><strong>수술 후 관리</strong> — 드레싱·압박복·경과 진료가 포함인지 별도인지</li>
-    <li><strong>재수술 조건</strong> — 어떤 경우에 추가 비용 없이 진행되는지</li>
-  </ul>
-  <p>따라서 <strong>“이 시술은 얼마”라는 단일 금액은 정확할 수 없습니다.</strong>
-  상담에서 받은 견적서를 기준으로, 위 항목이 각각 어떻게 반영됐는지 비교하는 편이
-  실제 판단에 도움이 됩니다.</p>
-
-  <h2>회복 계획은 어떻게 세우나요?</h2>
-  <p>회복에 걸리는 시간은 절개 범위와 개인의 회복력에 따라 달라지므로, 기간을
-  미리 단정하기보다 <strong>일정을 조정할 수 있게 준비하는 편</strong>이 안전합니다.
-  상담에서 아래를 확인해 두면 계획을 세우기 쉽습니다.</p>
-  <ul>
-    <li>수술 직후 며칠 동안 도움이 필요한지, 보호자 동행이 필요한 시점은 언제인지</li>
-    <li>일상 활동과 업무 복귀를 판단하는 기준은 무엇인지</li>
-    <li>실밥 제거·경과 확인을 위한 내원 일정은 어떻게 잡히는지</li>
-    <li>압박복 착용이나 자세 제한 같은 생활 수칙이 있는지</li>
-    <li>회복 중 이상이 느껴질 때 연락할 방법과 시간대</li>
-  </ul>
-  <p>회복 중 통증·발열·출혈 등 예상과 다른 증상이 있으면 자가 판단하지 말고
-  <strong>수술받은 병원에 즉시 연락</strong>하는 것이 원칙입니다.</p>
-
-  <h2 id="terms">자주 쓰이는 용어</h2>
-  <p>시술 설명에 반복해서 나오는 표현입니다. 정확한 적용 여부는 개인 상태에 따라
-  달라지므로, 아래는 일반적인 의미만 정리한 것입니다.</p>
-  <table>
-    <tr><th>거상</th><td>늘어진 피부·조직을 절제하고 당겨 고정하는 수술을 가리킵니다.
-      절개가 동반되며, 절개 위치와 길이는 범위에 따라 달라집니다.</td></tr>
-    <tr><th>지방흡입</th><td>피하지방을 흡입해 부피를 줄이는 시술입니다.
-      피부 자체가 늘어난 경우에는 흡입만으로 해결되지 않을 수 있습니다.</td></tr>
-    <tr><th>리프팅</th><td>처진 조직을 끌어올리는 방식의 총칭으로, 절개 여부와
-      사용하는 방법이 서로 다릅니다.</td></tr>
-    <tr><th>재수술</th><td>이전 수술의 결과를 교정하는 수술입니다. 조직 상태가
-      처음과 다르기 때문에 계획이 달라집니다.</td></tr>
-    <tr><th>병행 시술</th><td>한 번의 수술에서 두 가지 이상을 함께 진행하는 것으로,
-      마취 시간과 회복 계획에 영향을 줍니다.</td></tr>
-  </table>
-
-  <h2 id="verify">수치는 어떻게 확인하나요?</h2>
-  <p class="lead"><strong>해당 시술을 진료하는 병원이 직접 확인한 값만 게재합니다.</strong>
-  확인되지 않은 금액이나 기간은 추정해서 채우지 않고 비워 둡니다.</p>
-  <p>각 페이지 하단에 마지막 확인일과 출처를 함께 표시하며, 정보가 바뀌면 병원 확인을
-  거쳐 갱신합니다. 마지막 전체 점검일은 2026-08-13입니다.</p>
-
-  <h2>공식 확인처</h2>
-  <p>병원과 의사 정보는 아래 공공·학회 사이트에서 직접 확인할 수 있습니다.
-  이 사이트의 안내와 별개로, 최종 확인은 공식 기관 자료를 기준으로 하시는 것이 안전합니다.</p>
-  <ul>
-    <li><a href="https://www.plasticsurgery.or.kr/" rel="nofollow noopener" target="_blank">대한성형외과학회</a>
-      — 성형외과 전문의 자격 확인</li>
-    <li><a href="https://www.hira.or.kr/" rel="nofollow noopener" target="_blank">건강보험심사평가원</a>
-      — 의료기관 개설 정보 조회</li>
-    <li><a href="https://www.kca.go.kr/" rel="nofollow noopener" target="_blank">한국소비자원</a>
-      — 의료 서비스 관련 상담·분쟁 절차</li>
-  </ul>
-
   <h2 id="directory">시술별 안내</h2>
-  <div class="cat">
+  <p class="sub">현재 33개 항목을 다루고 있습니다. 각 페이지는 자주 묻는 질문을
+  소제목으로 두고 그 아래에 바로 답을 적는 형태입니다.</p>
+  <div class="cat" id="cat-0">
     <h3>복부·처진 살</h3>
     <ul>
       <li><a href="tanggle-ps/복부거상.html">복부거상</a></li>
@@ -242,7 +172,7 @@
       <li><a href="tanggle-ps/바디성형.html">바디성형</a></li>
     </ul>
   </div>
-  <div class="cat">
+  <div class="cat" id="cat-1">
     <h3>얼굴·안티에이징</h3>
     <ul>
       <li><a href="tanggle-ps/이마성형.html">이마성형</a></li>
@@ -263,6 +193,83 @@
     </ul>
   </div>
 
+  <h2 id="why">왜 성형외과 전문의를 확인해야 하나요?</h2>
+  <p class="lead"><strong>'성형외과 전문의'와 '성형외과 진료 의사'는 다른 표현이기
+  때문입니다.</strong> 전문의는 정해진 수련 과정을 마치고 자격을 취득한 의사를 가리키며,
+  진료 과목 표기만으로는 그 자격 여부를 알 수 없습니다.</p>
+  <p>수술은 계획과 판단이 결과를 좌우합니다. 같은 이름의 시술이라도 절제 범위와 방법을
+  어떻게 정하느냐에 따라 회복 과정이 달라지므로, <strong>상담한 의사가 그대로 집도하는지</strong>와
+  <strong>전문의 자격을 보유했는지</strong>를 먼저 확인하는 것이 기준이 됩니다.
+  자격은 아래 <a href="#official">공식 확인처</a>에서 직접 조회할 수 있습니다.</p>
+
+  <h2>시술 정보는 왜 찾기 어려울까요?</h2>
+  <p class="lead"><strong>같은 이름의 시술이라도 병원마다 실제 수술 범위가 다르기
+  때문입니다.</strong> 그래서 비용도 회복 기간도 한 가지 숫자로 답하기 어렵고,
+  검색해도 광고 문구만 나오는 경우가 많습니다.</p>
+  <p>예를 들어 '복부거상'이라는 같은 이름이 붙어도, 배꼽 아래만 절제하는 범위와
+  복직근 교정까지 함께 하는 범위는 수술 시간도 회복 과정도 다릅니다.
+  <strong>비교해야 하는 것은 금액이 아니라 그 금액에 무엇이 포함되어 있는가</strong>입니다.</p>
+
+  <h2 id="check">상담 전에 확인하면 좋은 것</h2>
+  <p class="lead"><strong>상담은 병원이 나를 평가하는 자리가 아니라, 내가 병원을
+  확인하는 자리입니다.</strong> 아래를 미리 정리해 두면 짧은 상담에서도 필요한 것을
+  빠뜨리지 않고 확인할 수 있습니다.</p>
+  <ul>
+    <li><strong>집도의가 누구인지</strong> — 상담한 의사가 그대로 수술하는지,
+    수술 당일 집도의가 바뀌는 경우가 있는지</li>
+    <li><strong>성형외과 전문의 자격</strong> — 표기가 아니라 자격으로 확인</li>
+    <li><strong>수술 범위</strong> — 절개 위치와 길이, 함께 진행하는 시술,
+    그 범위가 견적서에 어떻게 반영되어 있는지</li>
+    <li><strong>마취 방식</strong> — 수면·부분·전신 중 무엇인지, 담당 인력이 상주하는지</li>
+    <li><strong>수술 전후 관리</strong> — 문제가 생겼을 때 연락 경로와 내원 일정</li>
+    <li><strong>견적서</strong> — 구두 금액이 아니라 항목이 적힌 서면으로,
+    추가 비용이 생기는 조건과 함께</li>
+  </ul>
+
+  <h2>비용은 어떤 요인으로 달라지나요?</h2>
+  <p>같은 시술명이라도 아래 요인에 따라 견적이 달라집니다. 어느 항목이 포함되고
+  빠졌는지를 보면, 병원 간 금액 차이가 어디서 생기는지 설명이 됩니다.</p>
+  <ul>
+    <li><strong>절제·시술 범위</strong> — 부분인지 전체인지, 교정 항목이 함께 들어가는지</li>
+    <li><strong>마취 방식</strong> — 종류에 따라 준비와 인력이 달라집니다</li>
+    <li><strong>입원 여부</strong> — 당일 귀가인지 경과 관찰이 필요한지</li>
+    <li><strong>병행 시술</strong> — 함께 진행하면 한 번의 마취로 묶이는 경우가 있습니다</li>
+    <li><strong>수술 후 관리</strong> — 드레싱·압박복·경과 진료가 포함인지 별도인지</li>
+    <li><strong>재수술 조건</strong> — 어떤 경우에 추가 비용 없이 진행되는지</li>
+  </ul>
+  <p>따라서 <strong>"이 시술은 얼마"라는 단일 금액은 정확할 수 없습니다.</strong>
+  견적서를 기준으로 위 항목이 각각 어떻게 반영됐는지 비교하는 편이 판단에 도움이 됩니다.</p>
+
+  <h2 id="safety">환자 안전 — 회복 중 확인할 것</h2>
+  <p class="lead"><strong>회복 중 예상과 다른 증상이 있으면 자가 판단하지 말고
+  수술받은 병원에 즉시 연락하는 것이 원칙입니다.</strong></p>
+  <p>회복에 걸리는 시간은 절개 범위와 개인의 회복력에 따라 달라지므로, 기간을 미리
+  단정하기보다 일정을 조정할 수 있게 준비하는 편이 안전합니다. 상담에서 아래를 확인해
+  두면 계획을 세우기 쉽습니다.</p>
+  <ul>
+    <li>수술 직후 도움이 필요한 기간과 보호자 동행이 필요한 시점</li>
+    <li>일상 활동과 업무 복귀를 판단하는 기준</li>
+    <li>실밥 제거·경과 확인 내원 일정</li>
+    <li>압박복 착용이나 자세 제한 같은 생활 수칙</li>
+    <li><strong>이상이 느껴질 때 연락할 방법과 시간대</strong></li>
+  </ul>
+
+  <h2 id="terms">자주 쓰이는 용어</h2>
+  <p>시술 설명에 반복해서 나오는 표현입니다. 적용 여부는 개인 상태에 따라 달라지므로,
+  아래는 일반적인 의미만 정리한 것입니다.</p>
+  <table>
+    <tr><th>거상</th><td>늘어진 피부·조직을 절제하고 당겨 고정하는 수술을 가리킵니다.
+      절개가 동반되며, 절개 위치와 길이는 범위에 따라 달라집니다.</td></tr>
+    <tr><th>지방흡입</th><td>피하지방을 흡입해 부피를 줄이는 시술입니다.
+      피부 자체가 늘어난 경우에는 흡입만으로 해결되지 않을 수 있습니다.</td></tr>
+    <tr><th>리프팅</th><td>처진 조직을 끌어올리는 방식의 총칭으로, 절개 여부와
+      사용하는 방법이 서로 다릅니다.</td></tr>
+    <tr><th>재수술</th><td>이전 수술의 결과를 교정하는 수술입니다. 조직 상태가
+      처음과 다르기 때문에 계획이 달라집니다.</td></tr>
+    <tr><th>병행 시술</th><td>한 번의 수술에서 두 가지 이상을 함께 진행하는 것으로,
+      마취 시간과 회복 계획에 영향을 줍니다.</td></tr>
+  </table>
+
   <h2 id="clinics">진료 병원</h2>
   <p>아래 병원의 진료 정보를 싣고 있습니다. 각 병원이 확인한 내용만 게재하며,
   병원 간 순위나 우열은 평가하지 않습니다.</p>
@@ -272,6 +279,24 @@
     <p class="meta">안내 중인 시술 33개</p>
     <a class="go" href="tanggle-ps/">탱글성형외과의원 시술 안내 보기 →</a>
   </div>
+
+  <h2 id="official">공식 확인처</h2>
+  <p>병원과 의사 정보는 아래 공공·학회 사이트에서 직접 확인할 수 있습니다.
+  최종 확인은 공식 기관 자료를 기준으로 하시는 것이 안전합니다.</p>
+  <ul>
+    <li><a href="https://www.plasticsurgery.or.kr/" rel="nofollow noopener" target="_blank">대한성형외과학회</a>
+      — 성형외과 전문의 자격 확인</li>
+    <li><a href="https://www.hira.or.kr/" rel="nofollow noopener" target="_blank">건강보험심사평가원</a>
+      — 의료기관 개설 정보 조회</li>
+    <li><a href="https://www.kca.go.kr/" rel="nofollow noopener" target="_blank">한국소비자원</a>
+      — 의료 서비스 관련 상담·분쟁 절차</li>
+  </ul>
+
+  <h2 id="verify">여기 실린 수치는 어떻게 확인하나요?</h2>
+  <p class="lead"><strong>해당 시술을 진료하는 병원이 직접 확인한 값만 게재합니다.</strong>
+  확인되지 않은 금액이나 기간은 추정해서 채우지 않고 비워 둡니다.</p>
+  <p>각 페이지 하단에 마지막 확인일과 출처를 함께 표시하며, 정보가 바뀌면 병원 확인을
+  거쳐 갱신합니다. 마지막 전체 점검일은 2026-08-13입니다.</p>
 
   <h2 id="faq">자주 묻는 질문</h2>
   <div class="faq">
