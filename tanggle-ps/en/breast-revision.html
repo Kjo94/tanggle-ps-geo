@@ -9,12 +9,7 @@
 <link rel="alternate" hreflang="ko" href="https://damara.my/tanggle-ps/가슴재수술.html">
 <link rel="alternate" hreflang="en" href="https://damara.my/tanggle-ps/en/breast-revision.html">
 <style>
-  /* ── 디자인 토큰 ──
-     STORM-K 홈페이지에서 가져온 색·간격 체계.
-     ⚠️ **외부 폰트를 쓰지 않는다.** damara.my는 지금 외부 요청이 0개다.
-        인용이 목적인 사이트에 CDN 의존을 더하는 것은 이득보다 위험이 크다
-        (OpenAI도 "호스트·CDN이 우리 IP를 막으면 인용이 끊긴다"고 경고한다).
-        한글은 시스템 폰트로 충분히 읽힌다. */
+  
   :root{
     --blue:#0057FF; --blue-light:#00C2FF; --blue-dark:#003DBF;
     --ink:#0A0A14; --ink-2:#343A40; --muted:#6B7280;
@@ -26,8 +21,7 @@
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  /* ⚠️ 한글은 어절 단위로 끊어야 한다. keep-all이 없으면
-     '같은 시술인데 왜 병원마다 다를까 / 요?'처럼 낱말 중간이 쪼개진다. */
+  
   body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',
        'Pretendard','Noto Sans KR','Malgun Gothic',sans-serif;
        line-height:1.75;color:var(--ink);background:var(--surface);
@@ -46,8 +40,7 @@
   a{color:var(--blue)}
   .lead{font-size:17.5px;color:var(--ink-2)}
 
-  /* 목록 — 카드 격자. 마크업(<li><strong>제목</strong> — 설명)은 그대로 두고
-     보이는 형태만 바꾼다. 본문 글자는 한 자도 줄지 않는다. */
+  
   main > ul{list-style:none;padding:0;margin:1.2em 0;display:grid;
      grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:11px}
   main > ul > li{background:var(--surface);border:1px solid var(--line);
@@ -59,7 +52,7 @@
      border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
   main > ul > li strong{display:block;margin-bottom:1px}
 
-  /* 표 */
+  
   table{border-collapse:separate;border-spacing:0;width:100%;margin:1.3em 0;
      background:var(--surface);border:1px solid var(--line);
      border-radius:var(--radius);overflow:hidden;font-size:15px}
@@ -71,7 +64,7 @@
      color:var(--muted);padding-bottom:8px}
   table.stats td.q{color:var(--muted);font-size:.86em;line-height:1.55}
 
-  /* 상단 바 */
+  
   nav{position:sticky;top:0;z-index:20;font-size:14.5px;padding:14px 22px;
      background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(12px);
      border-bottom:1px solid var(--line)}
@@ -85,7 +78,7 @@
   footer a{color:var(--ink-2)}
   .disclaimer{font-size:13.5px;color:var(--muted);line-height:1.7}
 
-  /* ── 히어로 ── */
+  
   .hero{position:relative;overflow:hidden;padding:66px 22px 54px;
      border-bottom:1px solid var(--line);
      background:radial-gradient(820px 400px at 10% -10%,rgba(0,194,255,.15),transparent 60%),
@@ -99,7 +92,7 @@
      border:1px solid rgba(0,87,255,.18);border-radius:999px;padding:6px 13px;margin-bottom:18px}
   .kicker::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--blue)}
 
-  /* ── 진입 카드 ── */
+  
   .entries{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
      gap:12px;margin-top:34px}
   .entry{display:block;text-decoration:none;background:var(--surface);
@@ -112,7 +105,7 @@
      background:linear-gradient(135deg,var(--blue),var(--blue-light));
      -webkit-background-clip:text;background-clip:text;color:transparent}
 
-  /* ── 시술 분류 ── */
+  
   .cat{margin:2.2em 0}
   .cat h3{font-size:16.5px;margin:0 0 .7em;color:var(--ink)}
   .cat ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:7px}
@@ -121,7 +114,7 @@
      background:var(--bg);transition:all var(--t)}
   .cat li a:hover{background:var(--blue);border-color:var(--blue);color:#fff}
 
-  /* ── 병원 카드 ── */
+  
   .clinic{background:var(--surface);border:1px solid var(--line);
      border-radius:var(--radius-lg);padding:24px 26px;margin:16px 0;box-shadow:var(--shadow)}
   .clinic h3{margin-top:0;font-size:19px}
@@ -131,7 +124,7 @@
      text-decoration:none;transition:background var(--t),transform var(--t)}
   .go:hover{background:var(--blue-dark);transform:translateY(-1px)}
 
-  /* ── FAQ ── */
+  
   .faq h3{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
      margin:10px 0 0;padding:16px 20px 16px 54px;position:relative;font-size:16.5px}
   .faq h3::before{content:'Q';position:absolute;left:18px;top:17px;width:23px;height:23px;
@@ -142,7 +135,7 @@
      border-radius:0 0 var(--radius) var(--radius);margin:0 0 4px;
      padding:0 20px 18px 54px;font-size:15.4px;color:var(--ink-2)}
 
-  /* ── 요약·안내 ── */
+  
   .summary{background:linear-gradient(135deg,rgba(0,87,255,.05),rgba(0,194,255,.05));
      border:1px solid rgba(0,87,255,.2);border-radius:var(--radius-lg);
      padding:22px 25px;margin:2em 0;font-size:15.6px;color:var(--ink-2)}
