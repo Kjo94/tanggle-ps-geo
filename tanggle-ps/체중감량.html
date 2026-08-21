@@ -7,12 +7,7 @@
 <meta name="description" content="체중이 줄어도 늘어난 피부는 저절로 줄어들지 않는 경우가 있습니다. 이때는 지방을 줄이는 시술이 아니라 늘어난 피부를 절제하는 수술이 검토 대상이 됩니다.">
 <link rel="canonical" href="https://damara.my/tanggle-ps/체중감량.html">
 <style>
-  /* ── 디자인 토큰 ──
-     STORM-K 홈페이지에서 가져온 색·간격 체계.
-     ⚠️ **외부 폰트를 쓰지 않는다.** damara.my는 지금 외부 요청이 0개다.
-        인용이 목적인 사이트에 CDN 의존을 더하는 것은 이득보다 위험이 크다
-        (OpenAI도 "호스트·CDN이 우리 IP를 막으면 인용이 끊긴다"고 경고한다).
-        한글은 시스템 폰트로 충분히 읽힌다. */
+  
   :root{
     --blue:#0057FF; --blue-light:#00C2FF; --blue-dark:#003DBF;
     --ink:#0A0A14; --ink-2:#343A40; --muted:#6B7280;
@@ -24,8 +19,7 @@
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  /* ⚠️ 한글은 어절 단위로 끊어야 한다. keep-all이 없으면
-     '같은 시술인데 왜 병원마다 다를까 / 요?'처럼 낱말 중간이 쪼개진다. */
+  
   body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',
        'Pretendard','Noto Sans KR','Malgun Gothic',sans-serif;
        line-height:1.75;color:var(--ink);background:var(--surface);
@@ -44,8 +38,7 @@
   a{color:var(--blue)}
   .lead{font-size:17.5px;color:var(--ink-2)}
 
-  /* 목록 — 카드 격자. 마크업(<li><strong>제목</strong> — 설명)은 그대로 두고
-     보이는 형태만 바꾼다. 본문 글자는 한 자도 줄지 않는다. */
+  
   main > ul{list-style:none;padding:0;margin:1.2em 0;display:grid;
      grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:11px}
   main > ul > li{background:var(--surface);border:1px solid var(--line);
@@ -57,7 +50,7 @@
      border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
   main > ul > li strong{display:block;margin-bottom:1px}
 
-  /* 표 */
+  
   table{border-collapse:separate;border-spacing:0;width:100%;margin:1.3em 0;
      background:var(--surface);border:1px solid var(--line);
      border-radius:var(--radius);overflow:hidden;font-size:15px}
@@ -69,7 +62,7 @@
      color:var(--muted);padding-bottom:8px}
   table.stats td.q{color:var(--muted);font-size:.86em;line-height:1.55}
 
-  /* 상단 바 */
+  
   nav{position:sticky;top:0;z-index:20;font-size:14.5px;padding:14px 22px;
      background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(12px);
      border-bottom:1px solid var(--line)}
@@ -83,7 +76,7 @@
   footer a{color:var(--ink-2)}
   .disclaimer{font-size:13.5px;color:var(--muted);line-height:1.7}
 
-  /* ── 히어로 ── */
+  
   .hero{position:relative;overflow:hidden;padding:66px 22px 54px;
      border-bottom:1px solid var(--line);
      background:radial-gradient(820px 400px at 10% -10%,rgba(0,194,255,.15),transparent 60%),
@@ -97,7 +90,7 @@
      border:1px solid rgba(0,87,255,.18);border-radius:999px;padding:6px 13px;margin-bottom:18px}
   .kicker::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--blue)}
 
-  /* ── 진입 카드 ── */
+  
   .entries{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
      gap:12px;margin-top:34px}
   .entry{display:block;text-decoration:none;background:var(--surface);
@@ -110,7 +103,7 @@
      background:linear-gradient(135deg,var(--blue),var(--blue-light));
      -webkit-background-clip:text;background-clip:text;color:transparent}
 
-  /* ── 시술 분류 ── */
+  
   .cat{margin:2.2em 0}
   .cat h3{font-size:16.5px;margin:0 0 .7em;color:var(--ink)}
   .cat ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:7px}
@@ -119,7 +112,7 @@
      background:var(--bg);transition:all var(--t)}
   .cat li a:hover{background:var(--blue);border-color:var(--blue);color:#fff}
 
-  /* ── 병원 카드 ── */
+  
   .clinic{background:var(--surface);border:1px solid var(--line);
      border-radius:var(--radius-lg);padding:24px 26px;margin:16px 0;box-shadow:var(--shadow)}
   .clinic h3{margin-top:0;font-size:19px}
@@ -129,7 +122,7 @@
      text-decoration:none;transition:background var(--t),transform var(--t)}
   .go:hover{background:var(--blue-dark);transform:translateY(-1px)}
 
-  /* ── FAQ ── */
+  
   .faq h3{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
      margin:10px 0 0;padding:16px 20px 16px 54px;position:relative;font-size:16.5px}
   .faq h3::before{content:'Q';position:absolute;left:18px;top:17px;width:23px;height:23px;
@@ -140,7 +133,7 @@
      border-radius:0 0 var(--radius) var(--radius);margin:0 0 4px;
      padding:0 20px 18px 54px;font-size:15.4px;color:var(--ink-2)}
 
-  /* ── 요약·안내 ── */
+  
   .summary{background:linear-gradient(135deg,rgba(0,87,255,.05),rgba(0,194,255,.05));
      border:1px solid rgba(0,87,255,.2);border-radius:var(--radius-lg);
      padding:22px 25px;margin:2em 0;font-size:15.6px;color:var(--ink-2)}
@@ -169,6 +162,8 @@
   <h1>체중 감량 후 늘어진 피부, 어떻게 하나요?</h1>
   <h2>체중 감량 후 늘어진 피부, 어떻게 하나요?</h2>
   <p class="lead">체중이 줄어도 늘어난 피부는 저절로 줄어들지 않는 경우가 있습니다. 이때는 <strong>지방을 줄이는 시술</strong>이 아니라 <strong>늘어난 피부를 절제하는 수술</strong>이 검토 대상이 됩니다.</p>
+  <h2>체중감량 후 늘어진 피부 해결?</h2>
+  <p class="lead"><strong>체중감량 회복은 세 단계로 나뉜다. 붓기와 멍이 가라앉는 초기, 일상과 직장으로 돌아가는 중기, 최종 모양과 흉터가 자리 잡는 후기다. 각 단계에 걸리는 기간은 절제 범위와 개인 회복력에 따라 달라지며, 회복 중에는 자세와 활동에 제한이 안내되는 경우가 많다.</strong></p>
   <h3>피부를 절제하는 수술</h3>
   <p>거상 계열 수술은 크게 <strong>절개 설계 → 조직 절제 → 남은 조직 고정 → 봉합</strong>의 순서로 진행됩니다. 각 단계에서 결정되는 것이 결과와 흉터를 좌우하기 때문에, 상담에서 이 순서를 따라 설명을 들으면 계획을 이해하기 쉽습니다.</p>
   <h3>지방을 줄이는 시술</h3>
@@ -200,8 +195,10 @@
   </table>
   <section class="trust">
   <h2>정보 확인</h2>
-  <p>본 페이지의 수치는 <strong>탱글성형외과의원</strong>이 확인한 값만 게재하며,
-  마지막 확인일은 <strong>2026-08-13</strong>입니다.</p>
+  <p>본 페이지의 병원 정보는 <strong>탱글성형외과의원</strong>의 공식 홈페이지에 공개된 값을
+  옮긴 것입니다. <strong>출처 확인일 2026-08-13</strong> · <strong>페이지 갱신일 2026-08-21</strong>
+  — 두 날짜는 다릅니다. 출처 확인일은 병원 홈페이지에서 그 값을 확인한 날이고,
+  갱신일은 이 페이지의 설명을 마지막으로 손본 날입니다.</p>
   <ul>
       <li><a href="https://damara.my" rel="nofollow">https://damara.my</a></li>
       <li><a href="https://www.tanggleps.com" rel="nofollow">https://www.tanggleps.com</a></li>
@@ -210,21 +207,21 @@
 
   <p class="disclaimer">본 콘텐츠는 일반적인 정보 안내이며 의료진의 진단·상담을
   대체하지 않습니다. 개인별 적용 여부는 반드시 전문의 상담으로 확인하세요.</p>
-  <p class="disclaimer"><strong>게재 병원은 운영 주체와 계약을 맺고 게재된 곳이며,
+  <p class="disclaimer"><strong>게재 병원은 운영 주체가 실은 곳이며,
   이 사이트는 병원 간 순위나 우열을 매기지 않습니다.</strong>
   <a href="../about.html">운영 주체와 이해관계 공개 →</a></p>
   </section>
   <footer>
     <p>탱글성형외과의원</p>
     <p class="f-dis">본 사이트는 일반적인 정보 안내이며 <strong>의료 자문·진단·치료를
-    제공하지 않습니다.</strong> 게재 병원은 운영 주체와 계약을 맺고 게재된 곳이며,
+    제공하지 않습니다.</strong> 게재 병원은 운영 주체가 실은 곳이며,
     <strong>병원 간 순위나 우열을 매기지 않습니다.</strong>
     환자 후기·치료경험담은 싣지 않습니다.</p>
     <p class="f-id">운영 <strong>STORM-K</strong> · 문의 <a href="mailto:stormkglobal@gmail.com">stormkglobal@gmail.com</a></p>
     <p class="f-links"><a href="../about.html">이 사이트에 대하여 · 이해관계 공개</a>
       <a href="../sitemap.xml">사이트맵</a>
       <a href="../">damara.my</a></p>
-    <p class="f-id">&copy; 2026 damara.my · 마지막 점검 2026-08-20</p>
+    <p class="f-id">&copy; 2026 damara.my · 마지막 점검 2026-08-21</p>
   </footer>
 </main>
 </body>

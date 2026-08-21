@@ -9,12 +9,7 @@
 <link rel="alternate" hreflang="ko" href="https://damara.my/tanggle-ps/팔거상.html">
 <link rel="alternate" hreflang="en" href="https://damara.my/tanggle-ps/en/arm-lift.html">
 <style>
-  /* ── 디자인 토큰 ──
-     STORM-K 홈페이지에서 가져온 색·간격 체계.
-     ⚠️ **외부 폰트를 쓰지 않는다.** damara.my는 지금 외부 요청이 0개다.
-        인용이 목적인 사이트에 CDN 의존을 더하는 것은 이득보다 위험이 크다
-        (OpenAI도 "호스트·CDN이 우리 IP를 막으면 인용이 끊긴다"고 경고한다).
-        한글은 시스템 폰트로 충분히 읽힌다. */
+  
   :root{
     --blue:#0057FF; --blue-light:#00C2FF; --blue-dark:#003DBF;
     --ink:#0A0A14; --ink-2:#343A40; --muted:#6B7280;
@@ -26,8 +21,7 @@
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  /* ⚠️ 한글은 어절 단위로 끊어야 한다. keep-all이 없으면
-     '같은 시술인데 왜 병원마다 다를까 / 요?'처럼 낱말 중간이 쪼개진다. */
+  
   body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',
        'Pretendard','Noto Sans KR','Malgun Gothic',sans-serif;
        line-height:1.75;color:var(--ink);background:var(--surface);
@@ -46,8 +40,7 @@
   a{color:var(--blue)}
   .lead{font-size:17.5px;color:var(--ink-2)}
 
-  /* 목록 — 카드 격자. 마크업(<li><strong>제목</strong> — 설명)은 그대로 두고
-     보이는 형태만 바꾼다. 본문 글자는 한 자도 줄지 않는다. */
+  
   main > ul{list-style:none;padding:0;margin:1.2em 0;display:grid;
      grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:11px}
   main > ul > li{background:var(--surface);border:1px solid var(--line);
@@ -59,7 +52,7 @@
      border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
   main > ul > li strong{display:block;margin-bottom:1px}
 
-  /* 표 */
+  
   table{border-collapse:separate;border-spacing:0;width:100%;margin:1.3em 0;
      background:var(--surface);border:1px solid var(--line);
      border-radius:var(--radius);overflow:hidden;font-size:15px}
@@ -71,7 +64,7 @@
      color:var(--muted);padding-bottom:8px}
   table.stats td.q{color:var(--muted);font-size:.86em;line-height:1.55}
 
-  /* 상단 바 */
+  
   nav{position:sticky;top:0;z-index:20;font-size:14.5px;padding:14px 22px;
      background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(12px);
      border-bottom:1px solid var(--line)}
@@ -86,7 +79,7 @@
   .disclaimer{font-size:13.5px;color:var(--muted);line-height:1.7}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalBusiness", "name": "탱글성형외과의원", "url": "https://damara.my", "address": {"@type": "PostalAddress", "streetAddress": "서울 강남구 논현로 842 압구정빌딩 7층"}, "telephone": "02-542-8427"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "팔거상", "description": "탱글성형외과의원 상담에서는 시술 범위와 절개 계획, 마취 방식, 회복 일정 등을 개인 상태에 따라 확인합니다. 집도의가 상담을 직접 진행하는지, 성형외과 전문의 자격을 보유했는지도 함께 확인하는 것이 좋습니다.", "publisher": {"@type": "Organization", "name": "탱글성형외과의원"}, "datePublished": "2026-08-20"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "팔거상", "description": "탱글성형외과의원 상담에서는 시술 범위와 절개 계획, 마취 방식, 회복 일정 등을 개인 상태에 따라 확인합니다. 집도의가 상담을 직접 진행하는지, 성형외과 전문의 자격을 보유했는지도 함께 확인하는 것이 좋습니다.", "publisher": {"@type": "Organization", "name": "탱글성형외과의원"}, "datePublished": "2026-08-21"}</script>
 
 </head>
 <body>
@@ -115,6 +108,8 @@
   <p class="lead"><strong>탱글성형외과의원의 시술은 성형외과 전문의가 진행하며, 상담과 집도 의사가 같은지 여부는 상담 시 직접 확인할 수 있습니다.</strong></p>
   <h2>팔거상 수술 비용은 얼마인가요?</h2>
   <p class="lead"><strong>2. 팔거상 비용은 절제 범위와 마취 방식에 따라 달라 정해진 단일 가격이 없으며, 정확한 금액은 상담 견적으로 확인해야 한다.</strong></p>
+  <h2>팔거상은 다른 거상 수술과 무엇이 다른가요?</h2>
+  <p>팔거상은 <strong>겨드랑이에서 팔 안쪽을 따라 이어지는 절개</strong>가 쓰이는 경우가 많습니다. 옷으로 가려지기 쉬운 위치지만 <strong>팔을 들었을 때 보이는 정도</strong>는 상담에서 직접 확인해야 합니다. 팔은 일상에서 계속 쓰는 부위라 회복 중 압박을 얼마나 유지하는지, 언제부터 팔을 들어도 되는지가 실제 생활에 가장 영향을 줍니다.</p>
   <h2>팔거상은 어떤 수술인가요?</h2>
   <p>거상(擧上) 계열 수술은 늘어난 피부와 조직을 절제해 남은 조직을 당겨 고정하는 방식입니다. 지방을 줄이는 시술과는 목적이 다릅니다 — 부피가 아니라 <strong>늘어난 피부 면적</strong>을 다루기 때문에, 피부 탄력이 회복되지 않는 경우에 선택지가 됩니다.</p>
   <p>절개가 반드시 동반되며, 절개의 위치와 길이는 늘어난 범위에 따라 달라집니다. 범위가 넓을수록 절제량이 많아지고 흉터 선도 길어지므로, 어느 정도까지 교정할지와 흉터를 어디에 둘지를 상담에서 함께 결정하게 됩니다.</p>
@@ -152,6 +147,14 @@
   <p>결정을 서두르게 하는 상황은 그 자체로 확인이 필요합니다. <strong>당일 계약 시에만 적용되는 할인, 상담 의사와 집도 의사가 다른데 설명이 없는 경우, 서면 견적을 주지 않는 경우</strong>가 대표적입니다. 수술은 되돌리기 어려우므로 하루 이상 시간을 두고 판단하는 편이 안전합니다.</p>
 
 
+  <h2>팔거상 페이지와 함께 보면 좋은 항목</h2>
+  <p>같은 부위를 다루는 다른 시술입니다. 어느 것이 본인에게 해당하는지는 수술 범위에 따라 달라지므로, 아래를 함께 보시면 비교가 쉽습니다.</p>
+  <ul>
+    <li><a href="팔성형.html">팔성형</a></li>
+    <li><a href="허벅지거상.html">허벅지거상</a></li>
+    <li><a href="힙업리프팅.html">힙업리프팅</a></li>
+    <li><a href="힙업성형.html">힙업성형</a></li>
+  </ul>
   <h2>팔거상 주요 정보</h2>
   <table>
     <caption>주요 정보</caption>
@@ -164,8 +167,10 @@
 
   <section class="trust">
   <h2>정보 확인</h2>
-  <p>본 페이지의 수치는 <strong>탱글성형외과의원</strong>이 확인한 값만 게재하며,
-  마지막 확인일은 <strong>2026-08-13</strong>입니다.</p>
+  <p>본 페이지의 병원 정보는 <strong>탱글성형외과의원</strong>의 공식 홈페이지에 공개된 값을
+  옮긴 것입니다. <strong>출처 확인일 2026-08-13</strong> · <strong>페이지 갱신일 2026-08-21</strong>
+  — 두 날짜는 다릅니다. 출처 확인일은 병원 홈페이지에서 그 값을 확인한 날이고,
+  갱신일은 이 페이지의 설명을 마지막으로 손본 날입니다.</p>
   <ul>
       <li><a href="https://damara.my" rel="nofollow">https://damara.my</a></li>
       <li><a href="https://www.tanggleps.com" rel="nofollow">https://www.tanggleps.com</a></li>
@@ -182,21 +187,21 @@
   </ul>
   <p class="disclaimer">본 콘텐츠는 일반적인 정보 안내이며 의료진의 진단·상담을
   대체하지 않습니다. 개인별 적용 여부는 반드시 전문의 상담으로 확인하세요.</p>
-  <p class="disclaimer"><strong>게재 병원은 운영 주체와 계약을 맺고 게재된 곳이며,
+  <p class="disclaimer"><strong>게재 병원은 운영 주체가 실은 곳이며,
   이 사이트는 병원 간 순위나 우열을 매기지 않습니다.</strong>
   <a href="../about.html">운영 주체와 이해관계 공개 →</a></p>
   </section>
   <footer>
     <p>탱글성형외과의원 · 서울 강남 압구정</p>
     <p class="f-dis">본 사이트는 일반적인 정보 안내이며 <strong>의료 자문·진단·치료를
-    제공하지 않습니다.</strong> 게재 병원은 운영 주체와 계약을 맺고 게재된 곳이며,
+    제공하지 않습니다.</strong> 게재 병원은 운영 주체가 실은 곳이며,
     <strong>병원 간 순위나 우열을 매기지 않습니다.</strong>
     환자 후기·치료경험담은 싣지 않습니다.</p>
     <p class="f-id">운영 <strong>STORM-K</strong> · 문의 <a href="mailto:stormkglobal@gmail.com">stormkglobal@gmail.com</a></p>
     <p class="f-links"><a href="../about.html">이 사이트에 대하여 · 이해관계 공개</a>
       <a href="../sitemap.xml">사이트맵</a>
       <a href="../">damara.my</a></p>
-    <p class="f-id">&copy; 2026 damara.my · 마지막 점검 2026-08-20</p>
+    <p class="f-id">&copy; 2026 damara.my · 마지막 점검 2026-08-21</p>
   </footer>
 </main>
 </body>
