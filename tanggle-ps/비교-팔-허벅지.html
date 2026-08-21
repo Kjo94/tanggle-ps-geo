@@ -7,7 +7,12 @@
 <meta name="description" content="팔과 허벅지는 움직임이 많고 피부가 얇아 흉터 위치가 특히 중요합니다. 늘어난 피부를 절제할지, 지방만 줄일지는 피부 탄력으로 갈립니다.">
 <link rel="canonical" href="https://damara.my/tanggle-ps/비교-팔-허벅지.html">
 <style>
-  
+  /* ── 디자인 토큰 ──
+     STORM-K 홈페이지에서 가져온 색·간격 체계.
+     ⚠️ **외부 폰트를 쓰지 않는다.** damara.my는 지금 외부 요청이 0개다.
+        인용이 목적인 사이트에 CDN 의존을 더하는 것은 이득보다 위험이 크다
+        (OpenAI도 "호스트·CDN이 우리 IP를 막으면 인용이 끊긴다"고 경고한다).
+        한글은 시스템 폰트로 충분히 읽힌다. */
   :root{
     --blue:#0057FF; --blue-light:#00C2FF; --blue-dark:#003DBF;
     --ink:#0A0A14; --ink-2:#343A40; --muted:#6B7280;
@@ -19,7 +24,8 @@
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  
+  /* ⚠️ 한글은 어절 단위로 끊어야 한다. keep-all이 없으면
+     '같은 시술인데 왜 병원마다 다를까 / 요?'처럼 낱말 중간이 쪼개진다. */
   body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',
        'Pretendard','Noto Sans KR','Malgun Gothic',sans-serif;
        line-height:1.75;color:var(--ink);background:var(--surface);
@@ -38,7 +44,8 @@
   a{color:var(--blue)}
   .lead{font-size:17.5px;color:var(--ink-2)}
 
-  
+  /* 목록 — 카드 격자. 마크업(<li><strong>제목</strong> — 설명)은 그대로 두고
+     보이는 형태만 바꾼다. 본문 글자는 한 자도 줄지 않는다. */
   main > ul{list-style:none;padding:0;margin:1.2em 0;display:grid;
      grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:11px}
   main > ul > li{background:var(--surface);border:1px solid var(--line);
@@ -50,7 +57,7 @@
      border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
   main > ul > li strong{display:block;margin-bottom:1px}
 
-  
+  /* 표 */
   table{border-collapse:separate;border-spacing:0;width:100%;margin:1.3em 0;
      background:var(--surface);border:1px solid var(--line);
      border-radius:var(--radius);overflow:hidden;font-size:15px}
@@ -62,7 +69,7 @@
      color:var(--muted);padding-bottom:8px}
   table.stats td.q{color:var(--muted);font-size:.86em;line-height:1.55}
 
-  
+  /* 상단 바 */
   nav{position:sticky;top:0;z-index:20;font-size:14.5px;padding:14px 22px;
      background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(12px);
      border-bottom:1px solid var(--line)}
@@ -76,7 +83,7 @@
   footer a{color:var(--ink-2)}
   .disclaimer{font-size:13.5px;color:var(--muted);line-height:1.7}
 
-  
+  /* ── 히어로 ── */
   .hero{position:relative;overflow:hidden;padding:66px 22px 54px;
      border-bottom:1px solid var(--line);
      background:radial-gradient(820px 400px at 10% -10%,rgba(0,194,255,.15),transparent 60%),
@@ -90,7 +97,7 @@
      border:1px solid rgba(0,87,255,.18);border-radius:999px;padding:6px 13px;margin-bottom:18px}
   .kicker::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--blue)}
 
-  
+  /* ── 진입 카드 ── */
   .entries{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
      gap:12px;margin-top:34px}
   .entry{display:block;text-decoration:none;background:var(--surface);
@@ -103,7 +110,7 @@
      background:linear-gradient(135deg,var(--blue),var(--blue-light));
      -webkit-background-clip:text;background-clip:text;color:transparent}
 
-  
+  /* ── 시술 분류 ── */
   .cat{margin:2.2em 0}
   .cat h3{font-size:16.5px;margin:0 0 .7em;color:var(--ink)}
   .cat ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:7px}
@@ -112,7 +119,7 @@
      background:var(--bg);transition:all var(--t)}
   .cat li a:hover{background:var(--blue);border-color:var(--blue);color:#fff}
 
-  
+  /* ── 병원 카드 ── */
   .clinic{background:var(--surface);border:1px solid var(--line);
      border-radius:var(--radius-lg);padding:24px 26px;margin:16px 0;box-shadow:var(--shadow)}
   .clinic h3{margin-top:0;font-size:19px}
@@ -122,7 +129,7 @@
      text-decoration:none;transition:background var(--t),transform var(--t)}
   .go:hover{background:var(--blue-dark);transform:translateY(-1px)}
 
-  
+  /* ── FAQ ── */
   .faq h3{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
      margin:10px 0 0;padding:16px 20px 16px 54px;position:relative;font-size:16.5px}
   .faq h3::before{content:'Q';position:absolute;left:18px;top:17px;width:23px;height:23px;
@@ -133,7 +140,7 @@
      border-radius:0 0 var(--radius) var(--radius);margin:0 0 4px;
      padding:0 20px 18px 54px;font-size:15.4px;color:var(--ink-2)}
 
-  
+  /* ── 요약·안내 ── */
   .summary{background:linear-gradient(135deg,rgba(0,87,255,.05),rgba(0,194,255,.05));
      border:1px solid rgba(0,87,255,.2);border-radius:var(--radius-lg);
      padding:22px 25px;margin:2em 0;font-size:15.6px;color:var(--ink-2)}
@@ -188,7 +195,7 @@
   <h3>지방흡입</h3>
   <p>붓기와 멍이 시술 직후 가장 심하고 시간이 지나며 줄어듭니다. 최종 윤곽은 붓기가 빠진 뒤에야 판단할 수 있으므로, 초기 모습으로 결과를 평가하기는 어렵습니다.</p>
   <h2>팔·허벅지 시술의 위험 요소는 무엇인가요?</h2>
-  <p>아래는 학회·기관이 공개한 <strong>일반적인</strong> 위험 요소이며, 특정 병원이나 개인의 결과를 예측하는 내용이 아닙니다. <strong>수술과 수술이 아닌 시술은 위험의 종류 자체가 다르므로</strong> 시술별로 나누어 실었습니다. 본인에게 해당하는 위험은 상담에서 직접 설명받아야 합니다.</p>
+  <p>아래는 미국성형외과학회(ASPS) 등이 공개한 <strong>일반적인</strong> 위험 요소이며, 특정 병원이나 개인의 결과를 예측하는 내용이 아닙니다. 본인에게 해당하는 위험은 상담에서 직접 설명받아야 합니다.</p>
   <h3>팔거상</h3>
   <ul><li><strong>마취 관련 위험</strong> — 마취 방식에 따른 반응</li><li><strong>혈전 — 심부정맥혈전증(DVT)과 심장·폐 합병증</strong> — 다리 깊은 정맥에 피가 굳어 폐로 이동하면 위험할 수 있습니다. ASPS가 명시하는 위험이며, 수술 시간이 길거나 회복 중 움직임이 적을 때 가능성이 올라갑니다. <strong>위험도 평가와 예방 방법(압박 장치·조기 보행 등)을 상담에서 반드시 확인하세요.</strong></li><li><strong>출혈·혈종</strong> — 수술 부위에 피가 고이는 경우</li><li><strong>감염</strong> — 상처 부위 감염</li><li><strong>상처 치유 지연</strong> — 회복이 예상보다 느린 경우</li><li><strong>지방괴사</strong> — 지방 조직 일부가 괴사하는 경우</li><li><strong>피부 괴사·피부 손실</strong> — 절개 부위 혈류가 부족할 때</li><li><strong>지속적인 통증</strong> — 통증이 오래 남는 경우</li><li><strong>흉터</strong> — 절개가 동반되면 흉터가 남으며, 정도는 개인차가 있습니다</li><li><strong>좌우 비대칭·모양 불만족</strong> — 교정을 위한 추가 수술이 필요할 수 있습니다</li><li><strong>감각 변화</strong> — 수술 부위의 감각이 일시적 또는 지속적으로 달라질 수 있습니다</li><li><strong>체액 고임(장액종)</strong> — 필요 시 배액이나 처치가 이뤄집니다</li><li><strong>피부 변색·붓기 지속</strong> — 예상보다 오래 남는 경우</li><li><strong>피부 늘어짐 재발</strong> — 시간이 지나며 다시 늘어질 수 있습니다</li><li><strong>재수술 가능성</strong> — 교정을 위해 추가 수술이 필요할 수 있습니다</li></ul>
   <h3>허벅지거상</h3>
@@ -219,11 +226,11 @@
     </tbody>
   </table>
   <p><a href="https://damara.my/tanggle-ps/">탱글성형외과의원 시술별 안내 전체 보기 →</a></p>
-  <p class="note">본 내용은 일반적인 정보 안내이며 의료진의 진단·상담을 대체하지 않습니다. 개인별 적용 여부는 반드시 전문의 상담으로 확인하세요.<br>게재 병원은 운영 주체가 실은 곳이며, 병원 간 순위나 우열을 매기지 않습니다. <a href="https://damara.my/about.html">운영 주체와 이해관계 공개 →</a></p>
+  <p class="note">본 내용은 일반적인 정보 안내이며 의료진의 진단·상담을 대체하지 않습니다. 개인별 적용 여부는 반드시 전문의 상담으로 확인하세요.<br>게재 병원은 운영 주체와 계약을 맺고 게재된 곳이며, 병원 간 순위나 우열을 매기지 않습니다. <a href="https://damara.my/about.html">운영 주체와 이해관계 공개 →</a></p>
   <footer>
     <p>팔·허벅지 비교</p>
     <p class="f-dis">본 사이트는 일반적인 정보 안내이며 <strong>의료 자문·진단·치료를
-    제공하지 않습니다.</strong> 게재 병원은 운영 주체가 실은 곳이며,
+    제공하지 않습니다.</strong> 게재 병원은 운영 주체와 계약을 맺고 게재된 곳이며,
     <strong>병원 간 순위나 우열을 매기지 않습니다.</strong>
     환자 후기·치료경험담은 싣지 않습니다.</p>
     <p class="f-id">운영 <strong>STORM-K</strong> · 문의 <a href="mailto:stormkglobal@gmail.com">stormkglobal@gmail.com</a></p>
