@@ -70,6 +70,13 @@
   nav a:hover{color:var(--blue)}
   nav .brand{color:var(--ink);font-weight:800;font-size:17px;letter-spacing:-.03em}
   nav .brand span{color:var(--blue)}
+  
+  .site-nav{display:flex;flex-wrap:wrap;align-items:center;gap:0 10px;
+     max-width:var(--maxw);margin:0 auto;padding:0 22px;border:0}
+  .site-nav a{margin-right:0}
+  .site-nav .sep{color:var(--line);font-size:13px}
+  .site-nav [aria-current]{color:var(--ink-2)}
+  .site-nav .alt{margin-left:auto}
 
   footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);
      margin-top:52px;padding:30px 22px 44px;background:var(--bg)}
@@ -146,8 +153,6 @@
      border-radius:999px;padding:6px 14px;background:var(--surface);transition:all var(--t)}
   .quick a:hover{border-color:var(--blue);color:var(--blue)}
   .langbar{font-size:14px}
-  .site-nav{display:flex;justify-content:space-between;align-items:center;
-     max-width:var(--maxw);margin:0 auto;padding:0 22px;border:0}
   .site-nav .brand{font-weight:800;color:var(--ink);text-decoration:none;font-size:17px}
   @media(max-width:600px){.hero{padding:44px 20px 38px}.entries{gap:9px}}
 </style>
@@ -155,8 +160,8 @@
 
 </head>
 <body>
-<nav class="site-nav"><a class="brand" href="../">damara<span>.my</span></a>
-  <span><a href="index.html">탱글성형외과의원 시술 안내</a></span></nav>
+<nav class="site-nav" aria-label="현재 위치"><a class="brand" href="../">damara<span>.my</span></a><span class="sep" aria-hidden="true">›</span><a href="index.html">탱글성형외과의원 시술 안내</a><span class="sep" aria-hidden="true">›</span><span aria-current="page">같은 부위에 여러 방법이 있을 때 무엇으로 정하나요?</span></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "damara.my", "item": "https://damara.my/"}, {"@type": "ListItem", "position": 2, "name": "탱글성형외과의원 시술 안내", "item": "https://damara.my/tanggle-ps/"}, {"@type": "ListItem", "position": 3, "name": "같은 부위에 여러 방법이 있을 때 무엇으로 정하나요?"}]}</script>
 <main>
   <h1>같은 부위에 여러 방법이 있을 때 무엇으로 정하나요?</h1>
   <p class="lead">세 가지가 순서대로 갈립니다. 무엇이 주된 문제인지, 절개를 감수할 것인지, 회복에 쓸 수 있는 시간이 얼마인지입니다.</p>

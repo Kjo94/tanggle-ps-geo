@@ -70,6 +70,13 @@
   nav a:hover{color:var(--blue)}
   nav .brand{color:var(--ink);font-weight:800;font-size:17px;letter-spacing:-.03em}
   nav .brand span{color:var(--blue)}
+  
+  .site-nav{display:flex;flex-wrap:wrap;align-items:center;gap:0 10px;
+     max-width:var(--maxw);margin:0 auto;padding:0 22px;border:0}
+  .site-nav a{margin-right:0}
+  .site-nav .sep{color:var(--line);font-size:13px}
+  .site-nav [aria-current]{color:var(--ink-2)}
+  .site-nav .alt{margin-left:auto}
 
   footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);
      margin-top:52px;padding:30px 22px 44px;background:var(--bg)}
@@ -146,8 +153,6 @@
      border-radius:999px;padding:6px 14px;background:var(--surface);transition:all var(--t)}
   .quick a:hover{border-color:var(--blue);color:var(--blue)}
   .langbar{font-size:14px}
-  .site-nav{display:flex;justify-content:space-between;align-items:center;
-     max-width:var(--maxw);margin:0 auto;padding:0 22px;border:0}
   .site-nav .brand{font-weight:800;color:var(--ink);text-decoration:none;font-size:17px}
   @media(max-width:600px){.hero{padding:44px 20px 38px}.entries{gap:9px}}
 </style>
@@ -155,8 +160,8 @@
 
 </head>
 <body>
-<nav class="site-nav"><a class="brand" href="../">damara<span>.my</span></a>
-  <span><a href="index.html">탱글성형외과의원 시술 안내</a></span></nav>
+<nav class="site-nav" aria-label="현재 위치"><a class="brand" href="../">damara<span>.my</span></a><span class="sep" aria-hidden="true">›</span><a href="index.html">탱글성형외과의원 시술 안내</a><span class="sep" aria-hidden="true">›</span><span aria-current="page">수술 결과나 비용으로 분쟁이 생기면 어디에 도움을 청하나요?</span></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "damara.my", "item": "https://damara.my/"}, {"@type": "ListItem", "position": 2, "name": "탱글성형외과의원 시술 안내", "item": "https://damara.my/tanggle-ps/"}, {"@type": "ListItem", "position": 3, "name": "수술 결과나 비용으로 분쟁이 생기면 어디에 도움을 청하나요?"}]}</script>
 <main>
   <h1>수술 결과나 비용으로 분쟁이 생기면 어디에 도움을 청하나요?</h1>
   <p class="lead">의료행위와 관련된 분쟁은 한국의료분쟁조정중재원에서 조정·중재 절차를 안내받을 수 있고, 비용이나 환불 같은 소비자 문제는 한국소비자원에서 상담과 분쟁 조정을 받을 수 있습니다.</p>
@@ -218,6 +223,7 @@
   <p>본 페이지의 일반 정보는 아래 기관 자료를 참고해 작성했습니다.
   구체적인 적용은 진료 기관에서 확인하시기 바랍니다.</p>
   <ul>
+      <li><a href="https://www.k-medi.or.kr/" rel="nofollow noopener" target="_blank">한국의료분쟁조정중재원</a></li>
       <li><a href="https://www.kca.go.kr/" rel="nofollow noopener" target="_blank">한국소비자원</a></li>
   </ul>
   <p class="disclaimer">본 콘텐츠는 일반적인 정보 안내이며 의료진의 진단·상담을
