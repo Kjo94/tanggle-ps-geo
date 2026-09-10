@@ -74,6 +74,17 @@
      color:var(--muted);padding-bottom:8px}
   table.stats td.q{color:var(--muted);font-size:.86em;line-height:1.55}
 
+  /* 목차 — ⚠️ 아래 nav 규칙이 sticky 라, 별도로 풀지 않으면 목차가 화면에 붙는다 */
+  nav.toc{position:static;z-index:auto;background:var(--bg);backdrop-filter:none;
+     border:1px solid var(--line);border-radius:var(--radius);
+     padding:18px 22px;margin:26px 0;font-size:15px}
+  nav.toc .toc-h{margin:0 0 10px;font-weight:700;color:var(--ink);font-size:.95em}
+  nav.toc ol{margin:0;padding-left:1.25em;color:var(--muted)}
+  nav.toc li{margin:6px 0;line-height:1.5}
+  nav.toc a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent}
+  nav.toc a:hover{border-bottom-color:var(--blue)}
+  h2[id]{scroll-margin-top:72px}   /* 상단 바에 제목이 가리지 않게 */
+
   /* 상단 바 */
   nav{position:sticky;top:0;z-index:20;font-size:14.5px;padding:14px 22px;
      background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(12px);
@@ -190,7 +201,7 @@
   @media(max-width:600px){.entries{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "지방을 줄이는 것과 피부를 절제하는 것은 어떻게 다른가요?", "acceptedAnswer": {"@type": "Answer", "text": "지방흡입은 피하지방을 흡입해 둘레를 줄이는 시술이고, 거상 수술은 늘어진 피부 자체를 절제해 라인을 잡는 수술입니다. 다루는 대상이 다릅니다."}}, {"@type": "Question", "name": "둘 중 하나만 고르는 건가요?", "acceptedAnswer": {"@type": "Answer", "text": "둘 다 해당하는 경우가 있고, 그때는 함께 하거나 순서를 두고 하기도 합니다. 무엇이 주된 문제인지에 따라 시작점이 정해집니다."}}, {"@type": "Question", "name": "부위가 다르면 방법도 다른가요?", "acceptedAnswer": {"@type": "Answer", "text": "부위가 달라도 갈림은 같습니다. 배·팔·허벅지 모두 지방을 줄이는 쪽과 피부를 절제하는 쪽이 나란히 있고, 어느 쪽인지는 부위가 아니라 본인의 상태가 정합니다. 다만 절개 위치와 회복 중 제한되는 동작은 부위마다 다릅니다."}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "지방을 줄이는 것과 피부를 절제하는 것은 어떻게 다른가요?", "inLanguage": "ko", "url": "https://damara.my/지방과-피부.html", "publisher": {"@type": "Organization", "name": "STORM-K"}, "author": {"@type": "Organization", "name": "STORM-K"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "지방을 줄이는 것과 피부를 절제하는 것은 어떻게 다른가요?", "inLanguage": "ko", "url": "https://damara.my/지방과-피부.html", "publisher": {"@type": "Organization", "name": "STORM-K"}, "author": {"@type": "Organization", "name": "STORM-K"}, "dateModified": "2026-09-10"}</script>
 
 </head>
 <body>
@@ -198,6 +209,23 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "damara.my", "item": "https://damara.my/"}, {"@type": "ListItem", "position": 2, "name": "지방을 줄이는 것과 피부를 절제하는 것은 어떻게 다른가요?"}]}</script>
 <main>
   <h1>지방을 줄이는 것과 피부를 절제하는 것은 어떻게 다른가요?</h1>
+  <nav class="toc" aria-label="이 페이지의 목차">
+    <p class="toc-h">이 페이지에서 다루는 것</p>
+    <ol>
+    <li><a href="#표를-어떻게-읽나요">표를 어떻게 읽나요?</a></li>
+    <li><a href="#이-값이-뜻하지-않는-것">이 값이 뜻하지 않는 것</a></li>
+    <li><a href="#무엇이-이-차이를-만드나요">무엇이 이 차이를 만드나요?</a></li>
+    <li><a href="#다루는-대상이-다르다">다루는 대상이 다르다</a></li>
+    <li><a href="#부위가-달라도-갈림은-같다">부위가 달라도 갈림은 같다</a></li>
+    <li><a href="#두-가지를-함께-하는-경우">두 가지를 함께 하는 경우</a></li>
+    <li><a href="#상담에서-확인할-것">상담에서 확인할 것</a></li>
+    <li><a href="#본인-경우로-바꿔-묻는-법">본인 경우로 바꿔 묻는 법</a></li>
+    <li><a href="#자주-오해하는-것">자주 오해하는 것</a></li>
+    <li><a href="#이어서-보면-좋은-질문">이어서 보면 좋은 질문</a></li>
+    <li><a href="#정보-확인">정보 확인</a></li>
+    </ol>
+  </nav>
+
   <p class="lead">지방흡입은 피하지방을 흡입해 둘레를 줄이는 시술이고, 거상 수술은 늘어진 피부 자체를 절제해 라인을 잡는 수술입니다. 다루는 대상이 다릅니다.</p>
   <table class="stats">
     <caption>부위별로 같은 갈림이 반복된다</caption>
@@ -209,43 +237,43 @@
     <tr><th scope="row">가슴</th><td>지방이식으로 볼륨을 더함</td><td>가슴거상</td></tr>
     </tbody>
   </table>
-  <h2>표를 어떻게 읽나요?</h2>
+  <h2 id="표를-어떻게-읽나요">표를 어떻게 읽나요?</h2>
   <p>표를 가로로 읽으면 부위가 달라져도 같은 갈림이 반복되는 것이 보입니다. 배든 팔이든 허벅지든 &#x27;지방을 줄이는 쪽&#x27;과 &#x27;피부를 절제하는 쪽&#x27;이 나란히 있고, 어느 쪽인지는 부위가 아니라 본인의 상태가 정합니다.</p>
-  <h2>이 값이 뜻하지 않는 것</h2>
+  <h2 id="이-값이-뜻하지-않는-것">이 값이 뜻하지 않는 것</h2>
   <p>두 방법이 서로 대체하는 것은 아닙니다. 둘 다 해당하는 경우에는 함께 하거나 순서를 두고 하기도 합니다.</p>
-  <h2>무엇이 이 차이를 만드나요?</h2>
+  <h2 id="무엇이-이-차이를-만드나요">무엇이 이 차이를 만드나요?</h2>
   <ul>
     <li><strong>탄력이 남아 있는가</strong> — 탄력이 남아 있으면 지방만 줄여도 라인이 정리됩니다.</li>
     <li><strong>늘어진 양</strong> — 양이 많으면 절제가 검토됩니다.</li>
     <li><strong>흉터</strong> — 절제는 흉터가 남고 위치는 부위마다 다릅니다.</li>
   </ul>
-  <h2>다루는 대상이 다르다</h2>
+  <h2 id="다루는-대상이-다르다">다루는 대상이 다르다</h2>
   <p>지방흡입은 작은 절개를 통해 관을 넣어 피하지방을 흡입해 둘레를 줄입니다. 거상 수술은 늘어진 피부 자체를 절제해 라인을 잡습니다. 그래서 지방이 많고 탄력이 남아 있으면 지방흡입만으로 라인이 정리되지만, 피부가 늘어난 상태에서는 지방을 줄여도 늘어난 피부가 그대로 남습니다.</p>
-  <h2>부위가 달라도 갈림은 같다</h2>
+  <h2 id="부위가-달라도-갈림은-같다">부위가 달라도 갈림은 같다</h2>
   <p>배·팔·허벅지 모두 지방을 줄이는 쪽과 피부를 절제하는 쪽이 나란히 있고, 어느 쪽인지는 부위가 아니라 본인의 상태가 정합니다. 다만 절개 위치와 회복 중 제한되는 동작은 부위마다 다릅니다 — 팔은 팔을 들었을 때 보이는 정도가, 허벅지는 걷는 동안 닿는 부위가 함께 고려됩니다.</p>
-  <h2>두 가지를 함께 하는 경우</h2>
+  <h2 id="두-가지를-함께-하는-경우">두 가지를 함께 하는 경우</h2>
   <p>둘 다 해당하는 경우에는 함께 하거나 순서를 두고 하기도 합니다. 함께 하면 한 번의 회복으로 끝나지만 수술 시간이 길어지고, 수술 시간이 길수록 혈전이 생길 가능성이 올라간다고 미국성형외과학회가 밝히고 있습니다. 한 번에 할 범위를 정하는 판단에 이 점이 함께 들어갑니다.</p>
-  <h2>상담에서 확인할 것</h2>
+  <h2 id="상담에서-확인할-것">상담에서 확인할 것</h2>
   <ul>
     <li>직접 확인한 뒤 어느 쪽에 해당하는지 듣는 것</li>
     <li>두 가지를 함께 하는 경우 순서와 범위</li>
   </ul>
-  <h2>본인 경우로 바꿔 묻는 법</h2>
+  <h2 id="본인-경우로-바꿔-묻는-법">본인 경우로 바꿔 묻는 법</h2>
   <p>위 표는 일반적인 범위이므로 본인에게 그대로 적용되지 않습니다. 상담에서는 이렇게 바꿔 물으면 본인 기준의 답을 받을 수 있습니다.</p>
   <blockquote><p>제 경우 어느 쪽인가요? 두 가지를 함께 한다면 순서와 범위는 어떻게 되나요?</p></blockquote>
-  <h2>자주 오해하는 것</h2>
+  <h2 id="자주-오해하는-것">자주 오해하는 것</h2>
   <h3>둘 중 하나만 고르는 건가요?</h3>
   <p>둘 다 해당하는 경우가 있고, 그때는 함께 하거나 순서를 두고 하기도 합니다. 무엇이 주된 문제인지에 따라 시작점이 정해집니다.</p>
   <h3>부위가 다르면 방법도 다른가요?</h3>
   <p>부위가 달라도 갈림은 같습니다. 배·팔·허벅지 모두 지방을 줄이는 쪽과 피부를 절제하는 쪽이 나란히 있고, 어느 쪽인지는 부위가 아니라 본인의 상태가 정합니다. 다만 절개 위치와 회복 중 제한되는 동작은 부위마다 다릅니다.</p>
-  <h2>이어서 보면 좋은 질문</h2>
+  <h2 id="이어서-보면-좋은-질문">이어서 보면 좋은 질문</h2>
   <ul>
     <li><a href="절개-없이.html">절개 없이 처진 피부를 해결할 수 있나요?</a></li>
     <li><a href="방법-정하기.html">같은 부위에 여러 방법이 있을 때 무엇으로 정하나요?</a></li>
     <li><a href="수술-비수술.html">수술과 비수술 시술은 무엇이 다른가요?</a></li>
   </ul>
   <section class="trust">
-  <h2>정보 확인</h2>
+  <h2 id="정보-확인">정보 확인</h2>
   <p>본 페이지의 병원 정보는 <strong></strong>의 공식 홈페이지에 공개된 값을
   옮긴 것입니다. <strong>출처 확인일 확인 전</strong> · <strong>페이지 갱신일 2026-09-10</strong>
   — 두 날짜는 다릅니다. 출처 확인일은 병원 홈페이지에서 그 값을 확인한 날이고,

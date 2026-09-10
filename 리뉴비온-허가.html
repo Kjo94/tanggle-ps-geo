@@ -74,6 +74,17 @@
      color:var(--muted);padding-bottom:8px}
   table.stats td.q{color:var(--muted);font-size:.86em;line-height:1.55}
 
+  /* 목차 — ⚠️ 아래 nav 규칙이 sticky 라, 별도로 풀지 않으면 목차가 화면에 붙는다 */
+  nav.toc{position:static;z-index:auto;background:var(--bg);backdrop-filter:none;
+     border:1px solid var(--line);border-radius:var(--radius);
+     padding:18px 22px;margin:26px 0;font-size:15px}
+  nav.toc .toc-h{margin:0 0 10px;font-weight:700;color:var(--ink);font-size:.95em}
+  nav.toc ol{margin:0;padding-left:1.25em;color:var(--muted)}
+  nav.toc li{margin:6px 0;line-height:1.5}
+  nav.toc a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent}
+  nav.toc a:hover{border-bottom-color:var(--blue)}
+  h2[id]{scroll-margin-top:72px}   /* 상단 바에 제목이 가리지 않게 */
+
   /* 상단 바 */
   nav{position:sticky;top:0;z-index:20;font-size:14.5px;padding:14px 22px;
      background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(12px);
@@ -190,7 +201,7 @@
   @media(max-width:600px){.entries{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "리뉴비온은 무엇에 허가받은 장비인가요?", "acceptedAnswer": {"@type": "Answer", "text": "리뉴비온은 헬륨 플라즈마와 고주파를 함께 쓰는 장비의 상품명입니다. 미국 FDA의 510(k) 허가는 핸드피스와 사용 목적별로 따로 내려져 있습니다."}}, {"@type": "Question", "name": "리뉴비온은 FDA 승인을 받은 장비 아닌가요?", "acceptedAnswer": {"@type": "Answer", "text": "허가는 받았지만 핸드피스와 사용 목적별로 따로 내려져 있습니다. 주름 목적(K211652), 목과 턱밑(K220970), 지방흡입 후 연부조직 응고(K230272)가 각각 다른 허가이며, 하나가 다른 목적까지 덮지 않습니다."}}, {"@type": "Question", "name": "한국인에게도 같은 허가가 적용되나요?", "acceptedAnswer": {"@type": "Answer", "text": "주름 목적의 허가에는 피츠패트릭 I·II·III형이라는 피부 유형 조건이 붙어 있습니다. 한국인은 대체로 III~IV형에 해당해 그 목적의 허가 범위 밖일 수 있습니다. 또한 미국 FDA 허가와 국내 식약처 허가는 서로 다른 절차입니다."}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "리뉴비온은 무엇에 허가받은 장비인가요?", "inLanguage": "ko", "url": "https://damara.my/리뉴비온-허가.html", "publisher": {"@type": "Organization", "name": "STORM-K"}, "author": {"@type": "Organization", "name": "STORM-K"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "리뉴비온은 무엇에 허가받은 장비인가요?", "inLanguage": "ko", "url": "https://damara.my/리뉴비온-허가.html", "publisher": {"@type": "Organization", "name": "STORM-K"}, "author": {"@type": "Organization", "name": "STORM-K"}, "dateModified": "2026-09-10"}</script>
 
 </head>
 <body>
@@ -198,6 +209,24 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "damara.my", "item": "https://damara.my/"}, {"@type": "ListItem", "position": 2, "name": "리뉴비온은 무엇에 허가받은 장비인가요?"}]}</script>
 <main>
   <h1>리뉴비온은 무엇에 허가받은 장비인가요?</h1>
+  <nav class="toc" aria-label="이 페이지의 목차">
+    <p class="toc-h">이 페이지에서 다루는 것</p>
+    <ol>
+    <li><a href="#표를-어떻게-읽나요">표를 어떻게 읽나요?</a></li>
+    <li><a href="#이-값이-뜻하지-않는-것">이 값이 뜻하지 않는 것</a></li>
+    <li><a href="#무엇이-이-차이를-만드나요">무엇이 이 차이를 만드나요?</a></li>
+    <li><a href="#세-허가는-서로-다른-것이다">세 허가는 서로 다른 것이다</a></li>
+    <li><a href="#주름-목적에는-피부-유형-조건이-붙어-있다">주름 목적에는 피부 유형 조건이 붙어 있다</a></li>
+    <li><a href="#안전정보와-국내-허가는-따로-본다">안전정보와 국내 허가는 따로 본다</a></li>
+    <li><a href="#상담에서-확인할-것">상담에서 확인할 것</a></li>
+    <li><a href="#본인-경우로-바꿔-묻는-법">본인 경우로 바꿔 묻는 법</a></li>
+    <li><a href="#자주-오해하는-것">자주 오해하는 것</a></li>
+    <li><a href="#이어서-보면-좋은-질문">이어서 보면 좋은 질문</a></li>
+    <li><a href="#정보-확인">정보 확인</a></li>
+    <li><a href="#참고-자료">참고 자료</a></li>
+    </ol>
+  </nav>
+
   <p class="lead">리뉴비온은 헬륨 플라즈마와 고주파(전류로 피부 속에 열을 만드는 방식)를 함께 쓰는 장비의 상품명입니다. 미국 FDA의 510(k)(이미 허가된 기기와 같은 수준임을 미국 FDA에 신고해 확인받는 절차) 허가는 핸드피스와 사용 목적별로 따로 내려져 있습니다.</p>
   <table class="stats">
     <caption>미국 FDA 510(k) 허가 내역</caption>
@@ -209,43 +238,43 @@
     </tbody>
   </table>
   <p class="note">미국 FDA는 2022년 3월에 리뉴비온 관련 안전정보를 처음 알렸고 2023년 5월 10일에 갱신했습니다.</p>
-  <h2>표를 어떻게 읽나요?</h2>
+  <h2 id="표를-어떻게-읽나요">표를 어떻게 읽나요?</h2>
   <p>세 허가는 서로 다른 핸드피스에 대한 것이고 목적도 다릅니다. 그래서 &#x27;리뉴비온 허가&#x27;라고 뭉뚱그리면 실제로 무엇이 허가된 것인지가 사라집니다. K번호는 미국 FDA 데이터베이스에서 그대로 조회할 수 있습니다.</p>
-  <h2>이 값이 뜻하지 않는 것</h2>
+  <h2 id="이-값이-뜻하지-않는-것">이 값이 뜻하지 않는 것</h2>
   <p>주름 목적의 허가에는 피부 유형 조건이 붙어 있습니다. 한국인은 대체로 피츠패트릭 III~IV형에 해당해, 그 목적의 허가 범위 밖일 수 있습니다.</p>
-  <h2>무엇이 이 차이를 만드나요?</h2>
+  <h2 id="무엇이-이-차이를-만드나요">무엇이 이 차이를 만드나요?</h2>
   <ul>
     <li><strong>피부 유형 제한</strong> — 주름 목적의 허가는 피츠패트릭 I~III형으로 한정돼 있습니다. 한국인은 대체로 III~IV형에 해당해 허가 범위 밖일 수 있습니다.</li>
     <li><strong>핸드피스가 다르다</strong> — 세 허가는 서로 다른 핸드피스에 대한 것입니다.</li>
     <li><strong>병행 여부</strong> — 지방흡입 후 목적의 허가는 지방흡입과 함께 받는 것을 전제로 합니다.</li>
   </ul>
-  <h2>세 허가는 서로 다른 것이다</h2>
+  <h2 id="세-허가는-서로-다른-것이다">세 허가는 서로 다른 것이다</h2>
   <p>미국 FDA의 510(k)는 핸드피스와 사용 목적별로 따로 내려집니다. K211652는 주름에 대한 것이고, K220970은 목과 턱밑의 늘어진 피부에 대한 것이며, K230272는 지방흡입 후 피하 연부조직 응고에 대한 것입니다. 하나가 다른 목적까지 덮지 않으므로, 무엇에 대한 허가인지를 함께 말해야 뜻이 정확해집니다.</p>
-  <h2>주름 목적에는 피부 유형 조건이 붙어 있다</h2>
+  <h2 id="주름-목적에는-피부-유형-조건이-붙어-있다">주름 목적에는 피부 유형 조건이 붙어 있다</h2>
   <p>K211652의 허가 내용에는 피츠패트릭 I·II·III형이라는 조건이 적혀 있습니다. 한국인은 대체로 III~IV형에 해당해, 그 목적의 허가 범위 밖일 수 있습니다. 이 구분을 빼고 &#x27;FDA 허가 장비&#x27;라고만 하면 실제 허가 범위와 다르게 읽힙니다. 어떤 목적으로 쓰는지를 상담에서 먼저 확인해야 하는 이유입니다.</p>
-  <h2>안전정보와 국내 허가는 따로 본다</h2>
+  <h2 id="안전정보와-국내-허가는-따로-본다">안전정보와 국내 허가는 따로 본다</h2>
   <p>미국 FDA는 2022년 3월에 리뉴비온 관련 안전정보를 처음 알렸고 2023년 5월 10일에 갱신했습니다. 허가와 안전정보는 별개의 문서이므로 둘 다 확인 대상입니다. 또한 미국 FDA 허가가 국내 사용 허가를 뜻하지는 않습니다 — 국내에서는 식품의약품안전처의 별도 허가 절차가 있습니다.</p>
-  <h2>상담에서 확인할 것</h2>
+  <h2 id="상담에서-확인할-것">상담에서 확인할 것</h2>
   <ul>
     <li>어떤 목적으로 쓰는지, 위 세 가지 중 무엇에 해당하는지</li>
     <li>단독으로 받는지 다른 시술과 함께 받는지</li>
   </ul>
-  <h2>본인 경우로 바꿔 묻는 법</h2>
+  <h2 id="본인-경우로-바꿔-묻는-법">본인 경우로 바꿔 묻는 법</h2>
   <p>위 표는 일반적인 범위이므로 본인에게 그대로 적용되지 않습니다. 상담에서는 이렇게 바꿔 물으면 본인 기준의 답을 받을 수 있습니다.</p>
   <blockquote><p>어떤 목적으로 쓰시나요? 세 가지 허가 중 무엇에 해당하나요? 국내 허가는 어떻게 되나요?</p></blockquote>
-  <h2>자주 오해하는 것</h2>
+  <h2 id="자주-오해하는-것">자주 오해하는 것</h2>
   <h3>리뉴비온은 FDA 승인을 받은 장비 아닌가요?</h3>
   <p>허가는 받았지만 핸드피스와 사용 목적별로 따로 내려져 있습니다. 주름 목적(K211652), 목과 턱밑(K220970), 지방흡입 후 연부조직 응고(K230272)가 각각 다른 허가이며, 하나가 다른 목적까지 덮지 않습니다.</p>
   <h3>한국인에게도 같은 허가가 적용되나요?</h3>
   <p>주름 목적의 허가에는 피츠패트릭 I·II·III형이라는 피부 유형 조건이 붙어 있습니다. 한국인은 대체로 III~IV형에 해당해 그 목적의 허가 범위 밖일 수 있습니다. 또한 미국 FDA 허가와 국내 식약처 허가는 서로 다른 절차입니다.</p>
-  <h2>이어서 보면 좋은 질문</h2>
+  <h2 id="이어서-보면-좋은-질문">이어서 보면 좋은 질문</h2>
   <ul>
     <li><a href="fda-승인이란.html">&#x27;FDA 승인&#x27;이라는 말은 무엇을 뜻하나요?</a></li>
     <li><a href="수술-비수술.html">수술과 비수술 시술은 무엇이 다른가요?</a></li>
     <li><a href="안전한-병원.html">안전한 병원인지 무엇으로 확인하나요?</a></li>
   </ul>
   <section class="trust">
-  <h2>정보 확인</h2>
+  <h2 id="정보-확인">정보 확인</h2>
   <p>본 페이지의 병원 정보는 <strong></strong>의 공식 홈페이지에 공개된 값을
   옮긴 것입니다. <strong>출처 확인일 확인 전</strong> · <strong>페이지 갱신일 2026-09-10</strong>
   — 두 날짜는 다릅니다. 출처 확인일은 병원 홈페이지에서 그 값을 확인한 날이고,
@@ -254,7 +283,7 @@
       <li>병원 공식 홈페이지</li>
   </ul>
 
-  <h2>참고 자료</h2>
+  <h2 id="참고-자료">참고 자료</h2>
   <p>본 페이지의 일반 정보는 아래 기관 자료를 참고해 작성했습니다.
   구체적인 적용은 진료 기관에서 확인하시기 바랍니다.</p>
   <ul>

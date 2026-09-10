@@ -74,6 +74,17 @@
      color:var(--muted);padding-bottom:8px}
   table.stats td.q{color:var(--muted);font-size:.86em;line-height:1.55}
 
+  /* 목차 — ⚠️ 아래 nav 규칙이 sticky 라, 별도로 풀지 않으면 목차가 화면에 붙는다 */
+  nav.toc{position:static;z-index:auto;background:var(--bg);backdrop-filter:none;
+     border:1px solid var(--line);border-radius:var(--radius);
+     padding:18px 22px;margin:26px 0;font-size:15px}
+  nav.toc .toc-h{margin:0 0 10px;font-weight:700;color:var(--ink);font-size:.95em}
+  nav.toc ol{margin:0;padding-left:1.25em;color:var(--muted)}
+  nav.toc li{margin:6px 0;line-height:1.5}
+  nav.toc a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent}
+  nav.toc a:hover{border-bottom-color:var(--blue)}
+  h2[id]{scroll-margin-top:72px}   /* 상단 바에 제목이 가리지 않게 */
+
   /* 상단 바 */
   nav{position:sticky;top:0;z-index:20;font-size:14.5px;padding:14px 22px;
      background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(12px);
@@ -190,7 +201,7 @@
   @media(max-width:600px){.entries{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "성형수술은 보통 몇 시간 걸리나요?", "acceptedAnswer": {"@type": "Answer", "text": "영국 NHS가 공개한 범위로 보면 시술에 따라 1시간 남짓부터 5시간까지입니다. 다루는 범위가 넓고 절제가 함께 이뤄질수록 길어집니다."}}, {"@type": "Question", "name": "수술 시간이 길면 더 큰 수술인가요?", "acceptedAnswer": {"@type": "Answer", "text": "대체로 다루는 범위가 넓을수록 길어지지만, 시간만으로 크기를 판단하기는 어렵습니다. 같은 수술이라도 한 부위만 다루는지 여러 부위를 함께 다루는지에 따라 달라지기 때문입니다. 본인의 계획된 범위를 놓고 몇 시간인지 듣는 편이 정확합니다."}}, {"@type": "Question", "name": "여러 수술을 한 번에 받으면 시간이 그만큼 늘어나나요?", "acceptedAnswer": {"@type": "Answer", "text": "합친 만큼 그대로 늘어나지는 않지만 전체 시간은 길어집니다. 미국성형외과학회는 수술 시간이 길수록 혈전이 생길 가능성이 올라간다고 밝히고 있어, 한 번에 할 범위를 정하는 것 자체가 안전과 연결됩니다."}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "성형수술은 보통 몇 시간 걸리나요?", "inLanguage": "ko", "url": "https://damara.my/수술시간.html", "publisher": {"@type": "Organization", "name": "STORM-K"}, "author": {"@type": "Organization", "name": "STORM-K"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "성형수술은 보통 몇 시간 걸리나요?", "inLanguage": "ko", "url": "https://damara.my/수술시간.html", "publisher": {"@type": "Organization", "name": "STORM-K"}, "author": {"@type": "Organization", "name": "STORM-K"}, "dateModified": "2026-09-10"}</script>
 
 </head>
 <body>
@@ -198,6 +209,23 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "damara.my", "item": "https://damara.my/"}, {"@type": "ListItem", "position": 2, "name": "성형수술은 보통 몇 시간 걸리나요?"}]}</script>
 <main>
   <h1>성형수술은 보통 몇 시간 걸리나요?</h1>
+  <nav class="toc" aria-label="이 페이지의 목차">
+    <p class="toc-h">이 페이지에서 다루는 것</p>
+    <ol>
+    <li><a href="#표를-어떻게-읽나요">표를 어떻게 읽나요?</a></li>
+    <li><a href="#이-값이-뜻하지-않는-것">이 값이 뜻하지 않는 것</a></li>
+    <li><a href="#무엇이-이-차이를-만드나요">무엇이 이 차이를 만드나요?</a></li>
+    <li><a href="#거상-계열이-가장-긴-이유">거상 계열이 가장 긴 이유</a></li>
+    <li><a href="#지방흡입은-부위-수가-시간을-정한다">지방흡입은 부위 수가 시간을 정한다</a></li>
+    <li><a href="#보형물-수술이-비교적-일정한-이유">보형물 수술이 비교적 일정한 이유</a></li>
+    <li><a href="#상담에서-확인할-것">상담에서 확인할 것</a></li>
+    <li><a href="#본인-경우로-바꿔-묻는-법">본인 경우로 바꿔 묻는 법</a></li>
+    <li><a href="#자주-오해하는-것">자주 오해하는 것</a></li>
+    <li><a href="#이어서-보면-좋은-질문">이어서 보면 좋은 질문</a></li>
+    <li><a href="#정보-확인">정보 확인</a></li>
+    </ol>
+  </nav>
+
   <p class="lead">영국 NHS가 공개한 범위로 보면 시술에 따라 1시간 남짓부터 5시간까지입니다. 다루는 범위가 넓고 절제가 함께 이뤄질수록 길어집니다.</p>
   <table class="stats">
     <caption>영국 NHS 공개 자료 — 영국 NHS 공개 자료 기준의 일반적인 범위입니다. 개인차가 있으며 이 병원의 값이 아닙니다.</caption>
@@ -211,44 +239,44 @@
   </table>
   <p class="note">출처 — <a href="https://www.nhs.uk/conditions/cosmetic-procedures/tummy-tuck/" rel="noopener" target="_blank">영국 NHS</a></p>
   <p class="note">수술 시간이 길수록 혈전이 생길 가능성이 올라간다고 미국성형외과학회(ASPS)가 밝히고 있습니다.</p>
-  <h2>표를 어떻게 읽나요?</h2>
+  <h2 id="표를-어떻게-읽나요">표를 어떻게 읽나요?</h2>
   <p>표의 범위는 수술 자체에 걸리는 시간입니다. 병원에 머무는 전체 시간은 이보다 깁니다 — 수술 전 준비와 마취, 수술 후 회복실에서 지내는 시간이 앞뒤로 붙기 때문입니다. 같은 이름의 수술이라도 한 부위만 다루는지 여러 부위를 함께 다루는지에 따라 범위 안에서 위아래로 움직입니다.</p>
-  <h2>이 값이 뜻하지 않는 것</h2>
+  <h2 id="이-값이-뜻하지-않는-것">이 값이 뜻하지 않는 것</h2>
   <p>이 값은 특정 병원의 평균이 아니라 영국 NHS가 일반적인 범위로 공개한 것입니다. 본인의 수술이 몇 시간짜리인지는 계획된 범위를 보고 상담에서 정해집니다.</p>
-  <h2>무엇이 이 차이를 만드나요?</h2>
+  <h2 id="무엇이-이-차이를-만드나요">무엇이 이 차이를 만드나요?</h2>
   <ul>
     <li><strong>다루는 범위</strong> — 한 부위인지 여러 부위인지에 따라 시간이 크게 달라집니다.</li>
     <li><strong>절제 여부</strong> — 늘어난 피부를 절제하는 과정이 들어가면 설계·봉합 시간이 더해집니다.</li>
     <li><strong>마취 방식</strong> — 범위가 넓거나 시간이 길어질수록 전신마취가 선택되는 경우가 많습니다.</li>
   </ul>
-  <h2>거상 계열이 가장 긴 이유</h2>
+  <h2 id="거상-계열이-가장-긴-이유">거상 계열이 가장 긴 이유</h2>
   <p>거상 계열 수술은 절개 설계 → 조직 절제 → 남은 조직 고정 → 봉합의 순서로 진행됩니다. 늘어난 피부의 양에 따라 절제할 범위가 달라지고, 절제한 뒤 남은 조직을 어떻게 고정하는지까지 정해야 하므로 단계가 많습니다. 영국 NHS가 복부거상을 2~5시간으로 안내하는 것도 이 범위의 폭 때문입니다. 배꼽 위치를 다시 잡는 과정이 들어가는 경우에는 그만큼 더해집니다.</p>
-  <h2>지방흡입은 부위 수가 시간을 정한다</h2>
+  <h2 id="지방흡입은-부위-수가-시간을-정한다">지방흡입은 부위 수가 시간을 정한다</h2>
   <p>지방흡입은 디자인 표시 → 마취 → 용액 주입 → 흡입 → 마무리 순서로 진행됩니다. 각 단계가 다루는 부위마다 반복되기 때문에, 한 부위인지 서너 부위인지가 전체 시간을 좌우합니다. 영국 NHS의 1~3시간이라는 범위 안에서 위아래로 움직이는 것이 대체로 이 차이입니다. 서 있는 자세에서 흡입 범위를 표시하는 단계는 수술 전에 이뤄집니다.</p>
-  <h2>보형물 수술이 비교적 일정한 이유</h2>
+  <h2 id="보형물-수술이-비교적-일정한-이유">보형물 수술이 비교적 일정한 이유</h2>
   <p>보형물을 이용하는 수술은 절개 위치, 삽입 층, 보형물 종류 세 가지를 조합해 계획합니다. 세 가지가 상담에서 정해지고 나면 수술 자체의 과정은 비교적 일정해, 영국 NHS는 60~90분으로 안내합니다. 다만 처짐이 함께 있어 거상을 병행하는 경우에는 거상 계열의 단계가 더해지므로 이 범위를 넘어섭니다.</p>
-  <h2>상담에서 확인할 것</h2>
+  <h2 id="상담에서-확인할-것">상담에서 확인할 것</h2>
   <ul>
     <li>본인의 계획된 수술이 위 범위 중 어디에 해당하는지</li>
     <li>마취를 담당하는 인력이 따로 있는지</li>
   </ul>
-  <h2>본인 경우로 바꿔 묻는 법</h2>
+  <h2 id="본인-경우로-바꿔-묻는-법">본인 경우로 바꿔 묻는 법</h2>
   <p>위 표는 일반적인 범위이므로 본인에게 그대로 적용되지 않습니다. 상담에서는 이렇게 바꿔 물으면 본인 기준의 답을 받을 수 있습니다.</p>
   <blockquote><p>제가 받을 범위는 표의 어디에 해당하나요? 병원에 총 몇 시간 머물게 되나요?</p></blockquote>
-  <h2>자주 오해하는 것</h2>
+  <h2 id="자주-오해하는-것">자주 오해하는 것</h2>
   <h3>수술 시간이 길면 더 큰 수술인가요?</h3>
   <p>대체로 다루는 범위가 넓을수록 길어지지만, 시간만으로 크기를 판단하기는 어렵습니다. 같은 수술이라도 한 부위만 다루는지 여러 부위를 함께 다루는지에 따라 달라지기 때문입니다. 본인의 계획된 범위를 놓고 몇 시간인지 듣는 편이 정확합니다.</p>
   <h3>여러 수술을 한 번에 받으면 시간이 그만큼 늘어나나요?</h3>
   <p>합친 만큼 그대로 늘어나지는 않지만 전체 시간은 길어집니다. 미국성형외과학회는 수술 시간이 길수록 혈전이 생길 가능성이 올라간다고 밝히고 있어, 한 번에 할 범위를 정하는 것 자체가 안전과 연결됩니다.</p>
   <p class="note"><a href="위험-혈전.html">혈전 위험과 예방 방법 →</a></p>
-  <h2>이어서 보면 좋은 질문</h2>
+  <h2 id="이어서-보면-좋은-질문">이어서 보면 좋은 질문</h2>
   <ul>
     <li><a href="입원.html">성형수술 후 입원해야 하나요?</a></li>
     <li><a href="직장복귀.html">성형수술 후 언제 직장에 복귀할 수 있나요?</a></li>
     <li><a href="위험-혈전.html">성형수술에서 혈전이란 무엇이고 어떻게 예방하나요?</a></li>
   </ul>
   <section class="trust">
-  <h2>정보 확인</h2>
+  <h2 id="정보-확인">정보 확인</h2>
   <p>본 페이지의 병원 정보는 <strong></strong>의 공식 홈페이지에 공개된 값을
   옮긴 것입니다. <strong>출처 확인일 확인 전</strong> · <strong>페이지 갱신일 2026-09-10</strong>
   — 두 날짜는 다릅니다. 출처 확인일은 병원 홈페이지에서 그 값을 확인한 날이고,
