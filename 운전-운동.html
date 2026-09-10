@@ -180,6 +180,29 @@
   .site-nav .brand{font-weight:800;color:var(--ink);text-decoration:none;font-size:17px}
   @media(max-width:600px){.hero{padding:44px 20px 38px}.entries{gap:9px}}
 
+  /* ── 모바일 손질 (375px 실측으로 고친 것) ────────────────────────── */
+  @media(max-width:600px){
+    /* ⚠️ 상단 바가 두 줄로 접혀 55px 를 차지하고, 스크롤 중 본문 첫 줄을 덮었다.
+       패딩을 줄이고 글자를 키워 **한 줄에 가깝게** 만든다. */
+    nav{padding:8px 16px;font-size:14px}
+    nav .brand{font-size:16px}
+
+    /* ⚠️ 탭 타깃이 15~17px 이었다(권장 44px). 'English' 는 48×17px 로 손가락으로
+       누르기 어렵다. 글자 크기는 그대로 두고 **눌리는 영역만** 넓힌다. */
+    nav a, .site-nav a{display:inline-block;padding:11px 4px;margin-right:12px}
+    .site-nav .alt a{padding:11px 8px}
+
+    /* ⚠️ 기관 원문 인용이 3열 표 안에서 12.9px 로 줄었다. 표를 가로 스크롤로 두고
+       글자는 읽을 수 있는 크기를 지킨다 — 본문이 잘리는 것보다 낫다. */
+    table.stats{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    table.stats td, table.stats th{font-size:14px;padding:10px 12px;white-space:normal}
+    table.stats td.q{font-size:13.5px;min-width:15em}
+
+    /* 목차도 손가락 간격을 준다 */
+    nav.toc li{margin:10px 0}
+    nav.toc a{display:inline-block;padding:4px 0}
+  }
+
   /* ⚠️ 여기에는 hub.CSS/HOME_CSS에 **없는 것만** 둔다.
      예전에는 이 블록이 옛 청록 디자인을 그대로 갖고 있어서, 새 디자인의
      go 버튼(파란 배경 + 흰 글자)을 더 강한 선택자가 덮어써
@@ -197,7 +220,14 @@
   .topnav a{font-size:14.5px;color:var(--muted);text-decoration:none;margin-left:18px;
             transition:color var(--t)}
   .topnav a:hover{color:var(--blue)}
-  @media(max-width:560px){.topnav a{margin-left:11px;font-size:13px}}
+  /* ⚠️ 홈 상단 바가 모바일에서 105px(세 줄)이었고 링크 탭 타깃이 15px 였다.
+     ('EN' 은 17×15px.) 줄바꿈을 허용하되 **눌리는 영역**을 44px 가깝게 준다. */
+  @media(max-width:560px){
+    .topnav{padding:8px 14px}
+    .topnav a{margin-left:0;margin-right:14px;font-size:13.5px;
+       display:inline-block;padding:11px 2px}
+    .topnav .brand{padding:11px 0}
+  }
   @media(max-width:600px){.entries{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "성형수술 후 운전과 운동은 언제부터 할 수 있나요?", "acceptedAnswer": {"@type": "Answer", "text": "영국 NHS 기준으로 운전이 가장 이르고 무리한 활동이 가장 늦습니다. 가슴확대는 최소 1주 후 운전, 지방흡입은 무리한 활동을 10~12주 피하도록 안내됩니다."}}, {"@type": "Question", "name": "운전은 왜 다른 활동보다 이른가요?", "acceptedAnswer": {"@type": "Answer", "text": "운전은 팔과 상체의 제한된 동작이라 부담이 상대적으로 작기 때문입니다. 다만 안전벨트가 수술 부위에 닿거나 급한 조작이 필요한 상황을 감당할 수 있어야 하므로, 영국 NHS는 가슴확대의 경우 최소 1주 후로 안내합니다."}}, {"@type": "Question", "name": "가벼운 운동과 무리한 활동은 어떻게 구분하나요?", "acceptedAnswer": {"@type": "Answer", "text": "복압이 올라가거나 무거운 것을 드는 일이 무리한 활동에 해당합니다. 영국 NHS는 지방흡입 후 가벼운 운동을 3~4주 후, 무리한 활동은 10~12주 피하도록 안내합니다. 본인이 하는 운동이 어느 쪽인지를 바꿔 물어야 실제 일정이 나옵니다."}}]}</script>

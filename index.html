@@ -176,6 +176,26 @@
   @media(max-width:600px){.hero{padding:44px 20px 38px}.entries{gap:9px}}
 
   
+  @media(max-width:600px){
+    
+    nav{padding:8px 16px;font-size:14px}
+    nav .brand{font-size:16px}
+
+    
+    nav a, .site-nav a{display:inline-block;padding:11px 4px;margin-right:12px}
+    .site-nav .alt a{padding:11px 8px}
+
+    
+    table.stats{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    table.stats td, table.stats th{font-size:14px;padding:10px 12px;white-space:normal}
+    table.stats td.q{font-size:13.5px;min-width:15em}
+
+    
+    nav.toc li{margin:10px 0}
+    nav.toc a{display:inline-block;padding:4px 0}
+  }
+
+  
   .site-nav{display:flex;justify-content:space-between;align-items:center;
             max-width:var(--maxw);margin:0 auto;padding:0 22px}
   .topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);
@@ -188,7 +208,13 @@
   .topnav a{font-size:14.5px;color:var(--muted);text-decoration:none;margin-left:18px;
             transition:color var(--t)}
   .topnav a:hover{color:var(--blue)}
-  @media(max-width:560px){.topnav a{margin-left:11px;font-size:13px}}
+  
+  @media(max-width:560px){
+    .topnav{padding:8px 14px}
+    .topnav a{margin-left:0;margin-right:14px;font-size:13.5px;
+       display:inline-block;padding:11px 2px}
+    .topnav .brand{padding:11px 0}
+  }
   @media(max-width:600px){.entries{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "damara.my", "url": "https://damara.my/", "inLanguage": "ko", "description": "시술별 비용 기준·회복 경과·병원 선택 기준 안내"}</script>
