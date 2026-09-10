@@ -184,7 +184,7 @@
   @media(max-width:600px){
     /* ⚠️ 상단 바가 두 줄로 접혀 55px 를 차지하고, 스크롤 중 본문 첫 줄을 덮었다.
        패딩을 줄이고 글자를 키워 **한 줄에 가깝게** 만든다. */
-    nav{padding:8px 16px;font-size:14px}
+    nav{position:static;padding:8px 16px;font-size:14px}
     nav .brand{font-size:16px}
 
     /* ⚠️ 탭 타깃이 15~17px 이었다(권장 44px). 'English' 는 48×17px 로 손가락으로
@@ -223,7 +223,10 @@
   /* ⚠️ 홈 상단 바가 모바일에서 105px(세 줄)이었고 링크 탭 타깃이 15px 였다.
      ('EN' 은 17×15px.) 줄바꿈을 허용하되 **눌리는 영역**을 44px 가깝게 준다. */
   @media(max-width:560px){
-    .topnav{padding:8px 14px}
+    /* ⚠️ 탭 영역을 44px 로 키우니 바가 108px(세 줄)이 됐다. sticky 인 채로 두면
+       작은 화면의 13% 를 계속 먹고 스크롤 중 본문을 덮는다. 모바일에서는
+       **고정을 푼다** — 링크는 그대로 다 보이고, 위로 올리면 다시 나온다. */
+    .topnav{position:static;padding:8px 14px}
     .topnav a{margin-left:0;margin-right:14px;font-size:13.5px;
        display:inline-block;padding:11px 2px}
     .topnav .brand{padding:11px 0}
