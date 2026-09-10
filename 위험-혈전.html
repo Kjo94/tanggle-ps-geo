@@ -93,6 +93,28 @@
   nav a:hover{color:var(--blue)}
   nav .brand{color:var(--ink);font-weight:800;font-size:17px;letter-spacing:-.03em}
   nav .brand span{color:var(--blue)}
+  /* ── 모바일 손질 (375px 실측으로 고친 것) ────────────────────────── */
+  @media(max-width:600px){
+    /* ⚠️ 상단 바가 두 줄로 접혀 55px 를 차지하고, 스크롤 중 본문 첫 줄을 덮었다.
+       패딩을 줄이고 글자를 키워 **한 줄에 가깝게** 만든다. */
+    nav{position:static;padding:8px 16px;font-size:14px}
+    nav .brand{font-size:16px}
+
+    /* ⚠️ 탭 타깃이 15~17px 이었다(권장 44px). 'English' 는 48×17px 로 손가락으로
+       누르기 어렵다. 글자 크기는 그대로 두고 **눌리는 영역만** 넓힌다. */
+    nav a, .site-nav a{display:inline-block;padding:11px 4px;margin-right:12px}
+    .site-nav .alt a{padding:11px 8px}
+
+    /* ⚠️ 기관 원문 인용이 3열 표 안에서 12.9px 로 줄었다. 표를 가로 스크롤로 두고
+       글자는 읽을 수 있는 크기를 지킨다 — 본문이 잘리는 것보다 낫다. */
+    table.stats{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    table.stats td, table.stats th{font-size:14px;padding:10px 12px;white-space:normal}
+    table.stats td.q{font-size:13.5px;min-width:15em}
+
+    /* 목차도 손가락 간격을 준다 */
+    nav.toc li{margin:10px 0}
+    nav.toc a{display:inline-block;padding:4px 0}
+  }
   /* 현재 위치 — 모든 페이지가 같은 계층을 같은 모양으로 보여준다.
      ⚠️ HOME_CSS 에만 두면 시술 페이지(_css(CSS) 만 씀)에서 서식이 빠진다. */
   .site-nav{display:flex;flex-wrap:wrap;align-items:center;gap:0 10px;
@@ -180,28 +202,6 @@
   .site-nav .brand{font-weight:800;color:var(--ink);text-decoration:none;font-size:17px}
   @media(max-width:600px){.hero{padding:44px 20px 38px}.entries{gap:9px}}
 
-  /* ── 모바일 손질 (375px 실측으로 고친 것) ────────────────────────── */
-  @media(max-width:600px){
-    /* ⚠️ 상단 바가 두 줄로 접혀 55px 를 차지하고, 스크롤 중 본문 첫 줄을 덮었다.
-       패딩을 줄이고 글자를 키워 **한 줄에 가깝게** 만든다. */
-    nav{position:static;padding:8px 16px;font-size:14px}
-    nav .brand{font-size:16px}
-
-    /* ⚠️ 탭 타깃이 15~17px 이었다(권장 44px). 'English' 는 48×17px 로 손가락으로
-       누르기 어렵다. 글자 크기는 그대로 두고 **눌리는 영역만** 넓힌다. */
-    nav a, .site-nav a{display:inline-block;padding:11px 4px;margin-right:12px}
-    .site-nav .alt a{padding:11px 8px}
-
-    /* ⚠️ 기관 원문 인용이 3열 표 안에서 12.9px 로 줄었다. 표를 가로 스크롤로 두고
-       글자는 읽을 수 있는 크기를 지킨다 — 본문이 잘리는 것보다 낫다. */
-    table.stats{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
-    table.stats td, table.stats th{font-size:14px;padding:10px 12px;white-space:normal}
-    table.stats td.q{font-size:13.5px;min-width:15em}
-
-    /* 목차도 손가락 간격을 준다 */
-    nav.toc li{margin:10px 0}
-    nav.toc a{display:inline-block;padding:4px 0}
-  }
 
   /* ⚠️ 여기에는 hub.CSS/HOME_CSS에 **없는 것만** 둔다.
      예전에는 이 블록이 옛 청록 디자인을 그대로 갖고 있어서, 새 디자인의
