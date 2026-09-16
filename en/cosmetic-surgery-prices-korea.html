@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why do cosmetic surgery prices differ between clinics in Korea, and where can I check them? | damara.my</title>
+<meta name="description" content="Cosmetic procedures are non-covered services outside national health insurance, so each clinic sets its own prices. Clinics are required to post their…">
+<meta property="og:title" content="Why do cosmetic surgery prices differ between clinics in Korea, and where can I check them? | damara.my">
+<meta property="og:description" content="Cosmetic procedures are non-covered services outside national health insurance, so each clinic sets its own prices. Clinics are required to post their…">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="damara.my">
+<link rel="canonical" href="https://damara.my/en/cosmetic-surgery-prices-korea.html">
+<link rel="alternate" hreflang="ko" href="https://damara.my/비급여-가격공개.html">
+<link rel="alternate" hreflang="en" href="https://damara.my/en/cosmetic-surgery-prices-korea.html">
+<style>
+  /* ── 디자인 토큰 ──
+     STORM-K 홈페이지에서 가져온 색·간격 체계.
+     ⚠️ **외부 폰트를 쓰지 않는다.** damara.my는 지금 외부 요청이 0개다.
+        인용이 목적인 사이트에 CDN 의존을 더하는 것은 이득보다 위험이 크다
+        (OpenAI도 "호스트·CDN이 우리 IP를 막으면 인용이 끊긴다"고 경고한다).
+        한글은 시스템 폰트로 충분히 읽힌다. */
+  :root{
+    --blue:#0057FF; --blue-light:#00C2FF; --blue-dark:#003DBF;
+    --ink:#0A0A14; --ink-2:#343A40; --muted:#6B7280;
+    --line:#E9ECEF; --bg:#F8F9FA; --surface:#fff;
+    --radius:14px; --radius-lg:20px; --maxw:860px;
+    --t:.3s cubic-bezier(.4,0,.2,1);
+    --shadow:0 3px 18px rgba(10,10,20,.05);
+    --shadow-lg:0 10px 34px rgba(0,87,255,.11);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  /* ⚠️ 한글은 어절 단위로 끊어야 한다. keep-all이 없으면
+     '같은 시술인데 왜 병원마다 다를까 / 요?'처럼 낱말 중간이 쪼개진다. */
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',
+       'Pretendard','Noto Sans KR','Malgun Gothic',sans-serif;
+       line-height:1.75;color:var(--ink);background:var(--surface);
+       font-size:16.5px;-webkit-font-smoothing:antialiased;
+       word-break:keep-all;overflow-wrap:break-word}
+  main{max-width:var(--maxw);margin:0 auto;padding:8px 22px 88px}
+  h1{font-size:clamp(27px,4.2vw,40px);line-height:1.24;letter-spacing:-.035em;
+     font-weight:800;margin:.3em 0 .35em}
+  h2{font-size:clamp(21px,2.5vw,27px);line-height:1.34;letter-spacing:-.03em;
+     font-weight:760;color:var(--ink);margin:2.4em 0 .5em}
+  h2::before{content:'';display:block;width:32px;height:3px;border-radius:2px;
+     background:linear-gradient(90deg,var(--blue),var(--blue-light));margin-bottom:14px}
+  h3{font-size:17.5px;font-weight:700;margin:1.6em 0 .4em;letter-spacing:-.02em}
+  p{margin:0 0 .9em;color:var(--ink-2)}
+  strong{color:var(--ink);font-weight:700}
+  a{color:var(--blue)}
+  .lead{font-size:17.5px;color:var(--ink-2)}
+  .tldr{border-left:3px solid var(--blue);padding:10px 16px;margin:14px 0 22px;color:var(--ink)}
+  ol.checks{padding-left:1.4em}
+  ol.checks li{margin:0 0 10px}
+
+  /* 목록 — 카드 격자. 마크업(<li><strong>제목</strong> — 설명)은 그대로 두고
+     보이는 형태만 바꾼다. 본문 글자는 한 자도 줄지 않는다. */
+  main > ul{list-style:none;padding:0;margin:1.2em 0;display:grid;
+     grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:11px}
+  main > ul > li{background:var(--surface);border:1px solid var(--line);
+     border-radius:var(--radius);padding:15px 17px 15px 42px;position:relative;
+     font-size:15.4px;color:var(--ink-2);line-height:1.65}
+  main > ul > li::before{content:'';position:absolute;left:16px;top:20px;width:14px;height:14px;
+     border-radius:4px;background:linear-gradient(135deg,var(--blue),var(--blue-light))}
+  main > ul > li::after{content:'';position:absolute;left:20px;top:24px;width:4px;height:7px;
+     border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
+  main > ul > li strong{display:block;margin-bottom:1px}
+
+  /* 표 */
+  table{border-collapse:separate;border-spacing:0;width:100%;margin:1.3em 0;
+     background:var(--surface);border:1px solid var(--line);
+     border-radius:var(--radius);overflow:hidden;font-size:15px}
+  th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--line)}
+  th{background:var(--bg);width:30%;font-weight:700;color:var(--ink)}
+  tr:last-child td,tr:last-child th{border-bottom:0}
+  table.stats th{width:auto}
+  table.stats caption{caption-side:top;text-align:left;font-size:.85em;
+     color:var(--muted);padding-bottom:8px}
+  table.stats td.q{color:var(--muted);font-size:.86em;line-height:1.55}
+
+  /* 목차 — ⚠️ 아래 nav 규칙이 sticky 라, 별도로 풀지 않으면 목차가 화면에 붙는다 */
+  nav.toc{position:static;z-index:auto;background:var(--bg);backdrop-filter:none;
+     border:1px solid var(--line);border-radius:var(--radius);
+     padding:18px 22px;margin:26px 0;font-size:15px}
+  nav.toc .toc-h{margin:0 0 10px;font-weight:700;color:var(--ink);font-size:.95em}
+  nav.toc ol{margin:0;padding-left:1.25em;color:var(--muted)}
+  nav.toc li{margin:6px 0;line-height:1.5}
+  nav.toc a{color:var(--ink);text-decoration:none;border-bottom:1px solid transparent}
+  nav.toc a:hover{border-bottom-color:var(--blue)}
+  h2[id]{scroll-margin-top:72px}   /* 상단 바에 제목이 가리지 않게 */
+
+  /* 상단 바 */
+  nav{position:sticky;top:0;z-index:20;font-size:14.5px;padding:14px 22px;
+     background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(12px);
+     border-bottom:1px solid var(--line)}
+  nav a{color:var(--muted);text-decoration:none;margin-right:18px;transition:color var(--t)}
+  nav a:hover{color:var(--blue)}
+  nav .brand{color:var(--ink);font-weight:800;font-size:17px;letter-spacing:-.03em}
+  nav .brand span{color:var(--blue)}
+  /* ── 모바일 손질 (375px 실측으로 고친 것) ────────────────────────── */
+  @media(max-width:600px){
+    /* ⚠️ 상단 바가 두 줄로 접혀 55px 를 차지하고, 스크롤 중 본문 첫 줄을 덮었다.
+       패딩을 줄이고 글자를 키워 **한 줄에 가깝게** 만든다. */
+    nav{position:static;padding:8px 16px;font-size:14px}
+    nav .brand{font-size:16px}
+
+    /* ⚠️ 탭 타깃이 15~17px 이었다(권장 44px). 'English' 는 48×17px 로 손가락으로
+       누르기 어렵다. 글자 크기는 그대로 두고 **눌리는 영역만** 넓힌다. */
+    nav a, .site-nav a{display:inline-block;padding:11px 4px;margin-right:12px}
+    .site-nav .alt a{padding:11px 8px}
+
+    /* ⚠️ 기관 원문 인용이 3열 표 안에서 12.9px 로 줄었다. 표를 가로 스크롤로 두고
+       글자는 읽을 수 있는 크기를 지킨다 — 본문이 잘리는 것보다 낫다. */
+    table.stats{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+    table.stats td, table.stats th{font-size:14px;padding:10px 12px;white-space:normal}
+    table.stats td.q{font-size:13.5px;min-width:15em}
+
+    /* 목차도 손가락 간격을 준다 */
+    nav.toc li{margin:10px 0}
+    nav.toc a{display:inline-block;padding:4px 0}
+  }
+  /* 현재 위치 — 모든 페이지가 같은 계층을 같은 모양으로 보여준다.
+     ⚠️ HOME_CSS 에만 두면 시술 페이지(_css(CSS) 만 씀)에서 서식이 빠진다. */
+  .site-nav{display:flex;flex-wrap:wrap;align-items:center;gap:0 10px;
+     max-width:var(--maxw);margin:0 auto;padding:0 22px;border:0}
+  .site-nav a{margin-right:0}
+  .site-nav .sep{color:var(--line);font-size:13px}
+  .site-nav [aria-current]{color:var(--ink-2)}
+  .site-nav .alt{margin-left:auto}
+
+  footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);
+     margin-top:52px;padding:30px 22px 44px;background:var(--bg)}
+  footer a{color:var(--ink-2)}
+  .disclaimer{font-size:13.5px;color:var(--muted);line-height:1.7}
+
+  /* ── 히어로 ── */
+  .hero{position:relative;overflow:hidden;padding:66px 22px 54px;
+     border-bottom:1px solid var(--line);
+     background:radial-gradient(820px 400px at 10% -10%,rgba(0,194,255,.15),transparent 60%),
+                radial-gradient(760px 360px at 90% 0%,rgba(0,87,255,.13),transparent 62%),
+                linear-gradient(180deg,#F5F8FF 0%,#fff 100%)}
+  .hero-in{max-width:var(--maxw);margin:0 auto}
+  .hero h1{margin:0 0 .35em;max-width:20ch}
+  .hero p{font-size:17.5px;color:var(--ink-2);margin:.3em 0;max-width:58ch}
+  .kicker{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;
+     letter-spacing:.05em;color:var(--blue);background:rgba(0,87,255,.08);
+     border:1px solid rgba(0,87,255,.18);border-radius:999px;padding:6px 13px;margin-bottom:18px}
+  .kicker::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--blue)}
+
+  /* ── 진입 카드 ── */
+  .entries{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+     gap:12px;margin-top:34px}
+  .entry{display:block;text-decoration:none;background:var(--surface);
+     border:1px solid var(--line);border-radius:var(--radius);padding:17px 19px;
+     box-shadow:var(--shadow);transition:transform var(--t),box-shadow var(--t),border-color var(--t)}
+  .entry:hover{transform:translateY(-3px);border-color:rgba(0,87,255,.35);box-shadow:var(--shadow-lg)}
+  .entry-t{display:block;font-weight:700;font-size:16px;color:var(--ink);margin-bottom:4px}
+  .entry-d{display:block;font-size:13.5px;color:var(--muted);line-height:1.55;margin-bottom:9px}
+  .entry-n{display:block;font-size:19px;font-weight:800;letter-spacing:-.02em;
+     background:linear-gradient(135deg,var(--blue),var(--blue-light));
+     -webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* ── 시술 분류 ── */
+  .cat{margin:2.2em 0}
+  .cat h3{font-size:16.5px;margin:0 0 .7em;color:var(--ink)}
+  .cat ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:7px}
+  .cat li a{display:inline-block;text-decoration:none;color:var(--ink-2);font-size:14px;
+     border:1px solid var(--line);border-radius:999px;padding:6px 13px;
+     background:var(--bg);transition:all var(--t)}
+  .cat li a:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+
+  /* ── 병원 카드 ── */
+  .clinic{background:var(--surface);border:1px solid var(--line);
+     border-radius:var(--radius-lg);padding:24px 26px;margin:16px 0;box-shadow:var(--shadow)}
+  .clinic h3{margin-top:0;font-size:19px}
+  .clinic .meta{font-size:14.5px;color:var(--muted);margin:0 0 6px}
+  .go{display:inline-flex;align-items:center;gap:7px;margin-top:12px;background:var(--blue);
+     color:#fff;font-weight:700;font-size:15px;padding:11px 20px;border-radius:11px;
+     text-decoration:none;transition:background var(--t),transform var(--t)}
+  .go:hover{background:var(--blue-dark);transform:translateY(-1px)}
+
+  /* ── FAQ ── */
+  .faq h3{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+     margin:10px 0 0;padding:16px 20px 16px 54px;position:relative;font-size:16.5px}
+  .faq h3::before{content:'Q';position:absolute;left:18px;top:17px;width:23px;height:23px;
+     border-radius:7px;background:linear-gradient(135deg,var(--blue),var(--blue-light));
+     color:#fff;font-size:12.5px;font-weight:800;display:flex;align-items:center;
+     justify-content:center}
+  .faq h3 + p{background:var(--surface);border:1px solid var(--line);border-top:0;
+     border-radius:0 0 var(--radius) var(--radius);margin:0 0 4px;
+     padding:0 20px 18px 54px;font-size:15.4px;color:var(--ink-2)}
+
+  /* ── 요약·안내 ── */
+  .summary{background:linear-gradient(135deg,rgba(0,87,255,.05),rgba(0,194,255,.05));
+     border:1px solid rgba(0,87,255,.2);border-radius:var(--radius-lg);
+     padding:22px 25px;margin:2em 0;font-size:15.6px;color:var(--ink-2)}
+  .summary strong{color:var(--blue)}
+  .note-box{background:var(--bg);border:1px solid var(--line);border-left:3px solid var(--blue);
+     border-radius:0 var(--radius) var(--radius) 0;padding:16px 20px;
+     font-size:14.5px;color:var(--ink-2);margin:1.8em 0}
+  .subs{font-size:13px;color:var(--ink-2);margin-left:6px}
+  .subs a{color:var(--ink-2);text-decoration:none;border-bottom:1px dotted var(--line)}
+  .subs a:hover{color:var(--blue)}
+  .quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+  .quick a{font-size:14px;text-decoration:none;color:var(--ink-2);border:1px solid var(--line);
+     border-radius:999px;padding:6px 14px;background:var(--surface);transition:all var(--t)}
+  .quick a:hover{border-color:var(--blue);color:var(--blue)}
+  .langbar{font-size:14px}
+  .site-nav .brand{font-weight:800;color:var(--ink);text-decoration:none;font-size:17px}
+  @media(max-width:600px){.hero{padding:44px 20px 38px}.entries{gap:9px}}
+
+
+  /* ⚠️ 여기에는 hub.CSS/HOME_CSS에 **없는 것만** 둔다.
+     예전에는 이 블록이 옛 청록 디자인을 그대로 갖고 있어서, 새 디자인의
+     go 버튼(파란 배경 + 흰 글자)을 더 강한 선택자가 덮어써
+     **파란 배경에 어두운 글자가 겹쳐 안 보였다.**
+     색·여백은 토큰(:root)에서만 정하고, 여기서는 배치만 손댄다. */
+  .site-nav{display:flex;justify-content:space-between;align-items:center;
+            max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .topbar{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);
+          backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+  .topbar-in{max-width:var(--maxw);margin:0 auto;padding:14px 22px;display:flex;
+             align-items:center;justify-content:space-between;gap:18px}
+  .topbar .brand{font-size:17px;font-weight:800;letter-spacing:-.03em;color:var(--ink);
+                 text-decoration:none}
+  .topbar .brand span{color:var(--blue);font-weight:800}
+  .topnav a{font-size:14.5px;color:var(--muted);text-decoration:none;margin-left:18px;
+            transition:color var(--t)}
+  .topnav a:hover{color:var(--blue)}
+  /* ⚠️ 홈 상단 바가 모바일에서 105px(세 줄)이었고 링크 탭 타깃이 15px 였다.
+     ('EN' 은 17×15px.) 줄바꿈을 허용하되 **눌리는 영역**을 44px 가깝게 준다. */
+  @media(max-width:560px){
+    /* ⚠️ 탭 영역을 44px 로 키우니 바가 108px(세 줄)이 됐다. sticky 인 채로 두면
+       작은 화면의 13% 를 계속 먹고 스크롤 중 본문을 덮는다. 모바일에서는
+       **고정을 푼다** — 링크는 그대로 다 보이고, 위로 올리면 다시 나온다. */
+    .topnav{position:static;padding:8px 14px}
+    .topnav a{margin-left:0;margin-right:14px;font-size:13.5px;
+       display:inline-block;padding:11px 2px}
+    .topnav .brand{padding:11px 0}
+  }
+  @media(max-width:600px){.entries{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why do cosmetic surgery prices differ between clinics in Korea, and where can I check them?", "acceptedAnswer": {"@type": "Answer", "text": "Cosmetic procedures are non-covered services outside national health insurance, so each clinic sets its own prices. Clinics are required to post their non-covered prices in the clinic and on their website, so that is where to check; the price disclosure data of HIRA (Health Insurance Review and Assessment Service) covers only designated items and mostly does not include cosmetic procedures."}}, {"@type": "Question", "name": "Why do prices differ between clinics?", "acceptedAnswer": {"@type": "Answer", "text": "Cosmetic procedures are non-covered services outside national health insurance, so each institution sets its own prices. The difference comes from the structure of the system, not from anyone being at fault."}}, {"@type": "Question", "name": "Can I look up cosmetic procedure prices at HIRA?", "acceptedAnswer": {"@type": "Answer", "text": "Mostly not. HIRA's per-institution non-covered price disclosure is limited to items designated by the Ministry of Health and Welfare, and cosmetic and aesthetic procedures are excluded from disclosure. The clinic's posted prices in the clinic and on its website, and a written estimate, are where to check."}}, {"@type": "Question", "name": "Can I treat a posted price as my estimate?", "acceptedAnswer": {"@type": "Answer", "text": "Whether the posted item matches the scope of the operation you will have is a separate question. If the extent of excision, anesthesia, hospital stay or combined procedures differ, what you receive differs, so a written estimate received after your condition has been examined is the benchmark."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "Why do cosmetic surgery prices differ between clinics in Korea, and where can I check them?", "inLanguage": "en", "url": "https://damara.my/en/cosmetic-surgery-prices-korea.html", "publisher": {"@type": "Organization", "name": "STORM-K"}, "author": {"@type": "Organization", "name": "STORM-K"}, "dateModified": "2026-09-16"}</script>
+
+</head>
+<body>
+<nav class="site-nav" aria-label="현재 위치"><a class="brand" href="./">damara<span>.my</span></a><span class="sep" aria-hidden="true">›</span><span aria-current="page">Why do cosmetic surgery prices differ between clinics in Korea, and where can I check them?</span><span class="alt"><a href="https://damara.my/비급여-가격공개.html" hreflang="ko">한국어</a></span></nav>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "damara.my", "item": "https://damara.my/en/"}, {"@type": "ListItem", "position": 2, "name": "Why do cosmetic surgery prices differ between clinics in Korea, and where can I check them?"}]}</script>
+<main>
+  <h1>Why do cosmetic surgery prices differ between clinics in Korea, and where can I check them?</h1>
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc-h">On this page</p>
+    <ol>
+    <li><a href="#How-to-read-the-table">How to read the table</a></li>
+    <li><a href="#What-these-figures-do-not-mean">What these figures do not mean</a></li>
+    <li><a href="#What-do-public-bodies-in-other-countries">What do public bodies in other countries publish as the cost?</a></li>
+    <li><a href="#What-makes-the-difference">What makes the difference?</a></li>
+    <li><a href="#Cosmetic-purposes-are-non-covered">Cosmetic purposes are non-covered</a></li>
+    <li><a href="#Where-to-check">Where to check</a></li>
+    <li><a href="#The-basis-for-comparison-is-a-written-es">The basis for comparison is a written estimate</a></li>
+    <li><a href="#What-to-confirm-at-consultation">What to confirm at consultation</a></li>
+    <li><a href="#Asking-about-your-own-case">Asking about your own case</a></li>
+    <li><a href="#Common-misunderstandings">Common misunderstandings</a></li>
+    <li><a href="#Related-questions">Related questions</a></li>
+    <li><a href="#Information-verification">Information verification</a></li>
+    <li><a href="#References">References</a></li>
+    </ol>
+  </nav>
+
+  <p class="lead">Cosmetic procedures are non-covered services outside national health insurance, so each clinic sets its own prices. Clinics are required to post their non-covered prices in the clinic and on their website, so that is where to check; the price disclosure data of HIRA (Health Insurance Review and Assessment Service) covers only designated items and mostly does not include cosmetic procedures.</p>
+  <table class="stats">
+    <caption>Covered vs non-covered</caption>
+    <thead><tr><th>Category</th><th>Who sets the price</th><th>Where to check</th></tr></thead>
+    <tbody>
+    <tr><th scope="row">Covered (national health insurance)</th><td>Standards set by the state</td><td>Follows the health insurance schedule</td></tr>
+    <tr><th scope="row">Non-covered (cosmetic purpose)</th><td>Each medical institution</td><td>The clinic&#x27;s in-house posting and website notice, and a written estimate (HIRA&#x27;s disclosure data mostly excludes cosmetic procedures)</td></tr>
+    </tbody>
+  </table>
+  <p class="note">This site does not publish the prices of the clinics listed on it. Prices are set by clinics, and we do not copy figures that have not been confirmed. The ranges from other countries shown on this page are published by public bodies and professional societies for their own countries and cannot be compared directly with prices in Korea.</p>
+  <h2 id="How-to-read-the-table">How to read the table</h2>
+  <p>The table divides by who sets the price. Covered care follows standards set by the state, but cosmetic procedures are non-covered, so each institution sets its own. That is why prices differ between clinics, and it is not a fault.</p>
+  <h2 id="What-these-figures-do-not-mean">What these figures do not mean</h2>
+  <p>A posted price does not mean &#x27;the same price everywhere&#x27;. Whether the posted item matches the scope of the operation you will have is a separate question, so reading a posted amount as your estimate leads you astray. Searching HIRA&#x27;s disclosure data for cosmetic procedure prices mostly returns nothing — because they are not designated disclosure items, not because clinics hide them.</p>
+  <h2 id="What-do-public-bodies-in-other-countries">What do public bodies in other countries publish as the cost?</h2>
+  <p><strong>Ranges published by public bodies and professional societies in other countries, for their own countries. Exchange rates and healthcare systems differ, so they cannot be compared directly with prices in Korea, and they are not the prices of any clinic listed on this site.</strong></p>
+  <table class="stats">
+    <caption>Ranges published by public bodies and professional societies for their own countries</caption>
+    <thead><tr><th>Procedure</th><th>Basis</th><th>Published range</th><th>Not included</th><th>Source text</th></tr></thead>
+    <tbody>
+    <tr><th scope="row">Tummy Tuck (Abdominoplasty)</th><td>UK</td><td>£5,000 – £10,000</td><td>excludes consultations and follow-up care</td><td class="q">“It can cost from about £5,000 to £10,000 to have an abdominoplasty in the UK, plus the cost of any consultations or follow-up care.”</td></tr>
+    <tr><th scope="row">Tummy Tuck (Abdominoplasty)</th><td>US (surgeon fee only)</td><td>$8,174 average</td><td>excludes anesthesia and facility fees</td><td class="q">“The average cost of a tummy tuck (abdominoplasty) is $8,174, according to the latest statistics from the American Society of Plastic Surgeons.”</td></tr>
+    <tr><th scope="row">Liposuction</th><td>UK</td><td>£3,000 – £8,500</td><td>varies by provider and body area</td><td class="q">“In the UK, liposuction ranges in price from about £3,000 to £8,500, depending on where you go and the body areas being treated.”</td></tr>
+    <tr><th scope="row">Liposuction</th><td>US (surgeon fee only)</td><td>$4,711 average</td><td>excludes anesthesia and facility fees</td><td class="q">“The average cost of liposuction is $4,711, according to the latest statistics from the American Society of Plastic Surgeons.”</td></tr>
+    <tr><th scope="row">Breast Augmentation</th><td>UK</td><td>£3,500 – £8,000</td><td>excludes consultations and follow-up care</td><td class="q">“In the UK, breast implant surgery costs around £3,500 to £8,000.”</td></tr>
+    </tbody>
+  </table>
+  <p class="note">Sources — <a href="https://www.nhs.uk/conditions/cosmetic-procedures/breast-enlargement/" rel="noopener" target="_blank">NHS (UK)</a> · <a href="https://www.plasticsurgery.org/cosmetic-procedures/liposuction/safety" rel="noopener" target="_blank">American Society of Plastic Surgeons</a> (checked 2026-09-09)</p>
+  <h2 id="What-makes-the-difference">What makes the difference?</h2>
+  <ul>
+    <li><strong>The same name can mean different things</strong> — If the extent of excision, type of anesthesia, hospital stay or combined procedures differ, the same operation name covers different things. Comparing totals alone does not show what is included and what is left out.</li>
+    <li><strong>What the notice requirement means</strong> — The Medical Service Act requires clinics to make non-covered items and prices known to patients, and to post them on the website if they have one. So some items can be seen on a clinic&#x27;s website before consultation. HIRA&#x27;s per-institution disclosure covers only items designated by the Ministry of Health and Welfare and mostly excludes cosmetic procedures.</li>
+    <li><strong>A written estimate is the benchmark</strong> — The lowest price in an advertisement is often the amount under specific conditions. A written estimate received after your condition has been examined is the basis for comparison.</li>
+  </ul>
+  <h2 id="Cosmetic-purposes-are-non-covered">Cosmetic purposes are non-covered</h2>
+  <p>Covered care under national health insurance follows standards set by the state, but cosmetic procedures are non-covered, so each institution sets its own prices. Different amounts under the same operation name at different clinics come from the structure of the system, not from anyone being at fault.</p>
+  <h2 id="Where-to-check">Where to check</h2>
+  <p>Under the Medical Service Act, clinics post non-covered items and prices in the clinic, and on their website if they have one. So the first place to check is the clinic&#x27;s own posting and a written estimate. HIRA&#x27;s per-institution non-covered price disclosure is limited to items designated by the Ministry of Health and Welfare (693 items disclosed in 2025), and cosmetic and aesthetic procedures are excluded from disclosure, so it is hard to find cosmetic procedure prices there. Whether a posted item matches the scope of the operation you will have is a separate question, so reading a posted amount as your estimate leads you astray.</p>
+  <h2 id="The-basis-for-comparison-is-a-written-es">The basis for comparison is a written estimate</h2>
+  <p>Even under the same operation name, if the extent of excision, type of anesthesia, hospital stay or combined procedures differ, what you receive differs. Comparing totals alone does not show what is included and what is left out, so items have to be matched line by line for differences to appear. The lowest price in an advertisement is often the amount under specific conditions, so a written estimate received after your condition has been examined is the real benchmark.</p>
+  <h2 id="What-to-confirm-at-consultation">What to confirm at consultation</h2>
+  <ul>
+    <li>Whether the estimate includes anesthesia, tests and aftercare, item by item</li>
+    <li>When additional costs arise, and on what basis</li>
+    <li>Whether you can have it in writing</li>
+  </ul>
+  <h2 id="Asking-about-your-own-case">Asking about your own case</h2>
+  <p>The table above gives general ranges and does not apply to you as it stands. Rephrasing the question like this at consultation gets you an answer for your own case.</p>
+  <blockquote><p>Does the estimate include anesthesia, tests and aftercare? Can I have it in writing?</p></blockquote>
+  <h2 id="Common-misunderstandings">Common misunderstandings</h2>
+  <h3>Why do prices differ between clinics?</h3>
+  <p>Cosmetic procedures are non-covered services outside national health insurance, so each institution sets its own prices. The difference comes from the structure of the system, not from anyone being at fault.</p>
+  <h3>Can I look up cosmetic procedure prices at HIRA?</h3>
+  <p>Mostly not. HIRA&#x27;s per-institution non-covered price disclosure is limited to items designated by the Ministry of Health and Welfare, and cosmetic and aesthetic procedures are excluded from disclosure. The clinic&#x27;s posted prices in the clinic and on its website, and a written estimate, are where to check.</p>
+  <h3>Can I treat a posted price as my estimate?</h3>
+  <p>Whether the posted item matches the scope of the operation you will have is a separate question. If the extent of excision, anesthesia, hospital stay or combined procedures differ, what you receive differs, so a written estimate received after your condition has been examined is the benchmark.</p>
+  <h2 id="Related-questions">Related questions</h2>
+  <ul>
+    <li><a href="how-to-choose-a-method.html">When there are several methods for the same area, how do I decide?</a></li>
+    <li><a href="verify-board-certified-plastic-surgeon-korea.html">How do I verify that a doctor in Korea is a board-certified plastic surgeon?</a></li>
+    <li><a href="medical-disputes-korea.html">If a dispute arises over the result or the cost, where do I turn in Korea?</a></li>
+  </ul>
+  <section class="trust">
+  <h2 id="Information-verification">Information verification</h2>
+  <p>This page is general guidance based on material published by public bodies and
+  professional societies; it is not information about any particular clinic.
+  <strong>Page updated 2026-09-16</strong>. The sources are listed under References below.</p>
+  <h2 id="References">References</h2>
+  <ul>
+      <li><a href="https://www.hira.or.kr/npay/index.do?pgmid=HIRAA030009000000" rel="noopener" target="_blank">HIRA — Non-covered service price disclosure</a></li>
+      <li><a href="https://www.kca.go.kr/odr/pg/ma/cnsutInfo.do" rel="noopener" target="_blank">Korea Consumer Agency — Consumer counselling procedure</a></li>
+      <li><a href="https://www.nhs.uk/conditions/cosmetic-procedures/cosmetic-surgery/" rel="noopener" target="_blank">NHS (UK) — Cosmetic surgery</a></li>
+      <li><a href="https://www.plasticsurgery.org/cosmetic-procedures" rel="noopener" target="_blank">American Society of Plastic Surgeons — Cosmetic procedures</a></li>
+  </ul>
+  <p class="disclaimer">This content is general information and does not replace a
+  diagnosis or consultation with a medical professional. Whether it applies to you must be
+  confirmed with a board-certified specialist.</p>
+  <p class="disclaimer"><strong>This site does not rank or compare clinics.</strong>
+  <a href="../about.html">About &amp; disclosures →</a></p>
+  </section>
+  <footer>
+
+    <p class="f-dis">This site provides general information only and does not
+    provide medical advice, diagnosis, or treatment. Clinics listed here were
+    chosen and published by the operator; <strong>this site does not rank
+    or compare clinics, and does not publish patient testimonials.</strong></p>
+    <p class="f-id">Operated by <strong>STORM-K</strong> · <a href="mailto:stormkglobal@gmail.com">stormkglobal@gmail.com</a></p>
+    <p class="f-links"><a href="../about.html">About &amp; disclosures</a>
+      <a href="../sitemap.xml">Sitemap</a>
+      <a href="../rss.xml">RSS</a>
+      <a href="../">damara.my</a></p>
+    <p class="f-id">&copy; 2026 damara.my · Last reviewed 2026-09-16</p>
+  </footer>
+</main>
+</body>
+</html>
