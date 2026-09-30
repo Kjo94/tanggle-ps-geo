@@ -211,6 +211,78 @@
   @media(max-width:600px){.hero{padding:44px 20px 38px}.entries{gap:9px}}
 
 
+/* ══ 앱 껍데기 (중앙 컬럼형) ══════════════════════════════════
+   강남언니 PC 실측: 중앙 컬럼 616px · 카테고리 칩 96x54 r16 · 하단 탭바 64px.
+   ⚠️ **앱처럼 보이되 앱처럼 만들지 않는다.** 탭·칩은 전부 <a href> 로 다른 주소에
+      이동한다. 눌러서 화면만 갈아 끼우면 AI 봇이 첫 화면 하나만 보게 된다
+      (Vercel 실측: GPTBot 요청 5억 건 중 JS 실행 0건).
+   ⚠️ **616px 고정폭에는 반드시 모바일 해제가 붙는다.** 없으면 가로 스크롤이 생겨
+      모바일 우선 색인에서 감점된다. 맨 아래 @media 가 그것이다. */
+body.app{background:var(--bg)}
+.appcol{width:616px;max-width:100%;margin:0 auto;background:var(--surface);
+  border-left:1px solid var(--line);border-right:1px solid var(--line);min-height:100vh}
+.appbar{display:flex;align-items:center;gap:10px;padding:14px 16px;
+  border-bottom:1px solid var(--line);background:var(--surface)}
+.appbar .brand{font-size:1.2rem;font-weight:800;letter-spacing:-.04em;
+  color:var(--blue);text-decoration:none}
+.appbar .brand span{color:var(--ink)}
+.appbar .place{font-size:.9rem;color:var(--ink-2)}
+.appbar .signin{border:1px solid var(--line);border-radius:8px;padding:6px 13px;
+  font-size:.82rem;color:var(--ink-2);text-decoration:none}
+.appsearch{margin:12px 16px 0;background:var(--bg);border:1px solid var(--line);
+  border-radius:12px;padding:12px 15px;font-size:.9rem;color:var(--muted);
+  text-decoration:none;display:block}
+.appnote{display:flex;align-items:center;gap:12px;margin-top:14px;padding:14px 16px;
+  background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.appnote b{display:block;font-size:.9rem}
+.appnote a{font-size:.8rem;color:var(--blue)}
+.appnote .go2{margin-left:auto;background:var(--ink);color:var(--surface);
+  border-radius:8px;padding:8px 13px;font-size:.8rem;font-weight:700;
+  text-decoration:none;white-space:nowrap}
+.appchips{display:flex;gap:9px;padding:16px;overflow-x:auto}
+.appchips a{flex:0 0 96px;height:54px;border:1px solid var(--line);border-radius:16px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
+  font-size:.76rem;font-weight:600;color:var(--ink-2);text-decoration:none}
+.appchips a i{font-style:normal;font-size:1.05rem}
+.appchips a:hover{border-color:var(--blue);color:var(--blue)}
+/* 언어 드롭다운 — JS 0줄. 안쪽은 전부 <a href> 라 봇이 링크로 따라간다.
+   ⚠️ <select onchange="location=…"> 로 만들면 링크가 아니라 봇이 못 따라간다. */
+.lang{position:relative;margin-left:auto}
+.lang>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:5px;
+  border:1px solid var(--line);border-radius:8px;padding:5px 11px;font-size:.8rem;
+  color:var(--ink-2);white-space:nowrap}
+.lang>summary::-webkit-details-marker{display:none}
+.lang[open]>summary{border-color:var(--blue);color:var(--blue)}
+.lang .lmenu{position:absolute;right:0;top:calc(100% + 5px);z-index:30;min-width:172px;
+  background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:5px;
+  box-shadow:0 10px 30px rgba(10,10,20,.14)}
+.lang .lmenu a,.lang .lmenu span{display:flex;align-items:baseline;gap:8px;padding:7px 9px;
+  border-radius:7px;font-size:.84rem;color:var(--ink-2);text-decoration:none}
+.lang .lmenu a:hover,.lang .lmenu a[aria-current]{background:var(--blue-light,#F5F8FF);color:var(--blue)}
+.lang .lmenu em{margin-left:auto;font-style:normal;font-size:.7rem;color:var(--muted)}
+.lang .lmenu .soon{color:var(--muted);cursor:default}
+.apptabs{position:sticky;bottom:0;display:flex;height:64px;align-items:center;
+  background:var(--surface);border-top:1px solid var(--line);z-index:20}
+.apptabs a{flex:1;text-align:center;font-size:.7rem;color:var(--muted);text-decoration:none}
+.apptabs a i{display:block;font-style:normal;font-size:1.05rem;margin-bottom:2px}
+.apptabs a[aria-current]{color:var(--blue);font-weight:700}
+/* 앱 껍데기 안에서는 기존 섹션의 좌우 여백을 컬럼에 맞춘다 */
+.appcol .hero-in,.appcol main{max-width:100%;padding-left:16px;padding-right:16px}
+.appcol .hero{border-radius:0}
+@media(max-width:700px){
+  .appcol{width:100%;border-left:none;border-right:none}
+  .appbar{flex-wrap:wrap}
+}
+
+/* 영문 메인 병원 카드 안의 시술 목록 — 홈에서 영문 시술까지 1클릭 */
+.en-procs{list-style:none;margin:10px 0 12px;padding:0;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:2px 14px}
+.en-procs li{margin:0}
+.en-procs a{display:block;padding:3px 0;font-size:.92rem;color:var(--ink-2);
+  text-decoration:none;border-bottom:1px solid transparent}
+.en-procs a:hover{color:var(--blue);border-bottom-color:var(--blue)}
+@media(max-width:640px){.en-procs{grid-template-columns:1fr}}
+
   /* ⚠️ 여기에는 hub.CSS/HOME_CSS에 **없는 것만** 둔다.
      예전에는 이 블록이 옛 청록 디자인을 그대로 갖고 있어서, 새 디자인의
      go 버튼(파란 배경 + 흰 글자)을 더 강한 선택자가 덮어써
@@ -242,7 +314,7 @@
   @media(max-width:600px){.entries{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "지방을 줄이는 것과 피부를 절제하는 것은 어떻게 다른가요?", "acceptedAnswer": {"@type": "Answer", "text": "지방흡입은 피하지방을 흡입해 둘레를 줄이는 시술이고, 거상 수술은 늘어진 피부 자체를 절제해 라인을 잡는 수술입니다. 다루는 대상이 다릅니다."}}, {"@type": "Question", "name": "둘 중 하나만 고르는 건가요?", "acceptedAnswer": {"@type": "Answer", "text": "둘 다 해당하는 경우가 있고, 그때는 함께 하거나 순서를 두고 하기도 합니다. 무엇이 주된 문제인지에 따라 시작점이 정해집니다."}}, {"@type": "Question", "name": "부위가 다르면 방법도 다른가요?", "acceptedAnswer": {"@type": "Answer", "text": "부위가 달라도 갈림은 같습니다. 배·팔·허벅지 모두 지방을 줄이는 쪽과 피부를 절제하는 쪽이 나란히 있고, 어느 쪽인지는 부위가 아니라 본인의 상태가 정합니다. 다만 절개 위치와 회복 중 제한되는 동작은 부위마다 다릅니다."}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "지방을 줄이는 것과 피부를 절제하는 것은 어떻게 다른가요?", "inLanguage": "ko", "url": "https://damara.my/지방과-피부.html", "publisher": {"@type": "Organization", "name": "STORM-K"}, "author": {"@type": "Organization", "name": "STORM-K"}, "datePublished": "2026-08-21", "dateModified": "2026-09-16"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "지방을 줄이는 것과 피부를 절제하는 것은 어떻게 다른가요?", "inLanguage": "ko", "url": "https://damara.my/지방과-피부.html", "publisher": {"@type": "Organization", "name": "STORM-K"}, "author": {"@type": "Organization", "name": "STORM-K"}, "datePublished": "2026-08-21"}</script>
 
 </head>
 <body>
