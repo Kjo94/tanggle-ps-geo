@@ -232,7 +232,7 @@ body.app{background:var(--bg)}
 .appsearch{margin:12px 16px 0;background:var(--bg);border:1px solid var(--line);
   border-radius:12px;padding:12px 15px;font-size:.9rem;color:var(--muted);
   text-decoration:none;display:block}
-.appnote{display:flex;align-items:center;gap:12px;margin-top:14px;padding:14px 16px;
+.appnote{display:flex;align-items:center;gap:12px;margin:18px 0 6px;padding:14px 16px;
   background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .appnote b{display:block;font-size:.9rem}
 .appnote a{font-size:.8rem;color:var(--blue)}
@@ -243,7 +243,9 @@ body.app{background:var(--bg)}
 .appchips a{flex:0 0 96px;height:54px;border:1px solid var(--line);border-radius:16px;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
   font-size:.76rem;font-weight:600;color:var(--ink-2);text-decoration:none}
-.appchips a i{font-style:normal;font-size:1.05rem}
+.appchips a{padding:0 6px;line-height:1.15;text-align:center;overflow:hidden;
+  white-space:nowrap}
+.appchips a i{font-style:normal;font-size:1.05rem;line-height:1}
 .appchips a:hover{border-color:var(--blue);color:var(--blue)}
 /* 언어 드롭다운 — JS 0줄. 안쪽은 전부 <a href> 라 봇이 링크로 따라간다.
    ⚠️ <select onchange="location=…"> 로 만들면 링크가 아니라 봇이 못 따라간다. */
@@ -261,10 +263,198 @@ body.app{background:var(--bg)}
 .lang .lmenu a:hover,.lang .lmenu a[aria-current]{background:var(--blue-light,#F5F8FF);color:var(--blue)}
 .lang .lmenu em{margin-left:auto;font-style:normal;font-size:.7rem;color:var(--muted)}
 .lang .lmenu .soon{color:var(--muted);cursor:default}
+.appintro{padding:16px 16px 4px}
+.appintro b{display:block;font-size:1.02rem;letter-spacing:-.02em}
+.appintro span{display:block;margin-top:3px;font-size:.8rem;color:var(--muted)}
+.appsec{border-bottom:1px solid var(--line);padding-bottom:14px}
+.appsec:last-of-type{border-bottom:none}
+.sechead{display:flex;align-items:flex-end;gap:10px;padding:16px 16px 8px}
+.sechead h3{margin:0;font-size:.98rem;letter-spacing:-.02em}
+.sechead .secsub{display:block;margin-top:2px;font-size:.76rem;color:var(--muted)}
+.sechead .secmore{margin-left:auto;font-size:.8rem;color:var(--blue);
+  text-decoration:none;white-space:nowrap}
+.secnote{margin:0;padding:0 16px;font-size:.84rem;color:var(--ink-2)}
+.secempty{margin:0;padding:0 16px;font-size:.84rem;color:var(--muted)}
+.applist{list-style:none;margin:0;padding:0 16px;display:grid;gap:8px}
+.applist a{display:flex;align-items:baseline;gap:9px;border:1px solid var(--line);
+  border-radius:12px;padding:12px 14px;text-decoration:none;color:var(--ink)}
+.applist a:hover{border-color:var(--blue)}
+.applist b{font-size:.9rem}
+.applist span{font-size:.78rem;color:var(--muted)}
+.appsoon{margin:0 16px;border:1px dashed var(--line);border-radius:12px;
+  padding:18px 14px;font-size:.84rem;color:var(--muted);background:var(--bg)}
+.appguides{list-style:none;margin:0;padding:0 16px;display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:2px 14px}
+.appguides a{font-size:.85rem;color:var(--ink-2);text-decoration:none;
+  display:block;padding:5px 0;border-bottom:1px solid var(--line)}
+.appguides a:hover{color:var(--blue)}
+.faq .qa{border-bottom:1px solid var(--line)}
+.faq .qa>summary{list-style:none;cursor:pointer;padding:13px 0;
+  display:flex;align-items:center;gap:8px}
+.faq .qa>summary::-webkit-details-marker{display:none}
+.faq .qa>summary h3{margin:0;font-size:.92rem;font-weight:600}
+.faq .qa>summary::after{content:'+';margin-left:auto;color:var(--muted);font-size:1.1rem}
+.faq .qa[open]>summary::after{content:'2'}
+.faq .qa>p{margin:0 0 14px;font-size:.88rem;color:var(--ink-2)}
+.ccban{margin:14px 16px 0;border-radius:16px;padding:26px 24px;color:#fff;
+  background:linear-gradient(118deg,var(--blue),#1b47b8);min-height:140px}
+.ccban .t{font-size:.76rem;opacity:.85}
+.ccban h3{font-size:1.42rem;letter-spacing:-.03em;margin:5px 0;line-height:1.3;color:#fff}
+.ccban p{font-size:.8rem;opacity:.9;margin:0}
+.mstat{display:flex;margin:12px 16px 0;border:1px solid var(--line);
+  border-radius:12px;overflow:hidden}
+.mstat div{flex:1;text-align:center;padding:9px 3px;border-right:1px solid var(--line);
+  font-size:.66rem;color:var(--muted)}
+.mstat div:last-child{border-right:none}
+.mstat b{display:block;font-size:1.02rem;color:var(--ink);font-weight:700}
+.msec{padding:18px 16px;border-bottom:1px solid var(--line)}
+.msec .gh{display:flex;align-items:baseline;gap:9px;margin-bottom:10px}
+.msec .gh h3{margin:0;font-size:1rem;letter-spacing:-.02em}
+.msec .gh .sub{font-size:.74rem;color:var(--muted)}
+.msec .gh .more{margin-left:auto;font-size:.76rem;color:var(--blue);
+  text-decoration:none;white-space:nowrap}
+.ph{background:linear-gradient(135deg,#e8eeff,#f2f4f8)}
+.vf{display:inline-block;font-size:.64rem;font-weight:700;background:#e8f6ee;
+  color:#1d7a4c;border-radius:3px;padding:1px 6px}
+/* 많이 찾는 시술 — 한 줄 가로 레일 (PC·모바일 모두) */
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:thin;
+  margin-right:-16px;padding-right:16px}
+.rail::-webkit-scrollbar{height:6px}
+.rail::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+.pcard{flex:0 0 168px;scroll-snap-align:start;display:block;
+  text-decoration:none;color:var(--ink)}
+.pcard .im{display:block;aspect-ratio:4/3;border-radius:11px}
+.pcard .hs{display:block;font-size:.66rem;color:var(--muted);margin-top:8px}
+.pcard .nm{display:block;font-size:.86rem;font-weight:700;margin:2px 0 4px}
+.pcard .nm .enk{font-style:normal;font-size:.56rem;font-weight:700;color:var(--blue);
+  border:1px solid var(--blue);border-radius:3px;padding:0 3px;margin-left:4px;
+  vertical-align:2px}
+.pcard .ex{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;
+  overflow:hidden;font-size:.7rem;color:var(--ink-2);line-height:1.55;margin-bottom:6px}
+.pcard:hover .nm{color:var(--blue)}
+.pcard .bl{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.pcard .ask{font-size:.64rem;color:var(--muted)}
+/* 진료 병원 카드 */
+.hoss{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.hosc{display:flex;gap:13px;border:1px solid var(--line);border-radius:14px;
+  padding:15px;min-width:0}
+.hosc .im{width:78px;height:78px;border-radius:11px;flex:0 0 78px;
+  text-decoration:none}
+.hosc .tx{min-width:0}
+.hosc .nm{display:block;font-size.95rem;font-size:.95rem;font-weight:700;
+  text-decoration:none;color:var(--ink);letter-spacing:-.02em}
+.hosc .nm:hover{color:var(--blue)}
+.hosc .ad{font-size:.74rem;color:var(--muted);margin-top:3px}
+.hosc .tg{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.hosc .tg a{font-size:.7rem;color:var(--blue);background:var(--accent-s,#eef3ff);
+  border-radius:5px;padding:2px 8px;text-decoration:none}
+.hosc .mt{display:flex;flex-wrap:wrap;gap:10px;margin-top:9px;font-size:.7rem;
+  color:var(--ink-2)}
+.hosc .mt i{font-style:normal;color:var(--muted);margin-right:4px}
+/* 의사 카드 */
+.docs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.docc{border:1px solid var(--line);border-radius:14px;padding:16px 12px;
+  text-align:center;text-decoration:none;color:var(--ink)}
+.docc .av{display:block;width:44px;height:44px;border-radius:50%;margin:0 auto 9px;
+  color:#fff;font-size:1rem;font-weight:700;line-height:44px;
+  background:linear-gradient(135deg,var(--blue),#5b8cff)}
+.docc b{display:block;font-size:.82rem}
+.docc .hs{display:block;font-size:.7rem;color:var(--muted);margin:2px 0 9px}
+.docc:hover b{color:var(--blue)}
+/* 카페 2단 */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.two .col{border:1px solid var(--line);border-radius:14px;padding:14px}
+.two .ch{font-size:.86rem;font-weight:700;margin-bottom:10px}
+/* 가이드 2열 */
+.gds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.gds a{display:flex;gap:9px;align-items:flex-start;border:1px solid var(--line);
+  border-radius:10px;padding:10px 12px;text-decoration:none;color:var(--ink)}
+.gds a:hover{border-color:var(--blue)}
+.gds .bd{font-size:.64rem;color:var(--muted);background:var(--bg);
+  border:1px solid var(--line);border-radius:3px;padding:1px 6px;white-space:nowrap}
+/* ⚠️ 한 줄 말줄임으로 두면 긴 질문 제목이 통째로 잘린다 (실측: 23개 중 17개).
+   제목을 읽을 수 없으면 링크가 아무 일도 하지 못한다 — 두 줄까지 보여 준다. */
+.gds .tt{font-size:.8rem;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;
+  -webkit-box-orient:vertical;overflow:hidden}
+.gds .bd{margin-top:1px}
+.mplist a:hover .tt{color:var(--blue)}
+/* 본문 접기 — 접혀도 HTML 에 그대로 있어 AI 가 읽는 글자 수는 줄지 않는다 */
+.fold{border-bottom:1px solid var(--line)}
+.fold>summary{list-style:none;cursor:pointer;display:flex;align-items:center;
+  gap:10px;padding:15px 0}
+.fold>summary::-webkit-details-marker{display:none}
+.fold>summary h2{margin:0;font-size:1rem;border:none;padding:0}
+.fold>summary::after{content:'+';margin-left:auto;color:var(--muted);font-size:1.15rem}
+.fold[open]>summary::after{content:'2'}
+.fold>:not(summary){margin-bottom:14px}
+/* 모바일 — 칩·카드·종목을 가로 슬라이드로 (강남언니 방식) */
+@media(max-width:700px){
+  .rail{scrollbar-width:none}
+  .rail::-webkit-scrollbar{display:none}
+  .pcard{flex:0 0 58%}
+  /* 병원·의사는 아래로 늘어나지 않고 옆으로 넘긴다 */
+  .hoss,.docs{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;
+    margin-right:-16px;padding-right:16px;padding-bottom:4px}
+  .hoss::-webkit-scrollbar,.docs::-webkit-scrollbar{display:none}
+  .hosc{flex:0 0 84%;scroll-snap-align:start;padding:13px}
+  .hosc .im{width:62px;height:62px;flex:0 0 62px;border-radius:9px}
+  .hosc .ad{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+    overflow:hidden}
+  .hosc .tg{flex-wrap:nowrap;overflow:hidden}
+  .docc{flex:0 0 44%;scroll-snap-align:start}
+  .sccs,.two,.gds{grid-template-columns:1fr}
+  .scc[open]{grid-column:auto}
+  /* ⚠️ 손가락으로 누르는 것은 28px 미만이면 빗나간다 (실측에서 잡았다).
+     본문 속 글 링크는 그대로 두고, **단독 컨트롤만** 넓힌다. */
+  .msec .gh .more{padding:7px 0 7px 10px}
+  .hosc .tg a{padding:6px 10px}
+  .gds a{padding:12px}
+  .scc>summary{padding:13px 12px}
+  .appnote a{padding:4px 0;display:inline-block}
+  .appchips{margin-right:-16px;padding-right:16px;scroll-snap-type:x mandatory;
+    scrollbar-width:none}
+  .appchips::-webkit-scrollbar{display:none}
+  .appchips a{scroll-snap-align:start}
+  .ccban{margin:14px 16px 0;padding:22px 20px;min-height:0}
+  .ccban h3{font-size:1.26rem}
+  .mstat{margin:12px 16px 0}
+  .mstat div{padding:8px 2px;font-size:.62rem}
+  .mstat b{font-size:.94rem}
+  .msec{padding:16px}
+}
+.sccs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;
+  align-items:start}
+/* ⚠️ '에너지 기반 장비 시술' 처럼 긴 이름은 한 줄을 더 쓴다. 글자를 자르면
+   무슨 종목인지 못 읽으니, **칸 높이를 맞춘다** — 줄 수가 달라도 박스는 같다. */
+.scc>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;
+  padding:11px 12px;font-size:.8rem;font-weight:600;min-height:68px;
+  box-sizing:border-box}
+.scc>summary::-webkit-details-marker{display:none}
+.scc>summary::after{content:'+';color:var(--muted);font-size:1.05rem;margin-left:6px}
+.scc[open]>summary::after{content:'2'}
+.scc .b .pin{color:#fff;background:var(--blue);border-color:var(--blue)}
+.scc>summary i{font-style:normal;font-size:.95rem;background:var(--bg);
+  border:1px solid var(--line);border-radius:4px;padding:1px 6px}
+.scc>summary em{margin-left:auto;font-style:normal;font-size:.68rem;color:var(--blue)}
+.scc:hover>summary{color:var(--blue)}
+.scc .b{display:flex;flex-wrap:wrap;gap:5px;padding:10px 12px;
+  border-top:1px solid var(--line)}
+.scc .b a{font-size:.72rem;color:var(--ink-2);background:var(--surface);
+  border:1px solid var(--line);border-radius:6px;padding:2px 8px;text-decoration:none}
+.scc .b a:hover{border-color:var(--blue);color:var(--blue)}
+.scc .h em{margin-left:auto;font-style:normal;font-size:.68rem;color:var(--blue)}
+.scn{margin:0;padding:0 12px;font-size:.72rem;color:var(--muted)}
 .apptabs{position:sticky;bottom:0;display:flex;height:64px;align-items:center;
   background:var(--surface);border-top:1px solid var(--line);z-index:20}
-.apptabs a{flex:1;text-align:center;font-size:.7rem;color:var(--muted);text-decoration:none}
-.apptabs a i{display:block;font-style:normal;font-size:1.05rem;margin-bottom:2px}
+/* ⚠️ 라벨이 두 줄로 꺾이면 아이콘 높이가 어긋나 줄이 무너진다
+   ('자주 묻는 질문' 이 그랬다). 줄바꿈을 막고 칸 높이를 맞춘다. */
+.apptabs a{flex:1;min-width:0;text-align:center;font-size:.7rem;color:var(--muted);
+  text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  height:100%;gap:2px}
+.apptabs a i{font-style:normal;font-size:1.05rem;line-height:1}
 .apptabs a[aria-current]{color:var(--blue);font-weight:700}
 /* 앱 껍데기 안에서는 기존 섹션의 좌우 여백을 컬럼에 맞춘다 */
 .appcol .hero-in,.appcol main{max-width:100%;padding-left:16px;padding-right:16px}
@@ -388,7 +578,7 @@ body.app{background:var(--bg)}
   <section class="trust">
   <h2 id="정보-확인">정보 확인</h2>
   <p>본 페이지는 특정 병원의 정보가 아니라, 공공기관·학회가 공개한 자료를 근거로
-  정리한 일반 안내입니다. <strong>페이지 갱신일 2026-09-30</strong>.
+  정리한 일반 안내입니다. <strong>페이지 갱신일 2026-10-01</strong>.
   근거 자료는 아래 참고 자료에 밝힙니다.</p>
   <h2 id="참고-자료">참고 자료</h2>
   <ul>
@@ -410,8 +600,8 @@ body.app{background:var(--bg)}
     <p class="f-links"><a href="about.html">이 사이트에 대하여 · 이해관계 공개</a>
       <a href="sitemap.xml">사이트맵</a>
       <a href="rss.xml">새 글 알림(RSS)</a>
-      <a href="">damara.my</a></p>
-    <p class="f-id">&copy; 2026 damara.my · 마지막 점검 2026-09-30</p>
+      <a href="./">damara.my</a></p>
+    <p class="f-id">&copy; 2026 damara.my · 마지막 점검 2026-10-01</p>
   </footer>
 </main>
 </body>

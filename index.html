@@ -214,7 +214,7 @@ body.app{background:var(--bg)}
 .appsearch{margin:12px 16px 0;background:var(--bg);border:1px solid var(--line);
   border-radius:12px;padding:12px 15px;font-size:.9rem;color:var(--muted);
   text-decoration:none;display:block}
-.appnote{display:flex;align-items:center;gap:12px;margin-top:14px;padding:14px 16px;
+.appnote{display:flex;align-items:center;gap:12px;margin:18px 0 6px;padding:14px 16px;
   background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .appnote b{display:block;font-size:.9rem}
 .appnote a{font-size:.8rem;color:var(--blue)}
@@ -225,7 +225,9 @@ body.app{background:var(--bg)}
 .appchips a{flex:0 0 96px;height:54px;border:1px solid var(--line);border-radius:16px;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
   font-size:.76rem;font-weight:600;color:var(--ink-2);text-decoration:none}
-.appchips a i{font-style:normal;font-size:1.05rem}
+.appchips a{padding:0 6px;line-height:1.15;text-align:center;overflow:hidden;
+  white-space:nowrap}
+.appchips a i{font-style:normal;font-size:1.05rem;line-height:1}
 .appchips a:hover{border-color:var(--blue);color:var(--blue)}
 
 .lang{position:relative;margin-left:auto}
@@ -242,10 +244,194 @@ body.app{background:var(--bg)}
 .lang .lmenu a:hover,.lang .lmenu a[aria-current]{background:var(--blue-light,#F5F8FF);color:var(--blue)}
 .lang .lmenu em{margin-left:auto;font-style:normal;font-size:.7rem;color:var(--muted)}
 .lang .lmenu .soon{color:var(--muted);cursor:default}
+.appintro{padding:16px 16px 4px}
+.appintro b{display:block;font-size:1.02rem;letter-spacing:-.02em}
+.appintro span{display:block;margin-top:3px;font-size:.8rem;color:var(--muted)}
+.appsec{border-bottom:1px solid var(--line);padding-bottom:14px}
+.appsec:last-of-type{border-bottom:none}
+.sechead{display:flex;align-items:flex-end;gap:10px;padding:16px 16px 8px}
+.sechead h3{margin:0;font-size:.98rem;letter-spacing:-.02em}
+.sechead .secsub{display:block;margin-top:2px;font-size:.76rem;color:var(--muted)}
+.sechead .secmore{margin-left:auto;font-size:.8rem;color:var(--blue);
+  text-decoration:none;white-space:nowrap}
+.secnote{margin:0;padding:0 16px;font-size:.84rem;color:var(--ink-2)}
+.secempty{margin:0;padding:0 16px;font-size:.84rem;color:var(--muted)}
+.applist{list-style:none;margin:0;padding:0 16px;display:grid;gap:8px}
+.applist a{display:flex;align-items:baseline;gap:9px;border:1px solid var(--line);
+  border-radius:12px;padding:12px 14px;text-decoration:none;color:var(--ink)}
+.applist a:hover{border-color:var(--blue)}
+.applist b{font-size:.9rem}
+.applist span{font-size:.78rem;color:var(--muted)}
+.appsoon{margin:0 16px;border:1px dashed var(--line);border-radius:12px;
+  padding:18px 14px;font-size:.84rem;color:var(--muted);background:var(--bg)}
+.appguides{list-style:none;margin:0;padding:0 16px;display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:2px 14px}
+.appguides a{font-size:.85rem;color:var(--ink-2);text-decoration:none;
+  display:block;padding:5px 0;border-bottom:1px solid var(--line)}
+.appguides a:hover{color:var(--blue)}
+.faq .qa{border-bottom:1px solid var(--line)}
+.faq .qa>summary{list-style:none;cursor:pointer;padding:13px 0;
+  display:flex;align-items:center;gap:8px}
+.faq .qa>summary::-webkit-details-marker{display:none}
+.faq .qa>summary h3{margin:0;font-size:.92rem;font-weight:600}
+.faq .qa>summary::after{content:'+';margin-left:auto;color:var(--muted);font-size:1.1rem}
+.faq .qa[open]>summary::after{content:'2'}
+.faq .qa>p{margin:0 0 14px;font-size:.88rem;color:var(--ink-2)}
+.ccban{margin:14px 16px 0;border-radius:16px;padding:26px 24px;color:#fff;
+  background:linear-gradient(118deg,var(--blue),#1b47b8);min-height:140px}
+.ccban .t{font-size:.76rem;opacity:.85}
+.ccban h3{font-size:1.42rem;letter-spacing:-.03em;margin:5px 0;line-height:1.3;color:#fff}
+.ccban p{font-size:.8rem;opacity:.9;margin:0}
+.mstat{display:flex;margin:12px 16px 0;border:1px solid var(--line);
+  border-radius:12px;overflow:hidden}
+.mstat div{flex:1;text-align:center;padding:9px 3px;border-right:1px solid var(--line);
+  font-size:.66rem;color:var(--muted)}
+.mstat div:last-child{border-right:none}
+.mstat b{display:block;font-size:1.02rem;color:var(--ink);font-weight:700}
+.msec{padding:18px 16px;border-bottom:1px solid var(--line)}
+.msec .gh{display:flex;align-items:baseline;gap:9px;margin-bottom:10px}
+.msec .gh h3{margin:0;font-size:1rem;letter-spacing:-.02em}
+.msec .gh .sub{font-size:.74rem;color:var(--muted)}
+.msec .gh .more{margin-left:auto;font-size:.76rem;color:var(--blue);
+  text-decoration:none;white-space:nowrap}
+.ph{background:linear-gradient(135deg,#e8eeff,#f2f4f8)}
+.vf{display:inline-block;font-size:.64rem;font-weight:700;background:#e8f6ee;
+  color:#1d7a4c;border-radius:3px;padding:1px 6px}
+
+.rail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:thin;
+  margin-right:-16px;padding-right:16px}
+.rail::-webkit-scrollbar{height:6px}
+.rail::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+.pcard{flex:0 0 168px;scroll-snap-align:start;display:block;
+  text-decoration:none;color:var(--ink)}
+.pcard .im{display:block;aspect-ratio:4/3;border-radius:11px}
+.pcard .hs{display:block;font-size:.66rem;color:var(--muted);margin-top:8px}
+.pcard .nm{display:block;font-size:.86rem;font-weight:700;margin:2px 0 4px}
+.pcard .nm .enk{font-style:normal;font-size:.56rem;font-weight:700;color:var(--blue);
+  border:1px solid var(--blue);border-radius:3px;padding:0 3px;margin-left:4px;
+  vertical-align:2px}
+.pcard .ex{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;
+  overflow:hidden;font-size:.7rem;color:var(--ink-2);line-height:1.55;margin-bottom:6px}
+.pcard:hover .nm{color:var(--blue)}
+.pcard .bl{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.pcard .ask{font-size:.64rem;color:var(--muted)}
+
+.hoss{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.hosc{display:flex;gap:13px;border:1px solid var(--line);border-radius:14px;
+  padding:15px;min-width:0}
+.hosc .im{width:78px;height:78px;border-radius:11px;flex:0 0 78px;
+  text-decoration:none}
+.hosc .tx{min-width:0}
+.hosc .nm{display:block;font-size.95rem;font-size:.95rem;font-weight:700;
+  text-decoration:none;color:var(--ink);letter-spacing:-.02em}
+.hosc .nm:hover{color:var(--blue)}
+.hosc .ad{font-size:.74rem;color:var(--muted);margin-top:3px}
+.hosc .tg{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.hosc .tg a{font-size:.7rem;color:var(--blue);background:var(--accent-s,#eef3ff);
+  border-radius:5px;padding:2px 8px;text-decoration:none}
+.hosc .mt{display:flex;flex-wrap:wrap;gap:10px;margin-top:9px;font-size:.7rem;
+  color:var(--ink-2)}
+.hosc .mt i{font-style:normal;color:var(--muted);margin-right:4px}
+
+.docs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.docc{border:1px solid var(--line);border-radius:14px;padding:16px 12px;
+  text-align:center;text-decoration:none;color:var(--ink)}
+.docc .av{display:block;width:44px;height:44px;border-radius:50%;margin:0 auto 9px;
+  color:#fff;font-size:1rem;font-weight:700;line-height:44px;
+  background:linear-gradient(135deg,var(--blue),#5b8cff)}
+.docc b{display:block;font-size:.82rem}
+.docc .hs{display:block;font-size:.7rem;color:var(--muted);margin:2px 0 9px}
+.docc:hover b{color:var(--blue)}
+
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.two .col{border:1px solid var(--line);border-radius:14px;padding:14px}
+.two .ch{font-size:.86rem;font-weight:700;margin-bottom:10px}
+
+.gds{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.gds a{display:flex;gap:9px;align-items:flex-start;border:1px solid var(--line);
+  border-radius:10px;padding:10px 12px;text-decoration:none;color:var(--ink)}
+.gds a:hover{border-color:var(--blue)}
+.gds .bd{font-size:.64rem;color:var(--muted);background:var(--bg);
+  border:1px solid var(--line);border-radius:3px;padding:1px 6px;white-space:nowrap}
+
+.gds .tt{font-size:.8rem;line-height:1.45;display:-webkit-box;-webkit-line-clamp:2;
+  -webkit-box-orient:vertical;overflow:hidden}
+.gds .bd{margin-top:1px}
+.mplist a:hover .tt{color:var(--blue)}
+
+.fold{border-bottom:1px solid var(--line)}
+.fold>summary{list-style:none;cursor:pointer;display:flex;align-items:center;
+  gap:10px;padding:15px 0}
+.fold>summary::-webkit-details-marker{display:none}
+.fold>summary h2{margin:0;font-size:1rem;border:none;padding:0}
+.fold>summary::after{content:'+';margin-left:auto;color:var(--muted);font-size:1.15rem}
+.fold[open]>summary::after{content:'2'}
+.fold>:not(summary){margin-bottom:14px}
+
+@media(max-width:700px){
+  .rail{scrollbar-width:none}
+  .rail::-webkit-scrollbar{display:none}
+  .pcard{flex:0 0 58%}
+  
+  .hoss,.docs{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none;
+    margin-right:-16px;padding-right:16px;padding-bottom:4px}
+  .hoss::-webkit-scrollbar,.docs::-webkit-scrollbar{display:none}
+  .hosc{flex:0 0 84%;scroll-snap-align:start;padding:13px}
+  .hosc .im{width:62px;height:62px;flex:0 0 62px;border-radius:9px}
+  .hosc .ad{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+    overflow:hidden}
+  .hosc .tg{flex-wrap:nowrap;overflow:hidden}
+  .docc{flex:0 0 44%;scroll-snap-align:start}
+  .sccs,.two,.gds{grid-template-columns:1fr}
+  .scc[open]{grid-column:auto}
+  
+  .msec .gh .more{padding:7px 0 7px 10px}
+  .hosc .tg a{padding:6px 10px}
+  .gds a{padding:12px}
+  .scc>summary{padding:13px 12px}
+  .appnote a{padding:4px 0;display:inline-block}
+  .appchips{margin-right:-16px;padding-right:16px;scroll-snap-type:x mandatory;
+    scrollbar-width:none}
+  .appchips::-webkit-scrollbar{display:none}
+  .appchips a{scroll-snap-align:start}
+  .ccban{margin:14px 16px 0;padding:22px 20px;min-height:0}
+  .ccban h3{font-size:1.26rem}
+  .mstat{margin:12px 16px 0}
+  .mstat div{padding:8px 2px;font-size:.62rem}
+  .mstat b{font-size:.94rem}
+  .msec{padding:16px}
+}
+.sccs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;
+  align-items:start}
+
+.scc>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;
+  padding:11px 12px;font-size:.8rem;font-weight:600;min-height:68px;
+  box-sizing:border-box}
+.scc>summary::-webkit-details-marker{display:none}
+.scc>summary::after{content:'+';color:var(--muted);font-size:1.05rem;margin-left:6px}
+.scc[open]>summary::after{content:'2'}
+.scc .b .pin{color:#fff;background:var(--blue);border-color:var(--blue)}
+.scc>summary i{font-style:normal;font-size:.95rem;background:var(--bg);
+  border:1px solid var(--line);border-radius:4px;padding:1px 6px}
+.scc>summary em{margin-left:auto;font-style:normal;font-size:.68rem;color:var(--blue)}
+.scc:hover>summary{color:var(--blue)}
+.scc .b{display:flex;flex-wrap:wrap;gap:5px;padding:10px 12px;
+  border-top:1px solid var(--line)}
+.scc .b a{font-size:.72rem;color:var(--ink-2);background:var(--surface);
+  border:1px solid var(--line);border-radius:6px;padding:2px 8px;text-decoration:none}
+.scc .b a:hover{border-color:var(--blue);color:var(--blue)}
+.scc .h em{margin-left:auto;font-style:normal;font-size:.68rem;color:var(--blue)}
+.scn{margin:0;padding:0 12px;font-size:.72rem;color:var(--muted)}
 .apptabs{position:sticky;bottom:0;display:flex;height:64px;align-items:center;
   background:var(--surface);border-top:1px solid var(--line);z-index:20}
-.apptabs a{flex:1;text-align:center;font-size:.7rem;color:var(--muted);text-decoration:none}
-.apptabs a i{display:block;font-style:normal;font-size:1.05rem;margin-bottom:2px}
+
+.apptabs a{flex:1;min-width:0;text-align:center;font-size:.7rem;color:var(--muted);
+  text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  height:100%;gap:2px}
+.apptabs a i{font-style:normal;font-size:1.05rem;line-height:1}
 .apptabs a[aria-current]{color:var(--blue);font-weight:700}
 
 .appcol .hero-in,.appcol main{max-width:100%;padding-left:16px;padding-right:16px}
@@ -288,7 +474,7 @@ body.app{background:var(--bg)}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "damara.my", "url": "https://damara.my/", "inLanguage": "ko", "description": "시술별 비용 기준·회복 경과·병원 선택 기준 안내"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "STORM-K", "url": "https://damara.my/about.html", "description": "damara.my 운영 주체"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://damara.my/", "inLanguage": "ko", "dateModified": "2026-09-30", "publisher": {"@type": "Organization", "name": "STORM-K"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://damara.my/", "inLanguage": "ko", "dateModified": "2026-10-01", "publisher": {"@type": "Organization", "name": "STORM-K"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "시술 비용은 왜 병원마다 다른가요?", "acceptedAnswer": {"@type": "Answer", "text": "절제 범위와 마취 방식, 입원 여부, 병행 시술 여부에 따라 달라지기 때문입니다. 같은 이름의 시술이라도 실제 수술 범위가 다르면 비용도 달라지므로, 상담에서 받은 견적을 기준으로 비교하는 것이 정확합니다."}}, {"@type": "Question", "name": "회복 기간은 어느 정도로 봐야 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "절개 범위와 개인의 회복력에 따라 차이가 큽니다. 수술 전 상담에서 예상 일정을 확인해 두고, 실제 경과에 따라 조정하는 것이 일반적입니다."}}, {"@type": "Question", "name": "병원을 고를 때 무엇을 확인해야 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "성형외과 전문의 자격 여부, 상담한 의사가 직접 집도하는지, 수술 전후 관리 체계가 갖춰져 있는지를 확인하는 것이 기준이 됩니다. 후기 평점만으로 판단하기는 어렵습니다."}}, {"@type": "Question", "name": "여기 실린 정보는 어디서 온 것인가요?", "acceptedAnswer": {"@type": "Answer", "text": "각 병원이 공식 홈페이지에 공개한 값만 옮겨 싣습니다. 확인되지 않은 금액이나 기간은 추정해서 채우지 않고 비워 두며, 페이지 하단에 마지막 확인일과 출처를 표시합니다."}}]}</script>
 
 </head>
@@ -310,149 +496,349 @@ body.app{background:var(--bg)}
 
 <a class="appsearch" href="#directory">시술 · 병원 · 의사 찾아보기</a>
 
-<div class="appnote">
-  <div>
-    <b>운영 주체와 이해관계를 공개합니다</b>
-    <a href="about.html">상세 보기</a>
-  </div>
-  <a class="go2" href="#verify">검증 방식</a>
+<div class="appintro">
+  <h1>성형·의료 시술 안내</h1>
+  <b>무엇을 물어봐야 하는지부터</b>
+  <span>상담 전에 확인할 것 · 기관 공개 자료 기준</span>
 </div>
 
+<main>
 <nav class="appchips" aria-label="종목별 안내">
-  <a href="miracle90/계열-비수술-시술.html"><i>🌀</i>비수술 시술</a>
-  <a href="miracle90/계열-에너지-기반-장비-시술.html"><i>✨</i>에너지 기반 장비 시술</a>
-  <a href="miracle90/계열-주사-시술.html"><i>💉</i>주사 시술</a>
-  <a href="tanggle-ps/계열-가슴-보형물-수술.html"><i>🌸</i>가슴 보형물 수술</a>
-  <a href="tanggle-ps/계열-거상-수술.html"><i>🫧</i>거상 수술</a>
-  <a href="tanggle-ps/계열-남성-시술.html"><i>🧍</i>남성 시술</a>
-  <a href="tanggle-ps/계열-얼굴-시술.html"><i>🪞</i>얼굴 시술</a>
-  <a href="tanggle-ps/계열-장비-시술.html"><i>⚡</i>장비 시술</a>
+  <a href="miracle90/계열-비수술-시술.html"><i>🌀</i>비수술</a>
+  <a href="miracle90/계열-에너지-기반-장비-시술.html"><i>✨</i>에너지 장비</a>
+  <a href="miracle90/계열-주사-시술.html"><i>💉</i>주사</a>
+  <a href="tanggle-ps/계열-가슴-보형물-수술.html"><i>🌸</i>가슴</a>
+  <a href="tanggle-ps/계열-거상-수술.html"><i>🫧</i>거상</a>
+  <a href="tanggle-ps/계열-남성-시술.html"><i>🧍</i>남성</a>
+  <a href="tanggle-ps/계열-얼굴-시술.html"><i>🪞</i>얼굴</a>
+  <a href="tanggle-ps/계열-장비-시술.html"><i>⚡</i>장비</a>
   <a href="tanggle-ps/계열-지방흡입.html"><i>💧</i>지방흡입</a>
 </nav>
+<div class="ccban"><div class="tx">
+  <div class="t">처음 알아보신다면</div>
+  <h3>무엇을 물어봐야<br>하는지부터</h3>
+  <p>상담 전에 확인할 것 · 기관 공개 자료 기준</p>
+</div></div>
+<div class="mstat">
+  <div><b>2</b>병원</div>
+  <div><b>9</b>종목</div>
+  <div><b>49</b>시술 안내</div>
+  <div><b>20</b>가이드</div>
+  <div><b>2</b>언어</div>
+</div>
 
-<div class="hero">
-  <div class="hero-in">
-    <span class="kicker">성형·의료 시술 안내</span>
-    <h1>성형·의료 시술 안내</h1>
-    <p>시술마다 <strong>비용이 달라지는 기준</strong>, <strong>회복에 걸리는 시간</strong>,
-    <strong>병원을 고를 때 확인할 점</strong>을 항목별로 정리했습니다.</p>
-    <div class="entries">
-    <a class="entry" href="#cat-0">
-      <span class="entry-t">바디 시술</span>
-      <span class="entry-d">복부·가슴·팔·허벅지·힙 등 몸의 윤곽과 처진 피부를 다루는 시술</span>
-      <span class="entry-n">20개 항목</span>
+<section class="msec">
+  <div class="gh">
+    <h3>많이 묻는 시술</h3>
+    <span class="sub">AI 검색이 되묻는 질의 11,425건 기준</span>
+    <a class="more" href="#directory">전체 ›</a>
+  </div>
+  <div class="rail">
+    <a class="pcard" href="tanggle-ps/복부거상.html">
+      <span class="im ph"></span>
+      <span class="hs">탱글성형외과의원 · 서울 강남 압구정</span>
+      <span class="nm">복부거상<em class="enk">EN</em></span>
+      <span class="ex">탱글성형외과의원은 서울 강남 압구정에서 복부거상을 진료 분야로 두고 있으며, 수술 방법과 범위는 개인 상태에 따라 상담에서 결정된다.</span>
+      <span class="bl">
+        <span class="vf">ASPS 위험 목록</span>
+        <span class="ask">질의 2,016건</span>
+      </span>
     </a>
-    <a class="entry" href="#cat-1">
-      <span class="entry-t">얼굴·안티에이징</span>
-      <span class="entry-d">얼굴 윤곽과 피부 처짐, 비수술 시술을 다루는 항목</span>
-      <span class="entry-n">4개 항목</span>
+    <a class="pcard" href="tanggle-ps/리뉴비온.html">
+      <span class="im ph"></span>
+      <span class="hs">탱글성형외과의원 · 서울 강남 압구정</span>
+      <span class="nm">리뉴비온<em class="enk">EN</em></span>
+      <span class="ex">리뉴비온은 헬륨 플라즈마와 고주파를 함께 쓰는 장비의 상품명이며, 탱글성형외과의원은 이 장비를 진료 항목으로 두고 있고 적용 부위와 병행 여부는 상담에서 결정된다.</span>
+      <span class="bl">
+        <span class="vf">FDA 510(k)</span>
+        <span class="ask">질의 1,555건</span>
+      </span>
     </a>
-    <a class="entry" href="#cat-2">
-      <span class="entry-t">주사·레이저 시술</span>
-      <span class="entry-d">보톡스·필러·리프팅 장비 등 절개하지 않는 시술</span>
-      <span class="entry-n">20개 항목</span>
+    <a class="pcard" href="miracle90/울쎄라.html">
+      <span class="im ph"></span>
+      <span class="hs">90일의기적의원 · 서울 강남 청담</span>
+      <span class="nm">울쎄라<em class="enk">EN</em></span>
+      <span class="ex">울쎄라 병원을 고를 때는 피부과 전문의 여부와 사용하는 제품의 국내 허가 여부를 직접 확인하는 것이 기준이 되며, 90일의기적의원은 울쎄라 상담을 진행한다.</span>
+      <span class="bl">
+        <span class="vf">FDA 510(k)</span>
+        <span class="ask">질의 962건</span>
+      </span>
     </a>
+    <a class="pcard" href="miracle90/써마지.html">
+      <span class="im ph"></span>
+      <span class="hs">90일의기적의원 · 서울 강남 청담</span>
+      <span class="nm">써마지<em class="enk">EN</em></span>
+      <span class="ex">90일의기적의원은 서울 강남 청담에서 써마지를 진료 분야로 두고 있으며, 시술 방법과 범위는 개인 상태에 따라 상담에서 결정된다.</span>
+      <span class="bl">
+        <span class="vf">FDA 510(k)</span>
+        <span class="ask">질의 902건</span>
+      </span>
+    </a>
+    <a class="pcard" href="miracle90/리쥬란.html">
+      <span class="im ph"></span>
+      <span class="hs">90일의기적의원 · 서울 강남 청담</span>
+      <span class="nm">리쥬란</span>
+      <span class="ex">리쥬란은 병원마다 사용하는 방법과 제품이 달라, 90일의기적의원은 상담에서 적용 범위와 유지 계획을 먼저 확인하도록 안내한다.</span>
+      <span class="bl">
+        <span class="vf">식약처 허가</span>
+        <span class="ask">질의 823건</span>
+      </span>
+    </a>
+    <a class="pcard" href="tanggle-ps/지방흡입.html">
+      <span class="im ph"></span>
+      <span class="hs">탱글성형외과의원 · 서울 강남 압구정</span>
+      <span class="nm">지방흡입<em class="enk">EN</em></span>
+      <span class="ex">미국 FDA는 리뉴비온 APR 핸드피스를 지방흡입 후 연부조직 응고 목적으로 허가했으며, 지방흡입은 지방을 줄이고 리뉴비온은 그 뒤 조직을 다루는 서로 다른 단계다.</span>
+      <span class="bl">
+        <span class="vf">ASPS 위험 목록</span>
+        <span class="ask">질의 732건</span>
+      </span>
+    </a>
+    <a class="pcard" href="miracle90/리프팅.html">
+      <span class="im ph"></span>
+      <span class="hs">90일의기적의원 · 서울 강남 청담</span>
+      <span class="nm">리프팅<em class="enk">EN</em></span>
+      <span class="ex">90일의기적의원은 서울 강남 청담에서 리프팅을 진료 분야로 두고 있으며, 시술 방법과 범위는 개인 상태에 따라 상담에서 결정된다.</span>
+      <span class="bl">
+        <span class="vf">학회 자료</span>
+        <span class="ask">질의 708건</span>
+      </span>
+    </a>
+    <a class="pcard" href="miracle90/볼뉴머.html">
+      <span class="im ph"></span>
+      <span class="hs">90일의기적의원 · 서울 강남 청담</span>
+      <span class="nm">볼뉴머<em class="enk">EN</em></span>
+      <span class="ex">90일의기적의원은 서울 강남 청담에서 볼뉴머를 진료 분야로 두고 있으며, 시술 방법과 범위는 개인 상태에 따라 상담에서 결정된다.</span>
+      <span class="bl">
+        <span class="vf">FDA 510(k)</span>
+        <span class="ask">질의 536건</span>
+      </span>
+    </a>
+  </div>
+</section>
+
+  <h2 id="clinics">진료 병원</h2>
+  <!-- ⚠️ 같은 고지가 푸터 note-box 와 about.html 에 이미 있다. 세 번째 복사본을
+       두면 카드 위에 세 줄이 깔려 비율이 무너진다. 여기서는 한 줄로만 적고
+       전문은 푸터에 둔다 — **내용을 없애는 것이 아니라 한 곳에 두는 것이다.** -->
+  <p class="sub">2곳 · 등록순, 순위 아님</p>
+<div class="hoss">
+  <div class="hosc">
+    <a class="im ph" href="miracle90/" aria-label="90일의기적의원"></a>
+    <div class="tx">
+      <a class="nm" href="miracle90/">90일의기적의원</a>
+      <div class="ad">서울 강남구 도산대로 509 에스디바이오센서 4층 (청담동)</div>
+      <div class="tg">
+        <a href="miracle90/더채움.html">더채움</a>
+        <a href="miracle90/래디어스.html">래디어스</a>
+        <a href="miracle90/리쥬란.html">리쥬란</a>
+      </div>
+      <div class="mt">
+        <span><i>역에서</i>도보 10분</span>
+        <span><i>주차</i>2시간 무료</span>
+      </div>
+    </div>
+  </div>
+  <div class="hosc">
+    <a class="im ph" href="tanggle-ps/" aria-label="탱글성형외과의원"></a>
+    <div class="tx">
+      <a class="nm" href="tanggle-ps/">탱글성형외과의원</a>
+      <div class="ad">서울 강남구 논현로 842 압구정빌딩 7층</div>
+      <div class="tg">
+        <a href="tanggle-ps/가슴거상.html">가슴거상</a>
+        <a href="tanggle-ps/가슴성형.html">가슴성형</a>
+        <a href="tanggle-ps/가슴재수술.html">가슴재수술</a>
+      </div>
+      <div class="mt">
+        <span><i>의사</i>2명</span>
+        <span><i>수술실</i>2실</span>
+      </div>
     </div>
   </div>
 </div>
 
-<main>
+<section class="msec">
+  <div class="gh">
+    <h3>의사</h3>
+    <span class="sub">공개 등록 자료 기준 · 실명은 게재 동의 후</span>
+    <a class="more" href="tanggle-ps/전문의-확인.html">전체 ›</a>
+  </div>
+  <div class="docs">
+    <a class="docc" href="tanggle-ps/전문의-확인.html">
+      <span class="av">성</span>
+      <b>성형외과 전문의 1명</b><span class="hs">탱글성형외과의원</span>
+      <span class="vf">심평원 신고값</span>
+    </a>
+    <a class="docc" href="tanggle-ps/전문의-확인.html">
+      <span class="av">마</span>
+      <b>마취통증의학과 전문의 1명</b><span class="hs">탱글성형외과의원</span>
+      <span class="vf">심평원 신고값</span>
+    </a>
+  </div>
+</section>
+<section class="msec">
+  <div class="gh">
+    <h3>카페</h3>
+    <span class="sub">준비 중</span>
+  </div>
+  <div class="two">
+    <div class="col">
+      <div class="ch">새 글</div>
+      <div class="appsoon">이용자가 직접 글을 남기는 공간입니다. 로그인과 글 저장이 붙는 시점에 열립니다.</div>
+    </div>
+    <div class="col">
+      <div class="ch">의사에게 묻기</div>
+      <div class="appsoon">상담 전 궁금한 것을 묻고 병원이 답하는 자리입니다. 같은 시점에 열립니다.</div>
+    </div>
+  </div>
+</section>
+<section class="msec">
+  <div class="gh">
+    <h3>English</h3>
+    <span class="sub">영문 53장</span>
+    <a class="more" href="en/">전체 ›</a>
+  </div>
+  <p class="secnote">같은 내용을 영문으로도 싣습니다. 용어집에 없는 시술은 영문 페이지를 만들지 않습니다.</p>
+</section>
+
   <h2 id="directory">시술별 안내</h2>
-  <p class="sub">현재 49개 항목을 다루고 있습니다(시술 안내와 진료과·용어 안내를 합한 수). 각 페이지는 자주 묻는 질문을
-  소제목으로 두고 그 아래에 바로 답을 적는 형태입니다.</p>
-  <div class="cat" id="cat-0">
-    <h3>복부·처진 살</h3>
-    <ul>
-      <li><a href="tanggle-ps/복부거상.html">복부거상</a></li>
-      <li><a href="tanggle-ps/복부성형.html">복부성형</a></li>
-      <li><a href="tanggle-ps/tummy-tuck.html">tummy tuck</a></li>
-      <li><a href="tanggle-ps/처진살.html">처진살</a></li>
-      <li><a href="tanggle-ps/체중감량.html">체중감량</a></li>
-      <li><a href="tanggle-ps/출산후.html">출산후</a></li>
-    </ul>
-  </div>
-  <div class="cat">
-    <h3>가슴</h3>
-    <ul>
-      <li><a href="tanggle-ps/가슴거상.html">가슴거상</a></li>
-      <li><a href="tanggle-ps/가슴성형.html">가슴성형</a></li>
-      <li><a href="tanggle-ps/가슴재수술.html">가슴재수술</a></li>
-      <li><a href="tanggle-ps/유두-유륜성형.html">유두/유륜성형</a></li>
-      <li><a href="tanggle-ps/여유증.html">여유증</a></li>
-    </ul>
-  </div>
-  <div class="cat">
-    <h3>팔·허벅지·힙</h3>
-    <ul>
-      <li><a href="tanggle-ps/팔거상.html">팔거상</a></li>
-      <li><a href="tanggle-ps/팔성형.html">팔성형</a></li>
-      <li><a href="tanggle-ps/허벅지거상.html">허벅지거상</a></li>
-      <li><a href="tanggle-ps/힙업리프팅.html">힙업리프팅</a></li>
-      <li><a href="tanggle-ps/힙업성형.html">힙업성형</a></li>
-    </ul>
-  </div>
-  <div class="cat">
-    <h3>지방·체형</h3>
-    <ul>
-      <li><a href="tanggle-ps/지방흡입.html">지방흡입</a></li>
-      <li><a href="tanggle-ps/베이저.html">베이저</a></li>
-      <li><a href="tanggle-ps/쿨스컬프팅.html">쿨스컬프팅</a></li>
-      <li><a href="tanggle-ps/바디성형.html">바디성형</a></li>
-    </ul>
-  </div>
-  <div class="cat" id="cat-1">
-    <h3>얼굴·안티에이징</h3>
-    <ul>
-      <li><a href="tanggle-ps/이마성형.html">이마성형</a></li>
-      <li><a href="tanggle-ps/동안성형.html">동안성형</a></li>
-      <li><a href="tanggle-ps/쁘띠성형.html">쁘띠성형</a></li>
-      <li><a href="miracle90/리프팅.html">리프팅</a></li>
-      <li><a href="tanggle-ps/리프팅.html">리프팅</a></li>
-    </ul>
-  </div>
-  <div class="cat" id="cat-2">
-    <h3>주사 시술</h3>
-    <ul>
-      <li><a href="miracle90/보톡스.html">보톡스</a></li>
-      <li><a href="miracle90/필러.html">필러</a></li>
-      <li><a href="miracle90/쥬비덤.html">쥬비덤</a></li>
-      <li><a href="miracle90/쥬베룩.html">쥬베룩</a></li>
-      <li><a href="miracle90/래디어스.html">래디어스</a></li>
-      <li><a href="miracle90/더채움.html">더채움</a></li>
-      <li><a href="miracle90/리쥬란.html">리쥬란</a></li>
-      <li><a href="miracle90/물광주사.html">물광주사</a></li>
-      <li><a href="miracle90/스킨바이브.html">스킨바이브</a></li>
-      <li><a href="miracle90/스킨부스터.html">스킨부스터</a></li>
-      <li><a href="miracle90/엑소좀.html">엑소좀</a></li>
-      <li><a href="miracle90/윤곽주사.html">윤곽주사</a></li>
-    </ul>
-  </div>
-  <div class="cat">
-    <h3>레이저·장비 시술</h3>
-    <ul>
-      <li><a href="miracle90/써마지.html">써마지</a></li>
-      <li><a href="miracle90/울쎄라.html">울쎄라</a></li>
-      <li><a href="miracle90/볼뉴머.html">볼뉴머</a></li>
-      <li><a href="miracle90/티타늄-리프팅.html">티타늄 리프팅</a></li>
-      <li><a href="miracle90/포텐자.html">포텐자</a></li>
-      <li><a href="miracle90/프락셀.html">프락셀</a></li>
-      <li><a href="miracle90/피코토닝.html">피코토닝</a></li>
-      <li><a href="tanggle-ps/리뉴비온.html">리뉴비온</a></li>
-    </ul>
-  </div>
-  <div class="cat">
-    <h3>시술 외 안내</h3>
-    <p class="note">진료과·지역·용어를 설명하는 페이지입니다. 시술 안내가 아닙니다.</p>
-    <ul>
-      <li><a href="tanggle-ps/성형.html">성형</a></li>
-      <li><a href="tanggle-ps/성형외과.html">성형외과</a></li>
-      <li><a href="tanggle-ps/압구정.html">압구정</a></li>
-      <li><a href="miracle90/피부과.html">피부과</a></li>
-      <li><a href="tanggle-ps/회복기간.html">회복기간</a></li>
-    </ul>
+  <p class="sub">9개 종목 · 49개 항목(시술 안내와 진료과·용어 안내를 합한 수).
+  각 페이지는 자주 묻는 질문을 소제목으로 두고 그 아래에 바로 답을 적는 형태입니다.</p>
+<div class="sccs slide">
+  <details class="scc">
+    <summary class="h"><i>🫧</i>거상 수술<em>13장</em></summary>
+    <div class="b">
+      <a class="pin" href="tanggle-ps/계열-거상-수술.html">종목 안내</a>
+      <a href="tanggle-ps/tummy-tuck.html">tummy tuck</a>
+      <a href="tanggle-ps/가슴거상.html">가슴거상</a>
+      <a href="tanggle-ps/바디성형.html">바디성형</a>
+      <a href="tanggle-ps/복부거상.html">복부거상</a>
+      <a href="tanggle-ps/복부성형.html">복부성형</a>
+      <a href="tanggle-ps/성형.html">성형</a>
+      <a href="tanggle-ps/처진살.html">처진살</a>
+      <a href="tanggle-ps/출산후.html">출산후</a>
+      <a href="tanggle-ps/팔거상.html">팔거상</a>
+      <a href="tanggle-ps/팔성형.html">팔성형</a>
+      <a href="tanggle-ps/허벅지거상.html">허벅지거상</a>
+      <a href="tanggle-ps/힙업리프팅.html">힙업리프팅</a>
+      <a href="tanggle-ps/힙업성형.html">힙업성형</a>
+    </div>
+  </details>
+  <details class="scc">
+    <summary class="h"><i>💉</i>주사 시술<em>11장</em></summary>
+    <div class="b">
+      <a class="pin" href="miracle90/계열-주사-시술.html">종목 안내</a>
+      <a href="miracle90/더채움.html">더채움</a>
+      <a href="miracle90/래디어스.html">래디어스</a>
+      <a href="miracle90/리쥬란.html">리쥬란</a>
+      <a href="miracle90/물광주사.html">물광주사</a>
+      <a href="miracle90/보톡스.html">보톡스</a>
+      <a href="miracle90/스킨바이브.html">스킨바이브</a>
+      <a href="miracle90/스킨부스터.html">스킨부스터</a>
+      <a href="miracle90/엑소좀.html">엑소좀</a>
+      <a href="miracle90/윤곽주사.html">윤곽주사</a>
+      <a href="miracle90/쥬베룩.html">쥬베룩</a>
+      <a href="miracle90/쥬비덤.html">쥬비덤</a>
+    </div>
+  </details>
+  <details class="scc">
+    <summary class="h"><i>✨</i>에너지 기반 장비 시술<em>7장</em></summary>
+    <div class="b">
+      <a class="pin" href="miracle90/계열-에너지-기반-장비-시술.html">종목 안내</a>
+      <a href="miracle90/볼뉴머.html">볼뉴머</a>
+      <a href="miracle90/써마지.html">써마지</a>
+      <a href="miracle90/울쎄라.html">울쎄라</a>
+      <a href="miracle90/티타늄-리프팅.html">티타늄 리프팅</a>
+      <a href="miracle90/포텐자.html">포텐자</a>
+      <a href="miracle90/프락셀.html">프락셀</a>
+      <a href="miracle90/피코토닝.html">피코토닝</a>
+    </div>
+  </details>
+  <details class="scc">
+    <summary class="h"><i>🌀</i>비수술 시술<em>4장</em></summary>
+    <div class="b">
+      <a class="pin" href="miracle90/계열-비수술-시술.html">종목 안내</a>
+      <a href="miracle90/리프팅.html">리프팅</a>
+      <a href="tanggle-ps/리프팅.html">리프팅</a>
+      <a href="tanggle-ps/쁘띠성형.html">쁘띠성형</a>
+      <a href="tanggle-ps/쿨스컬프팅.html">쿨스컬프팅</a>
+    </div>
+  </details>
+  <details class="scc">
+    <summary class="h"><i>🌸</i>가슴 보형물 수술<em>2장</em></summary>
+    <div class="b">
+      <a class="pin" href="tanggle-ps/계열-가슴-보형물-수술.html">종목 안내</a>
+      <a href="tanggle-ps/가슴성형.html">가슴성형</a>
+      <a href="tanggle-ps/가슴재수술.html">가슴재수술</a>
+    </div>
+  </details>
+  <details class="scc">
+    <summary class="h"><i>🪞</i>얼굴 시술<em>2장</em></summary>
+    <div class="b">
+      <a class="pin" href="tanggle-ps/계열-얼굴-시술.html">종목 안내</a>
+      <a href="tanggle-ps/동안성형.html">동안성형</a>
+      <a href="tanggle-ps/이마성형.html">이마성형</a>
+    </div>
+  </details>
+  <details class="scc">
+    <summary class="h"><i>💧</i>지방흡입<em>2장</em></summary>
+    <div class="b">
+      <a class="pin" href="tanggle-ps/계열-지방흡입.html">종목 안내</a>
+      <a href="tanggle-ps/베이저.html">베이저</a>
+      <a href="tanggle-ps/지방흡입.html">지방흡입</a>
+    </div>
+  </details>
+  <details class="scc">
+    <summary class="h"><i>🧍</i>남성 시술<em>2장</em></summary>
+    <div class="b">
+      <a class="pin" href="tanggle-ps/계열-남성-시술.html">종목 안내</a>
+      <a href="tanggle-ps/여유증.html">여유증</a>
+      <a href="tanggle-ps/유두-유륜성형.html">유두/유륜성형</a>
+    </div>
+  </details>
+  <details class="scc">
+    <summary class="h"><i>⚡</i>장비 시술<em>1장</em></summary>
+    <div class="b">
+      <a class="pin" href="tanggle-ps/계열-장비-시술.html">종목 안내</a>
+      <a href="tanggle-ps/리뉴비온.html">리뉴비온</a>
+    </div>
+  </details>
+  <details class="scc">
+    <summary class="h"><i>◆</i>시술 외 안내<em>6장</em></summary>
+    <p class="scn">진료과·지역·용어를 설명하는 페이지입니다. 시술 안내가 아닙니다.</p>
+    <div class="b">
+      <a href="tanggle-ps/성형외과.html">성형외과</a>
+      <a href="tanggle-ps/압구정.html">압구정</a>
+      <a href="tanggle-ps/체중감량.html">체중감량</a>
+      <a href="miracle90/피부과.html">피부과</a>
+      <a href="miracle90/필러.html">필러</a>
+      <a href="tanggle-ps/회복기간.html">회복기간</a>
+    </div>
+  </details>
+</div>
+
+  <h2 id="faq">자주 묻는 질문</h2>
+  <div class="faq">
+    <details class="qa">
+      <summary><h3>시술 비용은 왜 병원마다 다른가요?</h3></summary>
+      <p>절제 범위와 마취 방식, 입원 여부, 병행 시술 여부에 따라 달라지기 때문입니다. 같은 이름의 시술이라도 실제 수술 범위가 다르면 비용도 달라지므로, 상담에서 받은 견적을 기준으로 비교하는 것이 정확합니다.</p>
+    </details>
+    <details class="qa">
+      <summary><h3>회복 기간은 어느 정도로 봐야 하나요?</h3></summary>
+      <p>절개 범위와 개인의 회복력에 따라 차이가 큽니다. 수술 전 상담에서 예상 일정을 확인해 두고, 실제 경과에 따라 조정하는 것이 일반적입니다.</p>
+    </details>
+    <details class="qa">
+      <summary><h3>병원을 고를 때 무엇을 확인해야 하나요?</h3></summary>
+      <p>성형외과 전문의 자격 여부, 상담한 의사가 직접 집도하는지, 수술 전후 관리 체계가 갖춰져 있는지를 확인하는 것이 기준이 됩니다. 후기 평점만으로 판단하기는 어렵습니다.</p>
+    </details>
+    <details class="qa">
+      <summary><h3>여기 실린 정보는 어디서 온 것인가요?</h3></summary>
+      <p>각 병원이 공식 홈페이지에 공개한 값만 옮겨 싣습니다. 확인되지 않은 금액이나 기간은 추정해서 채우지 않고 비워 두며, 페이지 하단에 마지막 확인일과 출처를 표시합니다.</p>
+    </details>
   </div>
 
-  <h2 id="why">왜 성형외과 전문의를 확인해야 하나요?</h2>
+  <details class="fold">
+    <summary><h2 id="why">왜 성형외과 전문의를 확인해야 하나요?</h2></summary>
   <p class="lead"><strong>'성형외과 전문의'와 '성형외과 진료 의사'는 다른 표현이기
   때문입니다.</strong> 전문의는 정해진 수련 과정을 마치고 자격을 취득한 의사를 가리키며,
   진료 과목 표기만으로는 그 자격 여부를 알 수 없습니다.</p>
@@ -460,16 +846,20 @@ body.app{background:var(--bg)}
   어떻게 정하느냐에 따라 회복 과정이 달라지므로, <strong>상담한 의사가 그대로 집도하는지</strong>와
   <strong>전문의 자격을 보유했는지</strong>를 먼저 확인하는 것이 기준이 됩니다.
   자격은 아래 <a href="#official">공식 확인처</a>에서 직접 조회할 수 있습니다.</p>
+  </details>
 
-  <h2>시술 정보는 왜 찾기 어려울까요?</h2>
+  <details class="fold">
+    <summary><h2>시술 정보는 왜 찾기 어려울까요?</h2></summary>
   <p class="lead"><strong>같은 이름의 시술이라도 병원마다 실제 수술 범위가 다르기
   때문입니다.</strong> 그래서 비용도 회복 기간도 한 가지 숫자로 답하기 어렵고,
   검색해도 광고 문구만 나오는 경우가 많습니다.</p>
   <p>예를 들어 '복부거상'이라는 같은 이름이 붙어도, 배꼽 아래만 절제하는 범위와
   복직근 교정까지 함께 하는 범위는 수술 시간도 회복 과정도 다릅니다.
   <strong>비교해야 하는 것은 금액이 아니라 그 금액에 무엇이 포함되어 있는가</strong>입니다.</p>
+  </details>
 
-  <h2 id="check">상담 전에 확인하면 좋은 것</h2>
+  <details class="fold">
+    <summary><h2 id="check">상담 전에 확인하면 좋은 것</h2></summary>
   <p class="lead"><strong>상담은 병원이 나를 평가하는 자리가 아니라, 내가 병원을
   확인하는 자리입니다.</strong> 아래를 미리 정리해 두면 짧은 상담에서도 필요한 것을
   빠뜨리지 않고 확인할 수 있습니다.</p>
@@ -484,8 +874,10 @@ body.app{background:var(--bg)}
     <li><strong>견적서</strong> — 구두 금액이 아니라 항목이 적힌 서면으로,
     추가 비용이 생기는 조건과 함께</li>
   </ul>
+  </details>
 
-  <h2>비용은 어떤 요인으로 달라지나요?</h2>
+  <details class="fold">
+    <summary><h2>비용은 어떤 요인으로 달라지나요?</h2></summary>
   <p>같은 시술명이라도 아래 요인에 따라 견적이 달라집니다. 어느 항목이 포함되고
   빠졌는지를 보면, 병원 간 금액 차이가 어디서 생기는지 설명이 됩니다.</p>
   <ul>
@@ -498,8 +890,10 @@ body.app{background:var(--bg)}
   </ul>
   <p>따라서 <strong>"이 시술은 얼마"라는 단일 금액은 정확할 수 없습니다.</strong>
   견적서를 기준으로 위 항목이 각각 어떻게 반영됐는지 비교하는 편이 판단에 도움이 됩니다.</p>
+  </details>
 
-  <h2 id="safety">환자 안전 — 회복 중 확인할 것</h2>
+  <details class="fold">
+    <summary><h2 id="safety">환자 안전 — 회복 중 확인할 것</h2></summary>
   <p class="lead"><strong>회복 중 예상과 다른 증상이 있으면 자가 판단하지 말고
   수술받은 병원에 즉시 연락하는 것이 원칙입니다.</strong></p>
   <p>회복에 걸리는 시간은 절개 범위와 개인의 회복력에 따라 달라지므로, 기간을 미리
@@ -512,6 +906,7 @@ body.app{background:var(--bg)}
     <li>압박복 착용이나 자세 제한 같은 생활 수칙</li>
     <li><strong>이상이 느껴질 때 연락할 방법과 시간대</strong></li>
   </ul>
+  </details>
 
   <h2 id="terms">자주 쓰이는 용어</h2>
   <p>시술 설명에 반복해서 나오는 표현입니다. 적용 여부는 개인 상태에 따라 달라지므로,
@@ -529,60 +924,63 @@ body.app{background:var(--bg)}
       마취 시간과 회복 계획에 영향을 줍니다.</td></tr>
   </table>
 
-  <h2 id="clinics">진료 병원</h2>
-  <p>아래 병원의 진료 정보를 싣고 있습니다. 각 병원이 공식 홈페이지에 공개한 값만
-  옮겨 싣고, 병원 간 순위나 우열은 평가하지 않습니다.</p>
-  <div class="clinic">
-    <h3>90일의기적의원</h3>
-    <p class="meta">서울 강남 청담 · 서울 강남구 도산대로 509 에스디바이오센서 4층 (청담동)</p>
-    <p class="meta">안내 중인 시술 21개</p>
-    <a class="go" href="miracle90/">90일의기적의원 시술 안내 보기 →</a>
-  </div>
-  <div class="clinic">
-    <h3>탱글성형외과의원</h3>
-    <p class="meta">서울 강남 압구정 · 서울 강남구 논현로 842 압구정빌딩 7층</p>
-    <p class="meta">안내 중인 시술 29개</p>
-    <a class="go" href="tanggle-ps/">탱글성형외과의원 시술 안내 보기 →</a>
-  </div>
-
   <h2 id="official">공식 확인처</h2>
   <p>병원과 의사 정보는 아래 공공·학회 사이트에서 직접 확인할 수 있습니다.
   최종 확인은 공식 기관 자료를 기준으로 하시는 것이 안전합니다.</p>
-  <ul>
+  <div class="gds">
     <!-- ⚠️ 기관 홈이 아니라 **그 기능이 있는 화면**으로 보낸다. '전문의 자격 확인'이라고
          써 놓고 학회 홈으로 보내면 방문자가 거기서 다시 찾아야 하고, 링크가 어떤 주장도
          뒷받침하지 못한다. 주소는 knowledge.SOURCES 의 kr_society_find·hira_hosp·kca 와 같다. -->
-    <li><a href="https://www.plasticsurgery.or.kr/about/hospital/search2.php"
-           rel="noopener" target="_blank">대한성형외과학회 — 전문의 찾기</a>
-      — 성형외과 전문의 자격 확인</li>
-    <li><a href="https://www.hira.or.kr/ra/hosp/getHealthMap.do?pgmid=HIRAA030002010000"
-           rel="noopener" target="_blank">건강보험심사평가원 — 병원·약국찾기</a>
-      — 의료기관 개설 정보 조회</li>
-    <li><a href="https://www.kca.go.kr/odr/pg/ma/cnsutInfo.do"
-           rel="noopener" target="_blank">한국소비자원 — 소비자상담 절차 안내</a>
-      — 의료 서비스 관련 상담·분쟁 절차</li>
-  </ul>
+    <a href="https://www.plasticsurgery.or.kr/about/hospital/search2.php"
+       rel="noopener" target="_blank"><span class="bd">학회</span>
+      <span class="tt">전문의 자격 확인 — 대한성형외과학회</span></a>
+    <a href="https://www.hira.or.kr/ra/hosp/getHealthMap.do?pgmid=HIRAA030002010000"
+       rel="noopener" target="_blank"><span class="bd">공공</span>
+      <span class="tt">의료기관 개설 정보 — 건강보험심사평가원</span></a>
+    <a href="https://www.kca.go.kr/odr/pg/ma/cnsutInfo.do"
+       rel="noopener" target="_blank"><span class="bd">공공</span>
+      <span class="tt">상담·분쟁 절차 — 한국소비자원</span></a>
+  </div>
 
-  <h2 id="verify">여기 실린 수치는 어떻게 확인하나요?</h2>
+  <details class="fold">
+    <summary><h2 id="verify">여기 실린 수치는 어떻게 확인하나요?</h2></summary>
   <p class="lead"><strong>병원 정보는 그 병원이 공식 홈페이지에 공개한 값만 옮겨 게재합니다.</strong>
   확인되지 않은 금액이나 기간은 추정해서 채우지 않고 비워 둡니다.</p>
   <p>각 페이지 하단에 마지막 확인일과 출처를 함께 표시하며, 병원 홈페이지의 정보가 바뀌면
-  다시 확인해 갱신합니다. 마지막 전체 점검일은 2026-09-30입니다.</p>
+  다시 확인해 갱신합니다. 마지막 전체 점검일은 2026-10-01입니다.</p>
+  </details>
 
-  <h2 id="faq">자주 묻는 질문</h2>
-  <div class="faq">
-    <h3>시술 비용은 왜 병원마다 다른가요?</h3>
-    <p>절제 범위와 마취 방식, 입원 여부, 병행 시술 여부에 따라 달라지기 때문입니다. 같은 이름의 시술이라도 실제 수술 범위가 다르면 비용도 달라지므로, 상담에서 받은 견적을 기준으로 비교하는 것이 정확합니다.</p>
-    <h3>회복 기간은 어느 정도로 봐야 하나요?</h3>
-    <p>절개 범위와 개인의 회복력에 따라 차이가 큽니다. 수술 전 상담에서 예상 일정을 확인해 두고, 실제 경과에 따라 조정하는 것이 일반적입니다.</p>
-    <h3>병원을 고를 때 무엇을 확인해야 하나요?</h3>
-    <p>성형외과 전문의 자격 여부, 상담한 의사가 직접 집도하는지, 수술 전후 관리 체계가 갖춰져 있는지를 확인하는 것이 기준이 됩니다. 후기 평점만으로 판단하기는 어렵습니다.</p>
-    <h3>여기 실린 정보는 어디서 온 것인가요?</h3>
-    <p>각 병원이 공식 홈페이지에 공개한 값만 옮겨 싣습니다. 확인되지 않은 금액이나 기간은 추정해서 채우지 않고 비워 두며, 페이지 하단에 마지막 확인일과 출처를 표시합니다.</p>
+<section class="msec">
+  <div class="gh">
+    <h3>가이드</h3>
+    <span class="sub">병원에 속하지 않는 공용 문서 20장</span>
   </div>
+  <div class="gds">
+    <a href="수술시간.html"><span class="bd">가이드</span><span class="tt">성형수술은 보통 몇 시간 걸리나요?</span></a>
+    <a href="입원.html"><span class="bd">가이드</span><span class="tt">성형수술 후 입원해야 하나요?</span></a>
+    <a href="직장복귀.html"><span class="bd">가이드</span><span class="tt">성형수술 후 언제 직장에 복귀할 수 있나요?</span></a>
+    <a href="운전-운동.html"><span class="bd">가이드</span><span class="tt">성형수술 후 운전과 운동은 언제부터 할 수 있나요?</span></a>
+    <a href="실밥-압박복.html"><span class="bd">가이드</span><span class="tt">실밥은 언제 뽑고 압박복은 얼마나 입나요?</span></a>
+    <a href="결과-붓기-흉터.html"><span class="bd">가이드</span><span class="tt">결과는 언제 보이고 붓기와 흉터는 얼마나 가나요?</span></a>
+    <a href="위험-혈전.html"><span class="bd">가이드</span><span class="tt">성형수술에서 혈전이란 무엇이고 어떻게 예방하나요?</span></a>
+    <a href="응급-증상.html"><span class="bd">가이드</span><span class="tt">수술 후 어떤 증상이면 바로 병원에 연락해야 하나요?</span></a>
+    <a href="안전한-병원.html"><span class="bd">가이드</span><span class="tt">안전한 병원인지 무엇으로 확인하나요?</span></a>
+    <a href="재수술.html"><span class="bd">가이드</span><span class="tt">성형수술 후 재수술이 필요한 경우는 언제인가요?</span></a>
+    <a href="수술-비수술.html"><span class="bd">가이드</span><span class="tt">수술과 비수술 시술은 무엇이 다른가요?</span></a>
+    <a href="절개-없이.html"><span class="bd">가이드</span><span class="tt">절개 없이 처진 피부를 해결할 수 있나요?</span></a>
+    <a href="리뉴비온-허가.html"><span class="bd">가이드</span><span class="tt">리뉴비온은 무엇에 허가받은 장비인가요?</span></a>
+    <a href="fda-승인이란.html"><span class="bd">가이드</span><span class="tt">&#x27;FDA 승인&#x27;이라는 말은 무엇을 뜻하나요?</span></a>
+    <a href="전문의-확인.html"><span class="bd">가이드</span><span class="tt">성형외과 전문의인지 어떻게 확인하나요?</span></a>
+    <a href="비급여-가격공개.html"><span class="bd">가이드</span><span class="tt">성형수술 비용은 왜 병원마다 다르고, 어디서 확인하나요?</span></a>
+    <a href="국내-허가-확인.html"><span class="bd">가이드</span><span class="tt">시술에 쓰는 장비나 제품이 국내에서 허가된 것인지 어떻게 확인하나요?</span></a>
+    <a href="분쟁-생기면.html"><span class="bd">가이드</span><span class="tt">수술 결과나 비용으로 분쟁이 생기면 어디에 도움을 청하나요?</span></a>
+    <a href="지방과-피부.html"><span class="bd">가이드</span><span class="tt">지방을 줄이는 것과 피부를 절제하는 것은 어떻게 다른가요?</span></a>
+    <a href="방법-정하기.html"><span class="bd">가이드</span><span class="tt">같은 부위에 여러 방법이 있을 때 무엇으로 정하나요?</span></a>
+  </div>
+</section>
 
   <div class="summary">
-    <strong>정리하면</strong> — 시술 비용과 회복 기간은 수술 범위·마취 방식·개인 상태에
+    시술 비용과 회복 기간은 수술 범위·마취 방식·개인 상태에
     따라 달라집니다. 광고 문구나 후기 평점보다, 전문의 자격과 실제 수술 범위를 상담에서
     확인하는 것이 판단 기준이 됩니다.
   </div>
@@ -603,15 +1001,22 @@ body.app{background:var(--bg)}
     <p class="f-links"><a href="about.html">이 사이트에 대하여 · 이해관계 공개</a>
       <a href="sitemap.xml">사이트맵</a>
       <a href="rss.xml">새 글 알림(RSS)</a>
-      <a href="">damara.my</a></p>
-    <p class="f-id">&copy; 2026 damara.my · 마지막 점검 2026-09-30</p>
+      <a href="./">damara.my</a></p>
+    <p class="f-id">&copy; 2026 damara.my · 마지막 점검 2026-10-01</p>
   </footer>
+<div class="appnote">
+  <div>
+    <b>운영 주체와 이해관계를 공개합니다</b>
+    <a href="about.html">상세 보기</a>
+  </div>
+  <a class="go2" href="#verify">검증 방식</a>
+</div>
 </main>
 <nav class="apptabs" aria-label="주요 메뉴">
   <a href="./" aria-current="true"><i>▦</i>홈</a>
   <a href="#clinics"><i>🏥</i>병원</a>
   <a href="#directory"><i>✚</i>종목</a>
-  <a href="#faq"><i>💬</i>자주 묻는 질문</a>
+  <a href="#faq"><i>💬</i>질문</a>
   <a href="#official"><i>📄</i>확인처</a>
 </nav>
 </div>
