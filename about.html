@@ -209,9 +209,12 @@ body.app{background:var(--bg)}
 .appbar .place{font-size:.9rem;color:var(--ink-2)}
 .appbar .signin{border:1px solid var(--line);border-radius:8px;padding:6px 13px;
   font-size:.82rem;color:var(--ink-2);text-decoration:none}
-.appsearch{margin:12px 16px 0;background:var(--bg);border:1px solid var(--line);
+.appsearch{margin:12px 16px 0;background:var(--surface);border:1px solid var(--line);
   border-radius:12px;padding:12px 15px;font-size:.9rem;color:var(--muted);
-  text-decoration:none;display:block}
+  text-decoration:none;display:flex;align-items:center;gap:9px;
+  box-shadow:0 1px 2px rgba(20,30,60,.04)}
+.appsearch:hover{border-color:var(--blue);color:var(--ink-2)}
+.appsearch .ic{width:1.05rem;height:1.05rem;color:var(--muted)}
 .appnote{display:flex;align-items:center;gap:12px;margin:18px 0 6px;padding:14px 16px;
   background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .appnote b{display:block;font-size:.9rem}
@@ -277,9 +280,15 @@ body.app{background:var(--bg)}
 .faq .qa>p{margin:0 0 14px;font-size:.88rem;color:var(--ink-2)}
 .ccban{margin:14px 16px 0;border-radius:16px;padding:26px 24px;color:#fff;
   background:linear-gradient(118deg,var(--blue),#1b47b8);min-height:140px}
-.ccban .t{font-size:.76rem;opacity:.85}
+.ccban .t{font-size:.76rem;color:rgba(255,255,255,.86);font-weight:500}
 .ccban h3{font-size:1.42rem;letter-spacing:-.03em;margin:5px 0;line-height:1.3;color:#fff}
-.ccban p{font-size:.8rem;opacity:.9;margin:0}
+
+.ccban p{font-size:.82rem;color:rgba(255,255,255,.93);margin:0;font-weight:500}
+.ccban{display:flex;align-items:center;gap:18px;position:relative;overflow:hidden}
+.ccban .tx{min-width:0;flex:1}
+.ccban .mark{flex:0 0 auto;opacity:.22}
+.ccban .mark .ic{width:92px;height:92px;stroke-width:1.1;color:#fff}
+@media(max-width:520px){.ccban .mark{display:none}}
 .mstat{display:flex;margin:12px 16px 0;border:1px solid var(--line);
   border-radius:12px;overflow:hidden}
 .mstat div{flex:1;text-align:center;padding:9px 3px;border-right:1px solid var(--line);
@@ -422,6 +431,74 @@ body.app{background:var(--bg)}
 .scc .b a:hover{border-color:var(--blue);color:var(--blue)}
 .scc .h em{margin-left:auto;font-style:normal;font-size:.68rem;color:var(--blue)}
 .scn{margin:0;padding:0 12px;font-size:.72rem;color:var(--muted)}
+
+.sprite{display:none}
+.ic{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+
+.tile{display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(140deg,var(--t1,#e8eeff),var(--t2,#f3f5fa))}
+.tile .ic{width:38%;height:38%;stroke-width:1.25;color:var(--tc,#5b7cc9);opacity:.92}
+.hosc .tile .ic{width:46%;height:46%}
+.t-lift{--t1:#e9f0ff;--t2:#f5f7fc;--tc:#3f62c4}
+.t-injectable{--t1:#eef0ff;--t2:#f6f6fd;--tc:#5a56c8}
+.t-lipo{--t1:#e6f3fb;--t2:#f3f8fc;--tc:#2d7ba8}
+.t-implant{--t1:#fdeef4;--t2:#fcf5f8;--tc:#b5557f}
+.t-device{--t1:#fff3e2;--t2:#fdf8f1;--tc:#b8762a}
+.t-nonsurgical{--t1:#e9f6f0;--t2:#f4faf7;--tc:#2a8061}
+.t-energy{--t1:#f1ecfd;--t2:#f8f5fd;--tc:#6a4fc0}
+.t-face{--t1:#eaf2fa;--t2:#f5f8fb;--tc:#44719e}
+.t-male{--t1:#eef1f6;--t2:#f6f7fa;--tc:#5a6b85}
+.t-other{--t1:#eef1f6;--t2:#f6f7fa;--tc:#6b7689}
+.t-hos{--t1:#e9eefa;--t2:#f4f6fb;--tc:#45659e}
+
+.appchips a .ic{width:1.05rem;height:1.05rem;color:var(--blue)}
+.apptabs a .ic{width:1.15rem;height:1.15rem}
+.scc>summary .ic{width:1rem;height:1rem;color:var(--blue)}
+
+.appcol main{padding:0}
+
+.appcol h2::before{display:none!important}
+.appcol main>h2{font-size:1rem;font-weight:700;letter-spacing:-.02em;
+  margin:0;padding:18px 16px 0}
+.appcol main>h2+p.sub,.appcol main>h2+p.lead,.appcol main>h2+p{
+  margin:3px 16px 10px;font-size:.78rem;color:var(--muted);line-height:1.6}
+
+.appcol main>h2{border-top:1px solid var(--line);margin-top:0}
+.appcol main>h2:first-of-type{border-top:none}
+.appcol main>ul,.appcol main>ol{margin:0 16px 14px;padding-left:18px;
+  font-size:.84rem;line-height:1.75;color:var(--ink-2)}
+.appcol main>p{margin:0 16px 12px;font-size:.84rem;line-height:1.75;color:var(--ink-2)}
+.appcol main>table,.appcol main>.table-wrap{margin:0 16px 14px}
+
+.appcol main table{width:calc(100% - 32px);margin:0 16px 14px;border-collapse:collapse;
+  font-size:.82rem;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.appcol main table th{background:var(--bg);text-align:left;padding:10px 12px;
+  font-size:.76rem;font-weight:600;color:var(--ink-2);white-space:nowrap;
+  border-bottom:1px solid var(--line);vertical-align:top;width:28%}
+.appcol main table td{padding:10px 12px;border-bottom:1px solid var(--line);
+  color:var(--ink-2);line-height:1.65}
+.appcol main table tr:last-child th,.appcol main table tr:last-child td{border-bottom:none}
+
+.appcol .fold{border-top:1px solid var(--line);border-bottom:none}
+.appcol .fold>summary{padding:15px 16px}
+.appcol .fold>summary h2{font-size:.93rem;font-weight:700;padding:0;border:none;
+  margin:0;letter-spacing:-.015em}
+.appcol .fold>:not(summary){margin:0 16px 14px;font-size:.84rem;line-height:1.75}
+
+.appcol .faq{padding:0 16px 8px}
+
+.appcol .summary,.appcol .note-box{margin:14px 16px;border-radius:12px;
+  padding:15px 16px;font-size:.82rem;line-height:1.72;border:1px solid var(--line)}
+.appcol .summary{background:var(--bg);border-color:var(--line)}
+.appcol .note-box{background:#fffaf2;border-color:#f0e2cb;color:#6b5a3e}
+.appcol footer{margin:0;padding:18px 16px 10px;border-top:1px solid var(--line);
+  font-size:.74rem;color:var(--muted)}
+.appcol footer .f-links{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 8px}
+.appcol footer .f-links a{color:var(--ink-2);text-decoration:none}
+.appcol footer .f-id{margin:0}
+
+.appcol main{padding-bottom:8px}
 .apptabs{position:sticky;bottom:0;display:flex;height:64px;align-items:center;
   background:var(--surface);border-top:1px solid var(--line);z-index:20}
 
@@ -534,7 +611,7 @@ body.app{background:var(--bg)}
   진료시간 등)는 그 병원이 공식 홈페이지에 공개한 값을 옮긴 것이므로, 값이 달라졌거나
   게재를 원하지 않으시면 알려 주시면 확인 후 반영하거나 내립니다.</p>
 
-  <p class="note">마지막 갱신 2026-10-01</p>
+  <p class="note">마지막 갱신 2026-10-02</p>
   <footer>
 
     <p class="f-dis">본 사이트는 일반적인 정보 안내이며 <strong>의료 자문·진단·치료를
@@ -546,7 +623,7 @@ body.app{background:var(--bg)}
       <a href="sitemap.xml">사이트맵</a>
       <a href="rss.xml">새 글 알림(RSS)</a>
       <a href="./">damara.my</a></p>
-    <p class="f-id">&copy; 2026 damara.my · 마지막 점검 2026-10-01</p>
+    <p class="f-id">&copy; 2026 damara.my · 마지막 점검 2026-10-02</p>
   </footer>
 </main>
 </body>

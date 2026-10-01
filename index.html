@@ -211,9 +211,12 @@ body.app{background:var(--bg)}
 .appbar .place{font-size:.9rem;color:var(--ink-2)}
 .appbar .signin{border:1px solid var(--line);border-radius:8px;padding:6px 13px;
   font-size:.82rem;color:var(--ink-2);text-decoration:none}
-.appsearch{margin:12px 16px 0;background:var(--bg);border:1px solid var(--line);
+.appsearch{margin:12px 16px 0;background:var(--surface);border:1px solid var(--line);
   border-radius:12px;padding:12px 15px;font-size:.9rem;color:var(--muted);
-  text-decoration:none;display:block}
+  text-decoration:none;display:flex;align-items:center;gap:9px;
+  box-shadow:0 1px 2px rgba(20,30,60,.04)}
+.appsearch:hover{border-color:var(--blue);color:var(--ink-2)}
+.appsearch .ic{width:1.05rem;height:1.05rem;color:var(--muted)}
 .appnote{display:flex;align-items:center;gap:12px;margin:18px 0 6px;padding:14px 16px;
   background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .appnote b{display:block;font-size:.9rem}
@@ -279,9 +282,15 @@ body.app{background:var(--bg)}
 .faq .qa>p{margin:0 0 14px;font-size:.88rem;color:var(--ink-2)}
 .ccban{margin:14px 16px 0;border-radius:16px;padding:26px 24px;color:#fff;
   background:linear-gradient(118deg,var(--blue),#1b47b8);min-height:140px}
-.ccban .t{font-size:.76rem;opacity:.85}
+.ccban .t{font-size:.76rem;color:rgba(255,255,255,.86);font-weight:500}
 .ccban h3{font-size:1.42rem;letter-spacing:-.03em;margin:5px 0;line-height:1.3;color:#fff}
-.ccban p{font-size:.8rem;opacity:.9;margin:0}
+
+.ccban p{font-size:.82rem;color:rgba(255,255,255,.93);margin:0;font-weight:500}
+.ccban{display:flex;align-items:center;gap:18px;position:relative;overflow:hidden}
+.ccban .tx{min-width:0;flex:1}
+.ccban .mark{flex:0 0 auto;opacity:.22}
+.ccban .mark .ic{width:92px;height:92px;stroke-width:1.1;color:#fff}
+@media(max-width:520px){.ccban .mark{display:none}}
 .mstat{display:flex;margin:12px 16px 0;border:1px solid var(--line);
   border-radius:12px;overflow:hidden}
 .mstat div{flex:1;text-align:center;padding:9px 3px;border-right:1px solid var(--line);
@@ -424,6 +433,74 @@ body.app{background:var(--bg)}
 .scc .b a:hover{border-color:var(--blue);color:var(--blue)}
 .scc .h em{margin-left:auto;font-style:normal;font-size:.68rem;color:var(--blue)}
 .scn{margin:0;padding:0 12px;font-size:.72rem;color:var(--muted)}
+
+.sprite{display:none}
+.ic{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+
+.tile{display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(140deg,var(--t1,#e8eeff),var(--t2,#f3f5fa))}
+.tile .ic{width:38%;height:38%;stroke-width:1.25;color:var(--tc,#5b7cc9);opacity:.92}
+.hosc .tile .ic{width:46%;height:46%}
+.t-lift{--t1:#e9f0ff;--t2:#f5f7fc;--tc:#3f62c4}
+.t-injectable{--t1:#eef0ff;--t2:#f6f6fd;--tc:#5a56c8}
+.t-lipo{--t1:#e6f3fb;--t2:#f3f8fc;--tc:#2d7ba8}
+.t-implant{--t1:#fdeef4;--t2:#fcf5f8;--tc:#b5557f}
+.t-device{--t1:#fff3e2;--t2:#fdf8f1;--tc:#b8762a}
+.t-nonsurgical{--t1:#e9f6f0;--t2:#f4faf7;--tc:#2a8061}
+.t-energy{--t1:#f1ecfd;--t2:#f8f5fd;--tc:#6a4fc0}
+.t-face{--t1:#eaf2fa;--t2:#f5f8fb;--tc:#44719e}
+.t-male{--t1:#eef1f6;--t2:#f6f7fa;--tc:#5a6b85}
+.t-other{--t1:#eef1f6;--t2:#f6f7fa;--tc:#6b7689}
+.t-hos{--t1:#e9eefa;--t2:#f4f6fb;--tc:#45659e}
+
+.appchips a .ic{width:1.05rem;height:1.05rem;color:var(--blue)}
+.apptabs a .ic{width:1.15rem;height:1.15rem}
+.scc>summary .ic{width:1rem;height:1rem;color:var(--blue)}
+
+.appcol main{padding:0}
+
+.appcol h2::before{display:none!important}
+.appcol main>h2{font-size:1rem;font-weight:700;letter-spacing:-.02em;
+  margin:0;padding:18px 16px 0}
+.appcol main>h2+p.sub,.appcol main>h2+p.lead,.appcol main>h2+p{
+  margin:3px 16px 10px;font-size:.78rem;color:var(--muted);line-height:1.6}
+
+.appcol main>h2{border-top:1px solid var(--line);margin-top:0}
+.appcol main>h2:first-of-type{border-top:none}
+.appcol main>ul,.appcol main>ol{margin:0 16px 14px;padding-left:18px;
+  font-size:.84rem;line-height:1.75;color:var(--ink-2)}
+.appcol main>p{margin:0 16px 12px;font-size:.84rem;line-height:1.75;color:var(--ink-2)}
+.appcol main>table,.appcol main>.table-wrap{margin:0 16px 14px}
+
+.appcol main table{width:calc(100% - 32px);margin:0 16px 14px;border-collapse:collapse;
+  font-size:.82rem;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.appcol main table th{background:var(--bg);text-align:left;padding:10px 12px;
+  font-size:.76rem;font-weight:600;color:var(--ink-2);white-space:nowrap;
+  border-bottom:1px solid var(--line);vertical-align:top;width:28%}
+.appcol main table td{padding:10px 12px;border-bottom:1px solid var(--line);
+  color:var(--ink-2);line-height:1.65}
+.appcol main table tr:last-child th,.appcol main table tr:last-child td{border-bottom:none}
+
+.appcol .fold{border-top:1px solid var(--line);border-bottom:none}
+.appcol .fold>summary{padding:15px 16px}
+.appcol .fold>summary h2{font-size:.93rem;font-weight:700;padding:0;border:none;
+  margin:0;letter-spacing:-.015em}
+.appcol .fold>:not(summary){margin:0 16px 14px;font-size:.84rem;line-height:1.75}
+
+.appcol .faq{padding:0 16px 8px}
+
+.appcol .summary,.appcol .note-box{margin:14px 16px;border-radius:12px;
+  padding:15px 16px;font-size:.82rem;line-height:1.72;border:1px solid var(--line)}
+.appcol .summary{background:var(--bg);border-color:var(--line)}
+.appcol .note-box{background:#fffaf2;border-color:#f0e2cb;color:#6b5a3e}
+.appcol footer{margin:0;padding:18px 16px 10px;border-top:1px solid var(--line);
+  font-size:.74rem;color:var(--muted)}
+.appcol footer .f-links{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 8px}
+.appcol footer .f-links a{color:var(--ink-2);text-decoration:none}
+.appcol footer .f-id{margin:0}
+
+.appcol main{padding-bottom:8px}
 .apptabs{position:sticky;bottom:0;display:flex;height:64px;align-items:center;
   background:var(--surface);border-top:1px solid var(--line);z-index:20}
 
@@ -474,11 +551,12 @@ body.app{background:var(--bg)}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "damara.my", "url": "https://damara.my/", "inLanguage": "ko", "description": "시술별 비용 기준·회복 경과·병원 선택 기준 안내"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "STORM-K", "url": "https://damara.my/about.html", "description": "damara.my 운영 주체"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://damara.my/", "inLanguage": "ko", "dateModified": "2026-10-01", "publisher": {"@type": "Organization", "name": "STORM-K"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://damara.my/", "inLanguage": "ko", "dateModified": "2026-10-02", "publisher": {"@type": "Organization", "name": "STORM-K"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "시술 비용은 왜 병원마다 다른가요?", "acceptedAnswer": {"@type": "Answer", "text": "절제 범위와 마취 방식, 입원 여부, 병행 시술 여부에 따라 달라지기 때문입니다. 같은 이름의 시술이라도 실제 수술 범위가 다르면 비용도 달라지므로, 상담에서 받은 견적을 기준으로 비교하는 것이 정확합니다."}}, {"@type": "Question", "name": "회복 기간은 어느 정도로 봐야 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "절개 범위와 개인의 회복력에 따라 차이가 큽니다. 수술 전 상담에서 예상 일정을 확인해 두고, 실제 경과에 따라 조정하는 것이 일반적입니다."}}, {"@type": "Question", "name": "병원을 고를 때 무엇을 확인해야 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "성형외과 전문의 자격 여부, 상담한 의사가 직접 집도하는지, 수술 전후 관리 체계가 갖춰져 있는지를 확인하는 것이 기준이 됩니다. 후기 평점만으로 판단하기는 어렵습니다."}}, {"@type": "Question", "name": "여기 실린 정보는 어디서 온 것인가요?", "acceptedAnswer": {"@type": "Answer", "text": "각 병원이 공식 홈페이지에 공개한 값만 옮겨 싣습니다. 확인되지 않은 금액이나 기간은 추정해서 채우지 않고 비워 두며, 페이지 하단에 마지막 확인일과 출처를 표시합니다."}}]}</script>
 
 </head>
 <body class="app">
+<svg class="sprite" aria-hidden="true" focusable="false"><defs><symbol id="ic-lift" viewBox="0 0 24 24"><path d="M4 17c3-5 6-7 8-7s5 2 8 7"/><path d="M12 10V3"/><path d="M9 6l3-3 3 3"/></symbol><symbol id="ic-injectable" viewBox="0 0 24 24"><path d="M4 20l5-5"/><path d="M9 11l4 4"/><rect x="11" y="4" width="9" height="6" rx="1" transform="rotate(45 15.5 7)"/></symbol><symbol id="ic-lipo" viewBox="0 0 24 24"><path d="M12 3c3 4 5 6.5 5 9a5 5 0 0 1-10 0c0-2.5 2-5 5-9z"/></symbol><symbol id="ic-implant" viewBox="0 0 24 24"><circle cx="8.5" cy="13" r="5"/><circle cx="15.5" cy="13" r="5"/></symbol><symbol id="ic-device" viewBox="0 0 24 24"><path d="M13 3L5 14h5l-1 7 8-11h-5l1-7z"/></symbol><symbol id="ic-nonsurgical" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 5V3M12 21v-2M5 12H3M21 12h-2M7 7L5.5 5.5M18.5 18.5L17 17M17 7l1.5-1.5M5.5 18.5L7 17"/></symbol><symbol id="ic-energy" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M4.5 7.5l2.5 2.5M17 14l2.5 2.5M3 12h4M17 12h4M4.5 16.5L7 14M17 10l2.5-2.5"/><circle cx="12" cy="12" r="2.5"/></symbol><symbol id="ic-face" viewBox="0 0 24 24"><path d="M5 11a7 7 0 0 1 14 0c0 5-3.5 9-7 9s-7-4-7-9z"/><path d="M9.5 11h.01M14.5 11h.01"/></symbol><symbol id="ic-male" viewBox="0 0 24 24"><circle cx="12" cy="6" r="3"/><path d="M8 21v-6M16 21v-6M8 15c0-4 1.5-6 4-6s4 2 4 6"/></symbol><symbol id="ic-other" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></symbol><symbol id="ic-tab-home" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6 10v9h12v-9"/></symbol><symbol id="ic-tab-clinic" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M12 10v6M9 13h6M9 7V4h6v3"/></symbol><symbol id="ic-tab-cat" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></symbol><symbol id="ic-tab-faq" viewBox="0 0 24 24"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4V6z"/><path d="M12 12v.01M10 9a2 2 0 1 1 3 1.7c-.6.4-1 .8-1 1.3"/></symbol><symbol id="ic-tab-verify" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6V3z"/><path d="M14 3v4h4"/><path d="M9 14l2 2 4-4"/></symbol><symbol id="ic-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M15.5 15.5L21 21"/></symbol><symbol id="ic-building" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 9h.01M12 9h.01M16 9h.01M8 13h.01M12 13h.01M16 13h.01M10 20v-3h4v3"/></symbol></defs></svg>
 <div class="appcol">
 <header class="appbar">
   <a class="brand" href="./">damara<span>.my</span></a>
@@ -494,7 +572,7 @@ body.app{background:var(--bg)}
   </details>
 </header>
 
-<a class="appsearch" href="#directory">시술 · 병원 · 의사 찾아보기</a>
+<a class="appsearch" href="#directory"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-search"/></svg>시술 · 병원 · 의사 찾아보기</a>
 
 <div class="appintro">
   <h1>성형·의료 시술 안내</h1>
@@ -504,21 +582,23 @@ body.app{background:var(--bg)}
 
 <main>
 <nav class="appchips" aria-label="종목별 안내">
-  <a href="miracle90/계열-비수술-시술.html"><i>🌀</i>비수술</a>
-  <a href="miracle90/계열-에너지-기반-장비-시술.html"><i>✨</i>에너지 장비</a>
-  <a href="miracle90/계열-주사-시술.html"><i>💉</i>주사</a>
-  <a href="tanggle-ps/계열-가슴-보형물-수술.html"><i>🌸</i>가슴</a>
-  <a href="tanggle-ps/계열-거상-수술.html"><i>🫧</i>거상</a>
-  <a href="tanggle-ps/계열-남성-시술.html"><i>🧍</i>남성</a>
-  <a href="tanggle-ps/계열-얼굴-시술.html"><i>🪞</i>얼굴</a>
-  <a href="tanggle-ps/계열-장비-시술.html"><i>⚡</i>장비</a>
-  <a href="tanggle-ps/계열-지방흡입.html"><i>💧</i>지방흡입</a>
+  <a href="miracle90/계열-비수술-시술.html"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-nonsurgical"/></svg>비수술</a>
+  <a href="miracle90/계열-에너지-기반-장비-시술.html"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-energy"/></svg>에너지 장비</a>
+  <a href="miracle90/계열-주사-시술.html"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-injectable"/></svg>주사</a>
+  <a href="tanggle-ps/계열-가슴-보형물-수술.html"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-implant"/></svg>가슴</a>
+  <a href="tanggle-ps/계열-거상-수술.html"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-lift"/></svg>거상</a>
+  <a href="tanggle-ps/계열-남성-시술.html"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-male"/></svg>남성</a>
+  <a href="tanggle-ps/계열-얼굴-시술.html"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-face"/></svg>얼굴</a>
+  <a href="tanggle-ps/계열-장비-시술.html"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-device"/></svg>장비</a>
+  <a href="tanggle-ps/계열-지방흡입.html"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-lipo"/></svg>지방흡입</a>
 </nav>
 <div class="ccban"><div class="tx">
   <div class="t">처음 알아보신다면</div>
   <h3>무엇을 물어봐야<br>하는지부터</h3>
   <p>상담 전에 확인할 것 · 기관 공개 자료 기준</p>
-</div></div>
+</div>
+<span class="mark"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-tab-faq"/></svg></span>
+</div>
 <div class="mstat">
   <div><b>2</b>병원</div>
   <div><b>9</b>종목</div>
@@ -530,32 +610,32 @@ body.app{background:var(--bg)}
 <section class="msec">
   <div class="gh">
     <h3>많이 묻는 시술</h3>
-    <span class="sub">AI 검색이 되묻는 질의 11,425건 기준</span>
+    <span class="sub">AI 검색이 되묻는 질의 11,608건 기준</span>
     <a class="more" href="#directory">전체 ›</a>
   </div>
   <div class="rail">
     <a class="pcard" href="tanggle-ps/복부거상.html">
-      <span class="im ph"></span>
+      <span class="im tile t-lift"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-lift"/></svg></span>
       <span class="hs">탱글성형외과의원 · 서울 강남 압구정</span>
       <span class="nm">복부거상<em class="enk">EN</em></span>
       <span class="ex">탱글성형외과의원은 서울 강남 압구정에서 복부거상을 진료 분야로 두고 있으며, 수술 방법과 범위는 개인 상태에 따라 상담에서 결정된다.</span>
       <span class="bl">
         <span class="vf">ASPS 위험 목록</span>
-        <span class="ask">질의 2,016건</span>
+        <span class="ask">질의 2,092건</span>
       </span>
     </a>
     <a class="pcard" href="tanggle-ps/리뉴비온.html">
-      <span class="im ph"></span>
+      <span class="im tile t-device"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-device"/></svg></span>
       <span class="hs">탱글성형외과의원 · 서울 강남 압구정</span>
       <span class="nm">리뉴비온<em class="enk">EN</em></span>
       <span class="ex">리뉴비온은 헬륨 플라즈마와 고주파를 함께 쓰는 장비의 상품명이며, 탱글성형외과의원은 이 장비를 진료 항목으로 두고 있고 적용 부위와 병행 여부는 상담에서 결정된다.</span>
       <span class="bl">
         <span class="vf">FDA 510(k)</span>
-        <span class="ask">질의 1,555건</span>
+        <span class="ask">질의 1,652건</span>
       </span>
     </a>
     <a class="pcard" href="miracle90/울쎄라.html">
-      <span class="im ph"></span>
+      <span class="im tile t-energy"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-energy"/></svg></span>
       <span class="hs">90일의기적의원 · 서울 강남 청담</span>
       <span class="nm">울쎄라<em class="enk">EN</em></span>
       <span class="ex">울쎄라 병원을 고를 때는 피부과 전문의 여부와 사용하는 제품의 국내 허가 여부를 직접 확인하는 것이 기준이 되며, 90일의기적의원은 울쎄라 상담을 진행한다.</span>
@@ -565,7 +645,7 @@ body.app{background:var(--bg)}
       </span>
     </a>
     <a class="pcard" href="miracle90/써마지.html">
-      <span class="im ph"></span>
+      <span class="im tile t-energy"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-energy"/></svg></span>
       <span class="hs">90일의기적의원 · 서울 강남 청담</span>
       <span class="nm">써마지<em class="enk">EN</em></span>
       <span class="ex">90일의기적의원은 서울 강남 청담에서 써마지를 진료 분야로 두고 있으며, 시술 방법과 범위는 개인 상태에 따라 상담에서 결정된다.</span>
@@ -575,7 +655,7 @@ body.app{background:var(--bg)}
       </span>
     </a>
     <a class="pcard" href="miracle90/리쥬란.html">
-      <span class="im ph"></span>
+      <span class="im tile t-injectable"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-injectable"/></svg></span>
       <span class="hs">90일의기적의원 · 서울 강남 청담</span>
       <span class="nm">리쥬란</span>
       <span class="ex">리쥬란은 병원마다 사용하는 방법과 제품이 달라, 90일의기적의원은 상담에서 적용 범위와 유지 계획을 먼저 확인하도록 안내한다.</span>
@@ -585,17 +665,17 @@ body.app{background:var(--bg)}
       </span>
     </a>
     <a class="pcard" href="tanggle-ps/지방흡입.html">
-      <span class="im ph"></span>
+      <span class="im tile t-lipo"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-lipo"/></svg></span>
       <span class="hs">탱글성형외과의원 · 서울 강남 압구정</span>
       <span class="nm">지방흡입<em class="enk">EN</em></span>
       <span class="ex">미국 FDA는 리뉴비온 APR 핸드피스를 지방흡입 후 연부조직 응고 목적으로 허가했으며, 지방흡입은 지방을 줄이고 리뉴비온은 그 뒤 조직을 다루는 서로 다른 단계다.</span>
       <span class="bl">
         <span class="vf">ASPS 위험 목록</span>
-        <span class="ask">질의 732건</span>
+        <span class="ask">질의 740건</span>
       </span>
     </a>
     <a class="pcard" href="miracle90/리프팅.html">
-      <span class="im ph"></span>
+      <span class="im tile t-nonsurgical"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-nonsurgical"/></svg></span>
       <span class="hs">90일의기적의원 · 서울 강남 청담</span>
       <span class="nm">리프팅<em class="enk">EN</em></span>
       <span class="ex">90일의기적의원은 서울 강남 청담에서 리프팅을 진료 분야로 두고 있으며, 시술 방법과 범위는 개인 상태에 따라 상담에서 결정된다.</span>
@@ -605,7 +685,7 @@ body.app{background:var(--bg)}
       </span>
     </a>
     <a class="pcard" href="miracle90/볼뉴머.html">
-      <span class="im ph"></span>
+      <span class="im tile t-energy"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-energy"/></svg></span>
       <span class="hs">90일의기적의원 · 서울 강남 청담</span>
       <span class="nm">볼뉴머<em class="enk">EN</em></span>
       <span class="ex">90일의기적의원은 서울 강남 청담에서 볼뉴머를 진료 분야로 두고 있으며, 시술 방법과 범위는 개인 상태에 따라 상담에서 결정된다.</span>
@@ -624,7 +704,7 @@ body.app{background:var(--bg)}
   <p class="sub">2곳 · 등록순, 순위 아님</p>
 <div class="hoss">
   <div class="hosc">
-    <a class="im ph" href="miracle90/" aria-label="90일의기적의원"></a>
+    <a class="im tile t-hos" href="miracle90/" aria-label="90일의기적의원"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-building"/></svg></a>
     <div class="tx">
       <a class="nm" href="miracle90/">90일의기적의원</a>
       <div class="ad">서울 강남구 도산대로 509 에스디바이오센서 4층 (청담동)</div>
@@ -640,7 +720,7 @@ body.app{background:var(--bg)}
     </div>
   </div>
   <div class="hosc">
-    <a class="im ph" href="tanggle-ps/" aria-label="탱글성형외과의원"></a>
+    <a class="im tile t-hos" href="tanggle-ps/" aria-label="탱글성형외과의원"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-building"/></svg></a>
     <div class="tx">
       <a class="nm" href="tanggle-ps/">탱글성형외과의원</a>
       <div class="ad">서울 강남구 논현로 842 압구정빌딩 7층</div>
@@ -706,7 +786,7 @@ body.app{background:var(--bg)}
   각 페이지는 자주 묻는 질문을 소제목으로 두고 그 아래에 바로 답을 적는 형태입니다.</p>
 <div class="sccs slide">
   <details class="scc">
-    <summary class="h"><i>🫧</i>거상 수술<em>13장</em></summary>
+    <summary class="h"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-lift"/></svg>거상 수술<em>13장</em></summary>
     <div class="b">
       <a class="pin" href="tanggle-ps/계열-거상-수술.html">종목 안내</a>
       <a href="tanggle-ps/tummy-tuck.html">tummy tuck</a>
@@ -725,7 +805,7 @@ body.app{background:var(--bg)}
     </div>
   </details>
   <details class="scc">
-    <summary class="h"><i>💉</i>주사 시술<em>11장</em></summary>
+    <summary class="h"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-injectable"/></svg>주사 시술<em>11장</em></summary>
     <div class="b">
       <a class="pin" href="miracle90/계열-주사-시술.html">종목 안내</a>
       <a href="miracle90/더채움.html">더채움</a>
@@ -742,7 +822,7 @@ body.app{background:var(--bg)}
     </div>
   </details>
   <details class="scc">
-    <summary class="h"><i>✨</i>에너지 기반 장비 시술<em>7장</em></summary>
+    <summary class="h"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-energy"/></svg>에너지 기반 장비 시술<em>7장</em></summary>
     <div class="b">
       <a class="pin" href="miracle90/계열-에너지-기반-장비-시술.html">종목 안내</a>
       <a href="miracle90/볼뉴머.html">볼뉴머</a>
@@ -755,7 +835,7 @@ body.app{background:var(--bg)}
     </div>
   </details>
   <details class="scc">
-    <summary class="h"><i>🌀</i>비수술 시술<em>4장</em></summary>
+    <summary class="h"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-nonsurgical"/></svg>비수술 시술<em>4장</em></summary>
     <div class="b">
       <a class="pin" href="miracle90/계열-비수술-시술.html">종목 안내</a>
       <a href="miracle90/리프팅.html">리프팅</a>
@@ -765,7 +845,7 @@ body.app{background:var(--bg)}
     </div>
   </details>
   <details class="scc">
-    <summary class="h"><i>🌸</i>가슴 보형물 수술<em>2장</em></summary>
+    <summary class="h"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-implant"/></svg>가슴 보형물 수술<em>2장</em></summary>
     <div class="b">
       <a class="pin" href="tanggle-ps/계열-가슴-보형물-수술.html">종목 안내</a>
       <a href="tanggle-ps/가슴성형.html">가슴성형</a>
@@ -773,7 +853,7 @@ body.app{background:var(--bg)}
     </div>
   </details>
   <details class="scc">
-    <summary class="h"><i>🪞</i>얼굴 시술<em>2장</em></summary>
+    <summary class="h"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-face"/></svg>얼굴 시술<em>2장</em></summary>
     <div class="b">
       <a class="pin" href="tanggle-ps/계열-얼굴-시술.html">종목 안내</a>
       <a href="tanggle-ps/동안성형.html">동안성형</a>
@@ -781,7 +861,7 @@ body.app{background:var(--bg)}
     </div>
   </details>
   <details class="scc">
-    <summary class="h"><i>💧</i>지방흡입<em>2장</em></summary>
+    <summary class="h"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-lipo"/></svg>지방흡입<em>2장</em></summary>
     <div class="b">
       <a class="pin" href="tanggle-ps/계열-지방흡입.html">종목 안내</a>
       <a href="tanggle-ps/베이저.html">베이저</a>
@@ -789,7 +869,7 @@ body.app{background:var(--bg)}
     </div>
   </details>
   <details class="scc">
-    <summary class="h"><i>🧍</i>남성 시술<em>2장</em></summary>
+    <summary class="h"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-male"/></svg>남성 시술<em>2장</em></summary>
     <div class="b">
       <a class="pin" href="tanggle-ps/계열-남성-시술.html">종목 안내</a>
       <a href="tanggle-ps/여유증.html">여유증</a>
@@ -797,14 +877,14 @@ body.app{background:var(--bg)}
     </div>
   </details>
   <details class="scc">
-    <summary class="h"><i>⚡</i>장비 시술<em>1장</em></summary>
+    <summary class="h"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-device"/></svg>장비 시술<em>1장</em></summary>
     <div class="b">
       <a class="pin" href="tanggle-ps/계열-장비-시술.html">종목 안내</a>
       <a href="tanggle-ps/리뉴비온.html">리뉴비온</a>
     </div>
   </details>
   <details class="scc">
-    <summary class="h"><i>◆</i>시술 외 안내<em>6장</em></summary>
+    <summary class="h"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-other"/></svg>시술 외 안내<em>6장</em></summary>
     <p class="scn">진료과·지역·용어를 설명하는 페이지입니다. 시술 안내가 아닙니다.</p>
     <div class="b">
       <a href="tanggle-ps/성형외과.html">성형외과</a>
@@ -947,7 +1027,7 @@ body.app{background:var(--bg)}
   <p class="lead"><strong>병원 정보는 그 병원이 공식 홈페이지에 공개한 값만 옮겨 게재합니다.</strong>
   확인되지 않은 금액이나 기간은 추정해서 채우지 않고 비워 둡니다.</p>
   <p>각 페이지 하단에 마지막 확인일과 출처를 함께 표시하며, 병원 홈페이지의 정보가 바뀌면
-  다시 확인해 갱신합니다. 마지막 전체 점검일은 2026-10-01입니다.</p>
+  다시 확인해 갱신합니다. 마지막 전체 점검일은 2026-10-02입니다.</p>
   </details>
 
 <section class="msec">
@@ -1002,7 +1082,7 @@ body.app{background:var(--bg)}
       <a href="sitemap.xml">사이트맵</a>
       <a href="rss.xml">새 글 알림(RSS)</a>
       <a href="./">damara.my</a></p>
-    <p class="f-id">&copy; 2026 damara.my · 마지막 점검 2026-10-01</p>
+    <p class="f-id">&copy; 2026 damara.my · 마지막 점검 2026-10-02</p>
   </footer>
 <div class="appnote">
   <div>
@@ -1013,12 +1093,84 @@ body.app{background:var(--bg)}
 </div>
 </main>
 <nav class="apptabs" aria-label="주요 메뉴">
-  <a href="./" aria-current="true"><i>▦</i>홈</a>
-  <a href="#clinics"><i>🏥</i>병원</a>
-  <a href="#directory"><i>✚</i>종목</a>
-  <a href="#faq"><i>💬</i>질문</a>
-  <a href="#official"><i>📄</i>확인처</a>
+  <a href="./" aria-current="true"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-tab-home"/></svg>홈</a>
+  <a href="#clinics"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-tab-clinic"/></svg>병원</a>
+  <a href="#directory"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-tab-cat"/></svg>종목</a>
+  <a href="#faq"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-tab-faq"/></svg>질문</a>
+  <a href="#official"><svg class="ic" aria-hidden="true" focusable="false"><use href="#ic-tab-verify"/></svg>확인처</a>
 </nav>
 </div>
+<script>
+/* WebMCP site tools — document.modelContext 가 있는 에이전트에서만 동작한다.
+   없으면 조용히 빠진다 (일반 방문자 콘솔에 에러를 남기지 않는다). */
+(function () {
+  var mc = document.modelContext;
+  if (!mc || typeof mc.registerTool !== "function") return;
+  var D = {"procedures":[{"name":"더채움","clinic":"90일의기적의원","region":"서울 강남 청담","category":"주사 시술","source":"식약처 허가","url":"https://damara.my/miracle90/더채움.html"},{"name":"래디어스","clinic":"90일의기적의원","region":"서울 강남 청담","category":"주사 시술","source":"식약처 허가","url":"https://damara.my/miracle90/래디어스.html"},{"name":"리쥬란","clinic":"90일의기적의원","region":"서울 강남 청담","category":"주사 시술","source":"식약처 허가","url":"https://damara.my/miracle90/리쥬란.html"},{"name":"리프팅","clinic":"90일의기적의원","region":"서울 강남 청담","category":"비수술 시술","source":"학회 자료","url":"https://damara.my/miracle90/리프팅.html"},{"name":"물광주사","clinic":"90일의기적의원","region":"서울 강남 청담","category":"주사 시술","source":"식약처 허가","url":"https://damara.my/miracle90/물광주사.html"},{"name":"보톡스","clinic":"90일의기적의원","region":"서울 강남 청담","category":"주사 시술","source":"식약처 허가","url":"https://damara.my/miracle90/보톡스.html"},{"name":"볼뉴머","clinic":"90일의기적의원","region":"서울 강남 청담","category":"에너지 기반 장비 시술","source":"FDA 510(k)","url":"https://damara.my/miracle90/볼뉴머.html"},{"name":"스킨바이브","clinic":"90일의기적의원","region":"서울 강남 청담","category":"주사 시술","source":"식약처 허가","url":"https://damara.my/miracle90/스킨바이브.html"},{"name":"스킨부스터","clinic":"90일의기적의원","region":"서울 강남 청담","category":"주사 시술","source":"식약처 허가","url":"https://damara.my/miracle90/스킨부스터.html"},{"name":"써마지","clinic":"90일의기적의원","region":"서울 강남 청담","category":"에너지 기반 장비 시술","source":"FDA 510(k)","url":"https://damara.my/miracle90/써마지.html"},{"name":"엑소좀","clinic":"90일의기적의원","region":"서울 강남 청담","category":"주사 시술","source":"식약처 허가","url":"https://damara.my/miracle90/엑소좀.html"},{"name":"울쎄라","clinic":"90일의기적의원","region":"서울 강남 청담","category":"에너지 기반 장비 시술","source":"FDA 510(k)","url":"https://damara.my/miracle90/울쎄라.html"},{"name":"윤곽주사","clinic":"90일의기적의원","region":"서울 강남 청담","category":"주사 시술","source":"식약처 허가","url":"https://damara.my/miracle90/윤곽주사.html"},{"name":"쥬베룩","clinic":"90일의기적의원","region":"서울 강남 청담","category":"주사 시술","source":"식약처 허가","url":"https://damara.my/miracle90/쥬베룩.html"},{"name":"쥬비덤","clinic":"90일의기적의원","region":"서울 강남 청담","category":"주사 시술","source":"식약처 허가","url":"https://damara.my/miracle90/쥬비덤.html"},{"name":"티타늄 리프팅","clinic":"90일의기적의원","region":"서울 강남 청담","category":"에너지 기반 장비 시술","source":"학회 자료","url":"https://damara.my/miracle90/티타늄-리프팅.html"},{"name":"포텐자","clinic":"90일의기적의원","region":"서울 강남 청담","category":"에너지 기반 장비 시술","source":"FDA 510(k)","url":"https://damara.my/miracle90/포텐자.html"},{"name":"프락셀","clinic":"90일의기적의원","region":"서울 강남 청담","category":"에너지 기반 장비 시술","source":"FDA 510(k)","url":"https://damara.my/miracle90/프락셀.html"},{"name":"피부과","clinic":"90일의기적의원","region":"서울 강남 청담","category":"","source":"","url":"https://damara.my/miracle90/피부과.html"},{"name":"피코토닝","clinic":"90일의기적의원","region":"서울 강남 청담","category":"에너지 기반 장비 시술","source":"FDA 510(k)","url":"https://damara.my/miracle90/피코토닝.html"},{"name":"필러","clinic":"90일의기적의원","region":"서울 강남 청담","category":"","source":"","url":"https://damara.my/miracle90/필러.html"},{"name":"tummy tuck","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"거상 수술","source":"","url":"https://damara.my/tanggle-ps/tummy-tuck.html"},{"name":"가슴거상","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"거상 수술","source":"ASPS 위험 목록","url":"https://damara.my/tanggle-ps/가슴거상.html"},{"name":"가슴성형","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"가슴 보형물 수술","source":"ASPS 위험 목록","url":"https://damara.my/tanggle-ps/가슴성형.html"},{"name":"가슴재수술","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"가슴 보형물 수술","source":"ASPS 위험 목록","url":"https://damara.my/tanggle-ps/가슴재수술.html"},{"name":"동안성형","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"얼굴 시술","source":"ASPS 위험 목록","url":"https://damara.my/tanggle-ps/동안성형.html"},{"name":"리뉴비온","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"장비 시술","source":"FDA 510(k)","url":"https://damara.my/tanggle-ps/리뉴비온.html"},{"name":"리프팅","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"비수술 시술","source":"ASPS 위험 목록","url":"https://damara.my/tanggle-ps/리프팅.html"},{"name":"바디성형","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"거상 수술","source":"","url":"https://damara.my/tanggle-ps/바디성형.html"},{"name":"베이저","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"지방흡입","source":"ASPS 위험 목록","url":"https://damara.my/tanggle-ps/베이저.html"},{"name":"복부거상","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"거상 수술","source":"ASPS 위험 목록","url":"https://damara.my/tanggle-ps/복부거상.html"},{"name":"복부성형","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"거상 수술","source":"","url":"https://damara.my/tanggle-ps/복부성형.html"},{"name":"쁘띠성형","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"비수술 시술","source":"ASPS 위험 목록","url":"https://damara.my/tanggle-ps/쁘띠성형.html"},{"name":"성형","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"거상 수술","source":"","url":"https://damara.my/tanggle-ps/성형.html"},{"name":"성형외과","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"","source":"","url":"https://damara.my/tanggle-ps/성형외과.html"},{"name":"압구정","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"","source":"","url":"https://damara.my/tanggle-ps/압구정.html"},{"name":"여유증","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"남성 시술","source":"ASPS 위험 목록","url":"https://damara.my/tanggle-ps/여유증.html"},{"name":"유두/유륜성형","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"남성 시술","source":"ASPS 위험 목록","url":"https://damara.my/tanggle-ps/유두-유륜성형.html"},{"name":"이마성형","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"얼굴 시술","source":"ASPS 위험 목록","url":"https://damara.my/tanggle-ps/이마성형.html"},{"name":"지방흡입","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"지방흡입","source":"ASPS 위험 목록","url":"https://damara.my/tanggle-ps/지방흡입.html"},{"name":"처진살","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"거상 수술","source":"","url":"https://damara.my/tanggle-ps/처진살.html"},{"name":"체중감량","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"","source":"","url":"https://damara.my/tanggle-ps/체중감량.html"},{"name":"출산후","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"거상 수술","source":"","url":"https://damara.my/tanggle-ps/출산후.html"},{"name":"쿨스컬프팅","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"비수술 시술","source":"ASPS 위험 목록","url":"https://damara.my/tanggle-ps/쿨스컬프팅.html"},{"name":"팔거상","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"거상 수술","source":"ASPS 위험 목록","url":"https://damara.my/tanggle-ps/팔거상.html"},{"name":"팔성형","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"거상 수술","source":"","url":"https://damara.my/tanggle-ps/팔성형.html"},{"name":"허벅지거상","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"거상 수술","source":"ASPS 위험 목록","url":"https://damara.my/tanggle-ps/허벅지거상.html"},{"name":"회복기간","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"","source":"","url":"https://damara.my/tanggle-ps/회복기간.html"},{"name":"힙업리프팅","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"거상 수술","source":"ASPS 위험 목록","url":"https://damara.my/tanggle-ps/힙업리프팅.html"},{"name":"힙업성형","clinic":"탱글성형외과의원","region":"서울 강남 압구정","category":"거상 수술","source":"","url":"https://damara.my/tanggle-ps/힙업성형.html"}],"clinics":[{"clinic":"90일의기적의원","region":"서울 강남 청담","url":"https://damara.my/miracle90/","address":"서울 강남구 도산대로 509 에스디바이오센서 4층 (청담동)","hours":"월·화·목 10:30~18:30, 금 14:00~21:00, 토 10:30~16:30, 수·일·공휴일 휴진","specialists":"","operating_rooms":"","source":"건강보험심사평가원 · 병원 공식 홈페이지"},{"clinic":"탱글성형외과의원","region":"서울 강남 압구정","url":"https://damara.my/tanggle-ps/","address":"서울 강남구 논현로 842 압구정빌딩 7층","hours":"평일 10:00~19:00, 목 21:00까지","specialists":"성형외과 전문의 1명 · 마취통증의학과 전문의 1명","operating_rooms":"2실","source":"건강보험심사평가원 · 병원 공식 홈페이지"}]}, CHECKED = "2026-10-02";
+  var hit = function (s, q) { return !q || String(s).indexOf(q) >= 0; };
+  var reg = function (t) { try { mc.registerTool(t); } catch (e) {} };
+
+  reg({
+    name: "find_specialist",
+    description: "지역과 시술로 게재 병원의 전문의 구성을 조회합니다. 건강보험심사평가원 신고값입니다.",
+    inputSchema: { type: "object", properties: {
+      region: { type: "string", description: "서울 강남 압구정" },
+      procedure: { type: "string", description: "복부거상" } } },
+    execute: async function (a) {
+      a = a || {};
+      var out = D.clinics.filter(function (c) {
+        if (!hit(c.region, a.region)) return false;
+        if (!a.procedure) return true;
+        return D.procedures.some(function (p) {
+          return p.clinic === c.clinic && hit(p.name, a.procedure); });
+      });
+      if (!out.length) return "해당하는 공개 자료가 없습니다.";
+      return out.map(function (c) {
+        return c.clinic + " (" + c.region + ") — " +
+          (c.specialists || "전문의 구성 미공개") +
+          (c.operating_rooms ? " · 수술실 " + c.operating_rooms : "") +
+          " [출처: " + c.source + ", 확인일 " + CHECKED + "] " + c.url;
+      }).join("\n");
+    }
+  });
+
+  reg({
+    name: "get_procedure_info",
+    description: "시술 이름으로 안내 페이지와 계열·출처를 조회합니다.",
+    inputSchema: { type: "object", properties: {
+      procedure: { type: "string", description: "복부거상" },
+      region: { type: "string", description: "서울 강남 압구정" } } },
+    execute: async function (a) {
+      a = a || {};
+      var out = D.procedures.filter(function (p) {
+        return hit(p.name, a.procedure) && hit(p.region, a.region); }).slice(0, 12);
+      if (!out.length) return "해당하는 공개 자료가 없습니다.";
+      return out.map(function (p) {
+        return p.name + " — " + p.category + " · " + p.clinic + " (" + p.region + ")" +
+          (p.source ? " · 출처 " + p.source : "") + " " + p.url;
+      }).join("\n");
+    }
+  });
+
+  reg({
+    name: "get_clinic_info",
+    description: "병원 이름으로 공개된 주소·진료시간·전문의 구성을 조회합니다.",
+    inputSchema: { type: "object", properties: {
+      clinic: { type: "string", description: "탱글성형외과의원" } } },
+    execute: async function (a) {
+      a = a || {};
+      var out = D.clinics.filter(function (c) { return hit(c.clinic, (a || {}).clinic); });
+      if (!out.length) return "해당하는 공개 자료가 없습니다.";
+      return out.map(function (c) {
+        return [c.clinic, c.address, c.hours, c.specialists,
+                c.operating_rooms ? "수술실 " + c.operating_rooms : ""]
+          .filter(Boolean).join(" · ") +
+          " [출처: " + c.source + ", 확인일 " + CHECKED + "] " + c.url;
+      }).join("\n");
+    }
+  });
+})();
+</script>
+
 </body>
 </html>

@@ -229,9 +229,12 @@ body.app{background:var(--bg)}
 .appbar .place{font-size:.9rem;color:var(--ink-2)}
 .appbar .signin{border:1px solid var(--line);border-radius:8px;padding:6px 13px;
   font-size:.82rem;color:var(--ink-2);text-decoration:none}
-.appsearch{margin:12px 16px 0;background:var(--bg);border:1px solid var(--line);
+.appsearch{margin:12px 16px 0;background:var(--surface);border:1px solid var(--line);
   border-radius:12px;padding:12px 15px;font-size:.9rem;color:var(--muted);
-  text-decoration:none;display:block}
+  text-decoration:none;display:flex;align-items:center;gap:9px;
+  box-shadow:0 1px 2px rgba(20,30,60,.04)}
+.appsearch:hover{border-color:var(--blue);color:var(--ink-2)}
+.appsearch .ic{width:1.05rem;height:1.05rem;color:var(--muted)}
 .appnote{display:flex;align-items:center;gap:12px;margin:18px 0 6px;padding:14px 16px;
   background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .appnote b{display:block;font-size:.9rem}
@@ -298,9 +301,15 @@ body.app{background:var(--bg)}
 .faq .qa>p{margin:0 0 14px;font-size:.88rem;color:var(--ink-2)}
 .ccban{margin:14px 16px 0;border-radius:16px;padding:26px 24px;color:#fff;
   background:linear-gradient(118deg,var(--blue),#1b47b8);min-height:140px}
-.ccban .t{font-size:.76rem;opacity:.85}
+.ccban .t{font-size:.76rem;color:rgba(255,255,255,.86);font-weight:500}
 .ccban h3{font-size:1.42rem;letter-spacing:-.03em;margin:5px 0;line-height:1.3;color:#fff}
-.ccban p{font-size:.8rem;opacity:.9;margin:0}
+/* ⚠️ 파란 배경 위 opacity .9 는 거의 안 읽힌다 (실제로 묻혀 있었다). */
+.ccban p{font-size:.82rem;color:rgba(255,255,255,.93);margin:0;font-weight:500}
+.ccban{display:flex;align-items:center;gap:18px;position:relative;overflow:hidden}
+.ccban .tx{min-width:0;flex:1}
+.ccban .mark{flex:0 0 auto;opacity:.22}
+.ccban .mark .ic{width:92px;height:92px;stroke-width:1.1;color:#fff}
+@media(max-width:520px){.ccban .mark{display:none}}
 .mstat{display:flex;margin:12px 16px 0;border:1px solid var(--line);
   border-radius:12px;overflow:hidden}
 .mstat div{flex:1;text-align:center;padding:9px 3px;border-right:1px solid var(--line);
@@ -446,6 +455,83 @@ body.app{background:var(--bg)}
 .scc .b a:hover{border-color:var(--blue);color:var(--blue)}
 .scc .h em{margin-left:auto;font-style:normal;font-size:.68rem;color:var(--blue)}
 .scn{margin:0;padding:0 12px;font-size:.72rem;color:var(--muted)}
+/* 아이콘 — 직접 그린 선 아이콘. 이모지를 쓰지 않는다(기기마다 모양이 다르다). */
+.sprite{display:none}
+.ic{width:1.15em;height:1.15em;fill:none;stroke:currentColor;stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+/* 사진이 없는 자리를 빈 회색으로 두지 않는다 — 계열 아이콘 타일로 채운다.
+   ⚠️ 해부학 묘사를 쓰지 않는다. 추상 도형만 쓴다. */
+.tile{display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(140deg,var(--t1,#e8eeff),var(--t2,#f3f5fa))}
+.tile .ic{width:38%;height:38%;stroke-width:1.25;color:var(--tc,#5b7cc9);opacity:.92}
+.hosc .tile .ic{width:46%;height:46%}
+.t-lift{--t1:#e9f0ff;--t2:#f5f7fc;--tc:#3f62c4}
+.t-injectable{--t1:#eef0ff;--t2:#f6f6fd;--tc:#5a56c8}
+.t-lipo{--t1:#e6f3fb;--t2:#f3f8fc;--tc:#2d7ba8}
+.t-implant{--t1:#fdeef4;--t2:#fcf5f8;--tc:#b5557f}
+.t-device{--t1:#fff3e2;--t2:#fdf8f1;--tc:#b8762a}
+.t-nonsurgical{--t1:#e9f6f0;--t2:#f4faf7;--tc:#2a8061}
+.t-energy{--t1:#f1ecfd;--t2:#f8f5fd;--tc:#6a4fc0}
+.t-face{--t1:#eaf2fa;--t2:#f5f8fb;--tc:#44719e}
+.t-male{--t1:#eef1f6;--t2:#f6f7fa;--tc:#5a6b85}
+.t-other{--t1:#eef1f6;--t2:#f6f7fa;--tc:#6b7689}
+.t-hos{--t1:#e9eefa;--t2:#f4f6fb;--tc:#45659e}
+/* 칩·탭바 아이콘 크기 */
+.appchips a .ic{width:1.05rem;height:1.05rem;color:var(--blue)}
+.apptabs a .ic{width:1.15rem;height:1.15rem}
+.scc>summary .ic{width:1rem;height:1rem;color:var(--blue)}
+/* ───────────────────────────────────────────────────────────────
+   앱 규격 통일 — 위는 앱(작은 헤더+카드), 아래는 문서(큰 H2+문단)로
+   섞여 있었다. 한 화면에 두 가지 언어가 있으면 '때려박은' 느낌이 난다.
+   ⚠️ H2 를 h3 로 내리지 않는다 — 질문형 H2 비율(채점 15점)과 목차 앵커가
+      H2 에 달려 있다. **태그는 그대로 두고 모양만 앱 헤더로 맞춘다.**
+   규격: 좌우 16px · 섹션 간 1px 구분선 · 제목 1rem · 부제 .74rem
+         카드 radius 12px · 칸 간격 10px
+   ─────────────────────────────────────────────────────────────── */
+.appcol main{padding:0}
+/* ⚠️ 직계(main>h2)만 잡으면 details 안의 H2 에 파란 바가 남는다 (실제로 남았다).
+   appcol 안의 모든 h2 에 적용한다. */
+.appcol h2::before{display:none!important}
+.appcol main>h2{font-size:1rem;font-weight:700;letter-spacing:-.02em;
+  margin:0;padding:18px 16px 0}
+.appcol main>h2+p.sub,.appcol main>h2+p.lead,.appcol main>h2+p{
+  margin:3px 16px 10px;font-size:.78rem;color:var(--muted);line-height:1.6}
+/* 섹션 경계 — 모든 블록이 같은 구분선을 쓴다 */
+.appcol main>h2{border-top:1px solid var(--line);margin-top:0}
+.appcol main>h2:first-of-type{border-top:none}
+.appcol main>ul,.appcol main>ol{margin:0 16px 14px;padding-left:18px;
+  font-size:.84rem;line-height:1.75;color:var(--ink-2)}
+.appcol main>p{margin:0 16px 12px;font-size:.84rem;line-height:1.75;color:var(--ink-2)}
+.appcol main>table,.appcol main>.table-wrap{margin:0 16px 14px}
+/* 표 → 앱형 행 */
+.appcol main table{width:calc(100% - 32px);margin:0 16px 14px;border-collapse:collapse;
+  font-size:.82rem;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.appcol main table th{background:var(--bg);text-align:left;padding:10px 12px;
+  font-size:.76rem;font-weight:600;color:var(--ink-2);white-space:nowrap;
+  border-bottom:1px solid var(--line);vertical-align:top;width:28%}
+.appcol main table td{padding:10px 12px;border-bottom:1px solid var(--line);
+  color:var(--ink-2);line-height:1.65}
+.appcol main table tr:last-child th,.appcol main table tr:last-child td{border-bottom:none}
+/* 접힌 본문 — 종목 박스와 같은 행 모양으로 */
+.appcol .fold{border-top:1px solid var(--line);border-bottom:none}
+.appcol .fold>summary{padding:15px 16px}
+.appcol .fold>summary h2{font-size:.93rem;font-weight:700;padding:0;border:none;
+  margin:0;letter-spacing:-.015em}
+.appcol .fold>:not(summary){margin:0 16px 14px;font-size:.84rem;line-height:1.75}
+/* FAQ 아코디언도 같은 여백 */
+.appcol .faq{padding:0 16px 8px}
+/* 한 줄 요약 · 안내 · 푸터 — 앱 카드로 */
+.appcol .summary,.appcol .note-box{margin:14px 16px;border-radius:12px;
+  padding:15px 16px;font-size:.82rem;line-height:1.72;border:1px solid var(--line)}
+.appcol .summary{background:var(--bg);border-color:var(--line)}
+.appcol .note-box{background:#fffaf2;border-color:#f0e2cb;color:#6b5a3e}
+.appcol footer{margin:0;padding:18px 16px 10px;border-top:1px solid var(--line);
+  font-size:.74rem;color:var(--muted)}
+.appcol footer .f-links{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 8px}
+.appcol footer .f-links a{color:var(--ink-2);text-decoration:none}
+.appcol footer .f-id{margin:0}
+/* 하단 탭바에 내용이 가리지 않게 */
+.appcol main{padding-bottom:8px}
 .apptabs{position:sticky;bottom:0;display:flex;height:64px;align-items:center;
   background:var(--surface);border-top:1px solid var(--line);z-index:20}
 /* ⚠️ 라벨이 두 줄로 꺾이면 아이콘 높이가 어긋나 줄이 무너진다
@@ -504,7 +590,7 @@ body.app{background:var(--bg)}
   @media(max-width:600px){.entries{grid-template-columns:1fr}}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does 'FDA approved' actually mean?", "acceptedAnswer": {"@type": "Answer", "text": "For aesthetic medical devices, what is commonly called 'FDA approval' is mostly a 510(k) clearance, and it is granted separately by device and by intended use. One clearance does not cover other purposes."}}, {"@type": "Question", "name": "Are 510(k) and approval different words?", "acceptedAnswer": {"@type": "Answer", "text": "For aesthetic medical devices, what is commonly called 'FDA approval' is mostly a 510(k) clearance. The clearance records together which device and which intended use, and that combination is the scope of the clearance."}}, {"@type": "Question", "name": "Can I read the clearance myself?", "acceptedAnswer": {"@type": "Answer", "text": "Each clearance has a number beginning with K and can be looked up in the U.S. FDA database. The intended use (Indications for Use) is written in the clearance as is, so you can compare whether the procedure you are having falls under it."}}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "What does 'FDA approved' actually mean?", "inLanguage": "en", "url": "https://damara.my/en/what-fda-cleared-means.html", "publisher": {"@type": "Organization", "name": "STORM-K"}, "author": {"@type": "Organization", "name": "STORM-K"}, "datePublished": "2026-09-16"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalWebPage", "name": "What does 'FDA approved' actually mean?", "inLanguage": "en", "url": "https://damara.my/en/what-fda-cleared-means.html", "publisher": {"@type": "Organization", "name": "STORM-K"}, "author": {"@type": "Organization", "name": "STORM-K"}, "datePublished": "2026-09-16", "dateModified": "2026-10-01"}</script>
 
 </head>
 <body>
@@ -582,7 +668,7 @@ body.app{background:var(--bg)}
   <h2 id="Information-verification">Information verification</h2>
   <p>This page is general guidance based on material published by public bodies and
   professional societies; it is not information about any particular clinic.
-  <strong>Page updated 2026-10-01</strong>. The sources are listed under References below.</p>
+  <strong>Page updated 2026-10-02</strong>. The sources are listed under References below.</p>
   <h2 id="References">References</h2>
   <ul>
       <li><a href="https://www.fda.gov/medical-devices/safety-communications/update-use-renuvionj-plasma-device-certain-aesthetic-procedures-fda-safety-communication" rel="noopener" target="_blank">U.S. FDA — Renuvion safety communication</a></li>
@@ -604,7 +690,7 @@ body.app{background:var(--bg)}
       <a href="../sitemap.xml">Sitemap</a>
       <a href="../rss.xml">RSS</a>
       <a href="../">damara.my</a></p>
-    <p class="f-id">&copy; 2026 damara.my · Last reviewed 2026-10-01</p>
+    <p class="f-id">&copy; 2026 damara.my · Last reviewed 2026-10-02</p>
   </footer>
 </main>
 </body>
